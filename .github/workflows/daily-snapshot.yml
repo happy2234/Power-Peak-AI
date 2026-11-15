@@ -49,8 +49,8 @@ jobs:
       - name: Commit the snapshot (only data and forecast files)
         run: |
           set -euo pipefail
-          git config user.name "snapshot-bot"
-          git config user.email "snapshot-bot@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -- $(python scripts/ci_snapshot.py paths)
           # any other changed file means something unexpected happened: stop before committing
           other=$(git status --porcelain | grep -v '^[AM]  ' || true)
