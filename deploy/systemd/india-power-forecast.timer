@@ -1,0 +1,11 @@
+# Grid-India usually publishes the previous day's PSP report in the morning (IST).
+[Unit]
+Description=Run the India Power Forecast pipeline daily
+
+[Timer]
+OnCalendar=*-*-* 11:30:00
+Persistent=true
+RandomizedDelaySec=10min
+
+[Install]
+WantedBy=timers.target

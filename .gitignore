@@ -1,0 +1,82 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Data & models. On the deploy-public branch ONLY the snapshot the public app and the daily job need is
+# committed: everything is ignored by default and listed below on purpose (see DEPLOY.md, "What is in the
+# repository"). Never allow raw downloads (data/raw/psp, data/raw/forecast, data/raw/_index), logs, .env
+# files or experiment outputs (data/processed/accuracy_round, weather_nasa, ...).
+/data/raw/*
+!/data/raw/weather/
+/data/raw/weather/*
+!/data/raw/weather/obs_*.parquet
+!/data/raw/weather/obsx_*.parquet
+!/data/raw/weather/fc_*.parquet
+!/data/raw/weather/fcx_*.parquet
+/data/processed/*
+!/data/processed/backtest_processed.parquet
+!/data/processed/best_model.txt
+!/data/processed/daily_clean.parquet
+!/data/processed/daily_summary.parquet
+!/data/processed/eval_coverage.parquet
+!/data/processed/eval_weather.parquet
+!/data/processed/evaluation_comparison.parquet
+!/data/processed/fairness_audit.json
+!/data/processed/features.parquet
+!/data/processed/fixed_split_info.json
+!/data/processed/fixed_split_tables.parquet
+!/data/processed/forecast_curve.parquet
+!/data/processed/forecast_daily.parquet
+!/data/processed/forecast_history.parquet
+!/data/processed/latest_explanations.parquet
+!/data/processed/latest_forecast.parquet
+!/data/processed/latest_meta.json
+!/data/processed/latest_raw_weather.parquet
+!/data/processed/latest_stress.parquet
+!/data/processed/latest_weather.parquet
+!/data/processed/live_scorecard.parquet
+!/data/processed/live_summary.json
+!/data/processed/mc_corr.npy
+!/data/processed/model_selection.json
+!/data/processed/pipeline_runs.jsonl
+!/data/processed/postprocess.json
+!/data/processed/record_calibration.parquet
+!/data/processed/region_weights.json
+!/data/processed/state_demand.parquet
+!/data/processed/timeseries_15min.parquet
+!/data/processed/training_log.jsonl
+!/data/processed/weather_city.parquet
+!/data/processed/weather_fc.parquet
+!/data/processed/weather_normals.json
+/models/*_snapshot/
+/models/**/__pycache__/
+
+# secrets and local config: never committed
+.env
+.env.*
+.streamlit/secrets.toml
+*.pem
+*.key
+
+# Test fixtures are committed explicitly under tests/fixtures/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+
+# logs / reports generated at runtime
+backfill.log
+reports/*.log
+
+# pipeline run log and lock, ad-hoc run logs
+/logs/
+run.log
+*.log.tmp
+
+# per-run reports (the daily data-quality summary); committed reports live in reports/
+/reports/latest/

@@ -1,0 +1,16 @@
+best_params:
+  batch_size: 32
+  dropout: 0.292797576724562
+  hidden: 128
+  layers: 2
+  lr: 0.0003574712922600243
+  weight_decay: 0.006351221010640704
+best_value: 0.17770135402679443
+feature_set: v1
+kind: lstm
+minutes: 5.0
+n_trials: 30
+note: copied from the previous round (tuned on exactly these inputs)
+tuned_on_origins:
+- '2023-06-01'
+- '2025-10-24'

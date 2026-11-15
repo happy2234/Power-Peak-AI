@@ -1,0 +1,60 @@
+# Refreshes the data snapshot the public app shows: runs the daily pipeline, runs the tests on the
+# result, and commits only the data and forecast files. Nothing is committed unless every step passed.
+#
+# Secrets: none. Open-Meteo and Grid-India need no key. The job uses the automatic GITHUB_TOKEN with
+# `contents: write` (below) only to push the snapshot commit. See DEPLOY.md.
+name: Daily data snapshot
+
+on:
+  schedule:
+    - cron: "23 6 * * *"        # 06:23 UTC = 11:53 IST. Off the hour on purpose: GitHub delays top-of-hour runs.
+  workflow_dispatch:             # "Run workflow" button, for a manual refresh
+
+permissions:
+  contents: write                # push the snapshot commit; nothing else is granted
+
+concurrency:
+  group: daily-snapshot
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version-file: .python-version
+          cache: pip
+          cache-dependency-path: requirements*.txt
+
+      - name: Install (CPU-only PyTorch)
+        run: pip install -r requirements-pipeline.txt
+
+      - name: Run the daily pipeline
+        # exit code 1 when the run fails; steps 1-3 (downloads) failing is "partial", caught by `check`
+        run: python -m src.pipeline --trigger timer
+
+      - name: Check the run and its outputs
+        run: python scripts/ci_snapshot.py check
+
+      - name: Tests on the new data
+        run: python -m pytest -q
+
+      - name: Keep run history and quality report next to the data
+        run: python scripts/ci_snapshot.py finish
+
+      - name: Commit the snapshot (only data and forecast files)
+        run: |
+          set -euo pipefail
+          git config user.name "snapshot-bot"
+          git config user.email "snapshot-bot@users.noreply.github.com"
+          git add -- $(python scripts/ci_snapshot.py paths)
+          # any other changed file means something unexpected happened: stop before committing
+          other=$(git status --porcelain | grep -v '^[AM]  ' || true)
+          if [ -n "$other" ]; then echo "Unexpected changes:"; echo "$other"; exit 1; fi
+          if git diff --cached --quiet; then echo "Nothing changed."; exit 0; fi
+          git commit -m "Data snapshot $(date -u +%F)"
+          git push

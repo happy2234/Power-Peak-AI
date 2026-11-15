@@ -1,0 +1,22 @@
+best_params:
+  batch_size: 64
+  colsample_bytree: 0.9194629548389118
+  dropout: 0.16020371548470896
+  learning_rate: 0.013460937632762977
+  lr: 0.00015439595353198277
+  min_child_samples: 44
+  num_leaves: 43
+  reg_lambda: 0.4452306594697801
+  subsample: 0.5064631211285395
+  weight_decay: 0.001442920117281508
+best_value: 0.005232766743126218
+feature_set: compact
+fit_origins:
+- '2023-05-03'
+- '2024-12-24'
+kind: lgbm
+minutes: 1.5
+n_trials: 30
+validation_origins:
+- '2025-01-01'
+- '2025-03-24'

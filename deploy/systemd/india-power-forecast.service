@@ -1,0 +1,11 @@
+# User unit: copy to ~/.config/systemd/user/ (see README "Daily pipeline").
+[Unit]
+Description=India Power Forecast daily pipeline (download, rebuild, forecast, score)
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=%h/projects/india-power-forecast
+ExecStart=%h/projects/india-power-forecast/scripts/daily_run.sh
+TimeoutStartSec=2h
