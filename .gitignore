@@ -1,0 +1,30 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Data and models stay local (copy them in by hand; see README)
+/data/raw/
+/data/processed/
+/models/
+/_archive_data/
+
+# logs and per-run output
+/logs/
+run.log
+*.log
+*.log.tmp
+/reports/latest/
+
+# secrets
+.env
+.env.*
+.streamlit/secrets.toml
+
+# editors / OS
+.vscode/
+.idea/
+.DS_Store

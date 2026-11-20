@@ -1,0 +1,9 @@
+# Runtime of the public, read-only app (Streamlit Community Cloud reads this file).
+# The app only reads the committed data snapshot, so it needs no PyTorch, LightGBM or SHAP.
+# Python 3.12 (see .python-version). Exact pins: tested in a clean virtual environment.
+streamlit==1.66.1
+pandas==3.1.0
+numpy==2.5.4
+pyarrow==24.0.0
+plotly==7.1.0
+pyyaml==6.0.3

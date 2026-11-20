@@ -1,0 +1,4 @@
+# Walkthrough app (walkthrough/app.py): the project's pipeline requirements plus the GUI.
+-r requirements-pipeline.txt
+PyQt6>=6.7
+matplotlib>=3.9

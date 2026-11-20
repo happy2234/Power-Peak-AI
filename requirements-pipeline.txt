@@ -1,0 +1,19 @@
+# Daily pipeline (GitHub Actions) and the full test suite: the app requirements plus everything that
+# downloads, parses, builds features and runs the trained models. CPU-only PyTorch: no CUDA, no GPU.
+#   python -m venv .venv && . .venv/bin/activate && pip install -r requirements-pipeline.txt
+-r requirements.txt
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.14.1+cpu
+lightgbm==4.7.0
+scikit-learn==1.9.1
+scipy==1.18.1
+shap==0.54.1
+optuna==5.0.0
+holidays==0.107
+pdfplumber==0.11.10
+python-calamine==0.9.0
+xlrd==2.0.2
+openpyxl==3.1.5
+requests==2.34.2
+tabulate==0.10.0
+pytest==9.2.0

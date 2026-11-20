@@ -1,0 +1,55 @@
+# Power Peak AI theme. The design tokens live in app/ui.py (CSS variables) and src/viz.py (charts);
+# this file gives Streamlit's own widgets the same values. Light is the default design; dark keeps
+# the same structure. Without a fixed `base`, the viewer's system setting picks the variant.
+[theme]
+primaryColor = "#2563EB"
+font = "Inter:https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap, sans-serif"
+codeFont = "'JetBrains Mono':https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap, monospace"
+headingFontWeights = [600, 600, 600, 600, 600, 600]
+headingFontSizes = ["1.75rem", "1.25rem", "1.05rem", "1rem", "0.95rem", "0.9rem"]
+baseRadius = "8px"
+buttonRadius = "8px"
+baseFontSize = 15
+showWidgetBorder = true
+showSidebarBorder = true
+chartCategoricalColors = ["#2563EB", "#0F766E", "#7C3AED", "#BE185D", "#4D7C0F", "#0E7490", "#A16207"]
+
+[theme.light]
+primaryColor = "#2563EB"
+backgroundColor = "#FAFAFA"
+secondaryBackgroundColor = "#F4F4F5"
+textColor = "#09090B"
+borderColor = "#E4E4E7"
+linkColor = "#2563EB"
+codeBackgroundColor = "#F4F4F5"
+dataframeBorderColor = "#E4E4E7"
+
+[theme.light.sidebar]
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F4F4F5"
+borderColor = "#E4E4E7"
+
+[theme.dark]
+primaryColor = "#2563EB"
+backgroundColor = "#09090B"
+secondaryBackgroundColor = "#18181B"
+textColor = "#FAFAFA"
+borderColor = "#27272A"
+linkColor = "#60A5FA"
+codeBackgroundColor = "#27272A"
+dataframeBorderColor = "#27272A"
+
+[theme.dark.sidebar]
+backgroundColor = "#09090B"
+secondaryBackgroundColor = "#18181B"
+borderColor = "#27272A"
+
+[client]
+toolbarMode = "minimal"          # no Deploy button; the remaining menu is hidden with CSS (app/ui.py)
+showErrorDetails = "stacktrace"
+
+[server]
+headless = true
+
+[browser]
+gatherUsageStats = false
