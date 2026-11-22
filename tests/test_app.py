@@ -21,6 +21,7 @@ PAGES = {
     "views/demand_explorer.py": ("Demand explorer", ["Trends", "Seasonality", "States"]),
     "views/weather.py": ("Weather impact", ["By condition", "By season", "Next 7 days"]),
     "views/evening_peak.py": ("Evening peak", ["Daytime vs evening", "Daily gap"]),
+    "views/raw_to_processed.py": ("Raw to processed", ["Raw file", "Parse", "Clean", "Weather", "Model input", "Files"]),
     "views/data_pipeline.py": ("Data pipeline", ["Update", "History", "Data quality"]),
 }
 
@@ -43,7 +44,9 @@ def no_data(monkeypatch, tmp_path):
     import src.models.baselines as bl
     import src.models.registry as reg
 
-    for mod, name in [(ad, "PROCESSED"), (ad, "REPORTS"), (ad, "MODELS_DIR"), (reg, "MODELS_DIR"), (bl, "PROCESSED")]:
+    import src.walkthrough as wt
+
+    for mod, name in [(wt, "PROCESSED"), (wt, "MODELS_DIR"), (wt, "RAW_LATEST"), (ad, "PROCESSED"), (ad, "REPORTS"), (ad, "MODELS_DIR"), (reg, "MODELS_DIR"), (bl, "PROCESSED")]:
         monkeypatch.setattr(mod, name, tmp_path)
 
 
@@ -78,7 +81,7 @@ def test_navigation_sections_and_old_url_paths():
     for section in ('"Forecast":', '"Performance":', '"Analysis":', '"Data":'):
         assert section in src
     for path in ("Forecast", "What_If", "Scorecard", "Model_Lab", "Demand_Explorer", "Weather", "Evening_Peak",
-                 "Data_Pipeline", "Seasonality", "States"):
+                 "Raw_to_processed", "Data_Pipeline", "Seasonality", "States"):
         assert f'url_path="{path}"' in src, path
     assert 'position="hidden"' in src          # ui.sidebar draws the grouped links
 
@@ -86,7 +89,7 @@ def test_navigation_sections_and_old_url_paths():
 def test_sidebar_search_filters_links_and_jumps():
     at = run_page("views/overview.py")
     links = lambda: [e.proto.label for e in at.sidebar.get("page_link")]  # noqa: E731
-    assert len(links()) == 9
+    assert len(links()) == 10
     at.sidebar.text_input(key="nav_q").input("weather").run()       # page titles and tab names match
     assert links() == ["Model lab", "Weather impact"]
     at.sidebar.text_input(key="nav_q").input("zzz").run()
@@ -94,11 +97,11 @@ def test_sidebar_search_filters_links_and_jumps():
     at.sidebar.text_input(key="nav_q").input("calibration").run()   # one match: Enter goes there
     at.run()
     assert [t.value for t in at.title] == ["Model lab"]
-    assert len(links()) == 9                                         # and the search is cleared
+    assert len(links()) == 10                                         # and the search is cleared
 
 
 # ============================================================================ presentation mode
-PRESENTATION_LINKS = ["Overview", "7-day forecast", "Data pipeline", "Our forecast vs Grid-India", "Model lab"]
+PRESENTATION_LINKS = ["Overview", "7-day forecast", "Raw to processed", "Data pipeline", "Our forecast vs Grid-India", "Model lab"]
 FULL_ONLY = ["views/what_if.py", "views/demand_explorer.py", "views/weather.py", "views/evening_peak.py"]
 
 
@@ -112,7 +115,7 @@ def test_mode_defaults_to_presentation_and_only_full_means_full(monkeypatch):
         assert ui.app_mode() == want
 
 
-def test_presentation_sidebar_lists_five_pages_and_keeps_update_button(monkeypatch):
+def test_presentation_sidebar_lists_six_pages_and_keeps_update_button(monkeypatch):
     monkeypatch.delenv("POWER_PEAK_MODE", raising=False)
     at = run_page("views/overview.py")
     assert not at.exception, [e.value for e in at.exception]
@@ -136,7 +139,7 @@ def test_presentation_mode_does_not_route_the_other_pages(page, monkeypatch):
 
 
 @pytest.mark.parametrize("page", ["views/overview.py", "views/forecast.py", "views/vs_grid_india.py",
-                                  "views/data_pipeline.py", "views/model_lab.py"])
+                                  "views/raw_to_processed.py", "views/data_pipeline.py", "views/model_lab.py"])
 def test_presentation_pages_render(page, monkeypatch):
     monkeypatch.delenv("POWER_PEAK_MODE", raising=False)
     at = run_page(page)

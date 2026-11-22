@@ -10,6 +10,7 @@ walkthrough app explains the pipeline step by step on one real day.
 | Folder | What is in it |
 |---|---|
 | `data/raw/psp/` | 1,320 daily Grid-India PSP Excel reports |
+| `data/raw/psp_latest/` | the one newest raw PSP file (about 0.4 MB, a public Grid-India report), the only raw download committed to git; the "Raw to processed" page shows it |
 | `data/raw/weather/` | observed (`obs_`, `obsx_`) and archived forecast (`fc_`, `fcx_`) weather, 11 cities |
 | `data/raw/forecast/` | Grid-India week-ahead forecast PDFs (the benchmark) |
 | `data/processed/` | parsed and cleaned tables, `features.parquet`, forecasts, back-tests |
@@ -19,7 +20,7 @@ walkthrough app explains the pipeline step by step on one real day.
 | `walkthrough/` | the PyQt6 walkthrough app (`app.py`, data layer `wt_data.py`, `screens/` screenshots) |
 | `_archive_data/` | git-ignored extras: NASA weather, older model runs, baseline snapshots, other processed files |
 
-`data/`, `models/` and `_archive_data/` are git-ignored (kept local only).
+`data/`, `models/` and `_archive_data/` are git-ignored (kept local only), except `data/raw/psp_latest/` (see above).
 
 ## Run
 

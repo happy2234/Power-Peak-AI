@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import shutil
 import sys
 from pathlib import Path
@@ -24,7 +25,7 @@ PROCESSED = ROOT / "data" / "processed"
 KEEP_RUNS = 60
 
 # everything the job is allowed to change in the repository (git add uses exactly these)
-COMMIT_PATHS = ["data/processed", "data/raw/weather", "reports/data_quality.md", "reports/data_quality_retries.json"]
+COMMIT_PATHS = ["data/processed", "data/raw/weather", "data/raw/psp_latest", "reports/data_quality.md", "reports/data_quality_retries.json"]
 
 
 def fail(msg: str) -> None:
@@ -67,6 +68,33 @@ def check(max_age_days: int = 3) -> None:
           f"actuals through {latest:%d %b %Y}; {run.get('summary')}")
 
 
+_PSP_NAME = re.compile(r"^(\d{2})\.(\d{2})\.(\d{2})_NLDC_PSP.*\.xlsx?$", re.IGNORECASE)
+
+
+def _psp_date(p: Path):
+    m = _PSP_NAME.match(p.name)
+    return (int(m[3]), int(m[2]), int(m[1])) if m else None       # sortable (yy, mm, dd)
+
+
+def keep_latest_psp() -> Path | None:
+    """Copy the newest DD.MM.YY_NLDC_PSP*.xls from data/raw/psp into data/raw/psp_latest and delete older
+    files there, so exactly one raw report is committed (the page "Raw to processed" shows it).
+    Does nothing when there is no PSP file. Returns the kept file."""
+    src = ROOT / "data" / "raw" / "psp"
+    files = [p for p in src.glob("*") if _psp_date(p)] if src.is_dir() else []
+    if not files:
+        return None
+    newest = max(files, key=lambda p: (_psp_date(p), p.name))
+    dst = ROOT / "data" / "raw" / "psp_latest"
+    dst.mkdir(parents=True, exist_ok=True)
+    for old in dst.iterdir():
+        if old.is_file() and old.name != newest.name:
+            old.unlink()
+    if not (dst / newest.name).exists():
+        shutil.copy(newest, dst / newest.name)
+    return dst / newest.name
+
+
 def finish() -> None:
     """Keep the last runs and the quality report next to the data, where the read-only app looks."""
     new = (ROOT / "logs" / "pipeline_runs.jsonl").read_text().splitlines()
@@ -76,6 +104,7 @@ def finish() -> None:
     q = ROOT / "reports" / "latest" / "data_quality.md"
     if q.exists():
         shutil.copy(q, ROOT / "reports" / "data_quality.md")
+    keep_latest_psp()
 
 
 def main(argv=None) -> int:

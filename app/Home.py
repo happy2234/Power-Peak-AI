@@ -2,14 +2,14 @@
 
     streamlit run app/Home.py
 
-Nine pages in four sections, drawn by ui.sidebar (wordmark, "Jump to…" search, grouped links,
+Ten pages in four sections, drawn by ui.sidebar (wordmark, "Jump to…" search, grouped links,
 "Update data", data timestamp); sub-views are tabs inside each page. st.navigation only
 routes (position="hidden"), so the sidebar can filter its links. Old page URLs (/Forecast,
 /Scorecard, /What_If, ...) keep working; /Seasonality and /States redirect to Demand explorer,
 whose tabs replaced them.
 
 POWER_PEAK_MODE chooses what is shown (ui.app_mode): "presentation" (the default) registers and
-lists only Overview, 7-day forecast, Data pipeline, Our forecast vs Grid-India and Model lab;
+lists only Overview, 7-day forecast, Raw to processed, Data pipeline, Our forecast vs Grid-India and Model lab;
 "full" adds What-if simulator, Demand explorer, Weather impact and Evening peak (and the old
 /Seasonality and /States URLs). The hidden pages stay in the code, unchanged.
 """
@@ -50,6 +50,8 @@ P = {
                        url_path="Weather"),
     "evening": st.Page(str(_VIEWS / "evening_peak.py"), title="Evening peak", icon=":material/nights_stay:",
                        url_path="Evening_Peak"),
+    "raw_to_processed": st.Page(str(_VIEWS / "raw_to_processed.py"), title="Raw to processed",
+                                icon=":material/account_tree:", url_path="Raw_to_processed"),
     "pipeline": st.Page(str(_VIEWS / "data_pipeline.py"), title="Data pipeline", icon=":material/storage:",
                         url_path="Data_Pipeline"),
     # old URLs of pages that became tabs (routed, never listed)
@@ -63,12 +65,12 @@ if ui.full_mode():
         "Forecast": [P["overview"], P["forecast"], P["what_if"]],
         "Performance": [P["scorecard"], P["model_lab"]],
         "Analysis": [P["explorer"], P["weather"], P["evening"]],
-        "Data": [P["pipeline"]],
+        "Data": [P["raw_to_processed"], P["pipeline"]],
     }
     ROUTES = [*[p for ps in SECTIONS.values() for p in ps], P["old_seasonality"], P["old_states"]]
-else:                                          # presentation: the five pages, in the order they are narrated
+else:                                          # presentation: the six pages, in the order they are narrated
     P = {k: ALL_PAGES[k] for k in ui.PRESENTATION_PAGES}
-    SECTIONS = {"Forecast": [P["overview"], P["forecast"]], "Data": [P["pipeline"]],
+    SECTIONS = {"Forecast": [P["overview"], P["forecast"]], "Data": [P["raw_to_processed"], P["pipeline"]],
                 "Performance": [P["scorecard"], P["model_lab"]]}
     ROUTES = list(P.values())                  # the other pages are not registered: their URLs do not open
 st.session_state["pp_pages"] = P               # only registered pages can be linked to
@@ -83,6 +85,7 @@ KEYWORDS = {
     "explorer": "trends seasonality states festivals weekday",
     "weather": "by condition by season next 7 days heat rain fog",
     "evening": "stress alert solar gap",
+    "raw_to_processed": "raw excel parse clean cities region weights features scaled model input walkthrough one day",
     "pipeline": "update history data quality freshness runs",
 }
 ui.settle_run()                                # an update this session was watching has ended

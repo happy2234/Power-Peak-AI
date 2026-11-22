@@ -33,12 +33,12 @@ APP_NAME = "Power Peak AI"
 TAGLINE = "7-day electricity demand forecasts for India"
 MODE_ENV = "POWER_PEAK_MODE"
 # the sidebar in presentation mode, in this order (keys of the page table in Home.py)
-PRESENTATION_PAGES = ("overview", "forecast", "pipeline", "scorecard", "model_lab")
+PRESENTATION_PAGES = ("overview", "forecast", "raw_to_processed", "pipeline", "scorecard", "model_lab")
 PRESENTATION_LAB_TABS = ("Leaderboard", "Evaluation design")
 
 
 def app_mode() -> str:
-    """POWER_PEAK_MODE: "presentation" (default; five pages, a short Model lab) or "full" (everything).
+    """POWER_PEAK_MODE: "presentation" (default; six pages, a short Model lab) or "full" (everything).
     Anything other than "full" means presentation, so a typo never exposes the unfinished pages."""
     return "full" if os.environ.get(MODE_ENV, "").strip().lower() == "full" else "presentation"
 
@@ -190,6 +190,20 @@ table.pp-table .date { white-space: nowrap; font-variant-numeric: tabular-nums; 
 table.pp-table td:first-child, table.pp-table td.nw { white-space: nowrap; }
 table.pp-table .num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
 table.pp-table th.num { text-align: right; }
+/* "Raw to processed" page */
+.pp-sec { font-size: 1.25rem; font-weight: 600; margin: 1.6rem 0 .6rem; }
+.pp-formula { font-size: 1.05rem; line-height: 1.7; padding: 14px 18px; border: 1px solid var(--pp-border);
+  border-radius: 12px; background: var(--pp-card); }
+.pp-check { font-size: 1.05rem; font-weight: 600; padding: 12px 16px; border-radius: 12px; margin: 6px 0;
+  border: 1px solid var(--pp-good); color: var(--pp-good); background: var(--pp-card); }
+.pp-check.bad { border-color: var(--pp-alert); color: var(--pp-alert); }
+table.pp-table.big { font-size: 1rem; }
+table.pp-table.big td { white-space: normal; word-break: break-word; }
+table.pp-table.big th, table.pp-table.big td.nw { white-space: nowrap; word-break: normal; }
+table.pp-table td.hit { background: var(--pp-accent-soft); color: var(--pp-accent); font-weight: 700;
+  box-shadow: inset 0 0 0 2px var(--pp-accent); }
+.pp-chip { display: inline-block; padding: 2px 10px; border-radius: 999px; background: var(--pp-accent-soft);
+  color: var(--pp-accent); font-size: .85rem; font-weight: 600; margin-right: 6px; }
 
 /* widgets */
 [data-testid="stBaseButton-primary"] { box-shadow: var(--pp-shadow); }
@@ -359,6 +373,40 @@ def kicker(text: str) -> None:
 def note(text: str, alert: bool = False) -> None:
     """A quiet explanatory note with a left rule (red rule only for alerts). `text` is plain text."""
     st.markdown(f"<div class='pp-note{' alert' if alert else ''}'>{html.escape(text)}</div>", unsafe_allow_html=True)
+
+
+def section(text: str) -> None:
+    """A large section heading inside a tab."""
+    st.markdown(f"<div class='pp-sec'>{html.escape(text)}</div>", unsafe_allow_html=True)
+
+
+def formula(text_html: str) -> None:
+    """A boxed sentence. `text_html` may contain <b> and <i>; escape everything else before passing it."""
+    st.markdown(f"<div class='pp-formula'>{text_html}</div>", unsafe_allow_html=True)
+
+
+def check(ok: bool, text: str) -> None:
+    """A clear green (match) or red (mismatch) result line."""
+    st.markdown(f"<div class='pp-check{'' if ok else ' bad'}'><b>{'OK' if ok else 'NOT OK'}</b> &nbsp;{html.escape(text)}</div>",
+                unsafe_allow_html=True)
+
+
+def chip_line(label: str, text: str) -> None:
+    """A highlighted chip followed by a plain sentence."""
+    st.markdown(f"<span class='pp-chip'>{html.escape(label)}</span> {html.escape(text)}", unsafe_allow_html=True)
+
+
+def grid_table(rows: list[dict], n_cols: int, letters: list[str]) -> None:
+    """A block of spreadsheet rows [{"excel_row", "cells", "targets": {col: ...}}] with the cells in `targets`
+    highlighted. Column headers are the Excel letters."""
+    head = "<th>Row</th>" + "".join(f"<th>{html.escape(x)}</th>" for x in letters[:n_cols])
+    body = []
+    for r in rows:
+        cells = "".join(f"<td class='{'hit' if c in r['targets'] else ''}{' nw' if len(t) <= 16 else ''}'>{html.escape(t)}</td>"
+                        for c, t in enumerate(r["cells"]))
+        body.append(f"<tr><td>{r['excel_row']}</td>{cells}</tr>")
+    st.markdown(f"<div class='pp-table-wrap'><table class='pp-table big'><thead><tr>{head}</tr></thead>"
+                f"<tbody>{''.join(body)}</tbody></table></div>", unsafe_allow_html=True)
 
 
 def card(name: str):

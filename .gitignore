@@ -7,7 +7,9 @@ __pycache__/
 .ipynb_checkpoints/
 
 # Data and models stay local (copy them in by hand; see README)
-/data/raw/
+/data/raw/*
+!/data/raw/psp_latest/
+!/data/raw/psp_latest/*.xls*
 /data/processed/
 /models/
 /_archive_data/

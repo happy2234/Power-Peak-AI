@@ -87,3 +87,36 @@ def test_finish_keeps_the_last_runs_and_the_quality_report(world):
 
 def test_commit_paths_are_data_and_forecast_files_only():
     assert all(p.startswith(("data/", "reports/data_quality")) for p in ci.COMMIT_PATHS)
+
+
+def _psp(root, *names):
+    d = root / "data" / "raw" / "psp"
+    d.mkdir(parents=True, exist_ok=True)
+    for n in names:
+        (d / n).write_bytes(n.encode())
+
+
+def test_raw_psp_latest_is_a_commit_path():
+    assert "data/raw/psp_latest" in ci.COMMIT_PATHS
+
+
+def test_finish_keeps_exactly_the_newest_psp_file(world):
+    _, _, root = world
+    _psp(root, "31.12.25_NLDC_PSP_998.xls", "02.01.26_NLDC_PSP_1.xls", "14.11.26_NLDC_PSP_736.xls",
+         "08.07.26_NLDC_PSP_H&E v1_222.xls")          # newest by date, not by name
+    old = root / "data" / "raw" / "psp_latest"
+    old.mkdir(parents=True)
+    (old / "13.11.26_NLDC_PSP_735.xls").write_bytes(b"older")
+    ci.finish()
+    assert [p.name for p in old.iterdir()] == ["14.11.26_NLDC_PSP_736.xls"]
+    assert (old / "14.11.26_NLDC_PSP_736.xls").read_bytes() == b"14.11.26_NLDC_PSP_736.xls"
+
+
+def test_finish_does_nothing_without_a_psp_file(world):
+    _, _, root = world
+    keep = root / "data" / "raw" / "psp_latest"
+    keep.mkdir(parents=True)
+    (keep / "13.11.26_NLDC_PSP_735.xls").write_bytes(b"kept")
+    ci.finish()                                         # no data/raw/psp at all
+    assert [p.name for p in keep.iterdir()] == ["13.11.26_NLDC_PSP_735.xls"]
+    assert ci.keep_latest_psp() is None
