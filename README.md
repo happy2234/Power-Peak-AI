@@ -117,7 +117,7 @@ POWER_PEAK_MODE=full streamlit run app/Home.py     # every page and tab
 
 | | Presentation | Full |
 |---|---|---|
-| Sidebar | Overview · 7-day forecast · Data pipeline · Our forecast vs Grid-India · Model lab | all nine pages in four sections |
+| Sidebar | Overview · 7-day forecast · Raw to processed · Data pipeline · Our forecast vs Grid-India · Model lab | all ten pages in four sections |
 | Model lab tabs | Leaderboard · Evaluation design | Leaderboard · By horizon · By weather · Calibration · Evaluation design · Drift |
 | Also in full only | | What-if simulator · Demand explorer · Weather impact · Evening peak (and the old `/Seasonality`, `/States` URLs) |
 
@@ -126,7 +126,7 @@ button and the sidebar toggle are in both modes. Full mode, by section: **Foreca
 forecast (Solar-hour peak | Evening peak | Energy), What-if simulator · **Performance** — Our forecast vs
 Grid-India (Live scorecard | Backtest | Bias-corrected), Model lab · **Analysis** — Demand explorer
 (Trends | Seasonality | States), Weather impact (By condition | By season | Next 7 days), Evening peak ·
-**Data** — Data pipeline (Update | History | Data quality). Old URLs still work in full mode.
+**Data** — Raw to processed (Raw file | Parse | Clean | Weather | Model input | Files), Data pipeline (Update | History | Data quality). Old URLs still work in full mode.
 
 **Update data (what you see).** The run happens in a background thread of the app server, so the page
 stays usable. The panel lists the seven steps with a live state (Waiting, Running, Done, No new data,

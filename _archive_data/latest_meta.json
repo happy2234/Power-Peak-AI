@@ -1,0 +1,58 @@
+{
+  "origin": "2026-11-14",
+  "best_model": "ensemble",
+  "weather_source": "open-meteo live forecast",
+  "issued_at": "2026-11-15 10:23:04",
+  "records": {
+    "all_time": 270820.0,
+    "all_time_date": "2026-05-21",
+    "year": 270820.0,
+    "year_date": "2026-05-21"
+  },
+  "record_probability": {
+    "p_all_time": 1.5585177924451437e-06,
+    "p_year": 0.0008609378394545861,
+    "per_day_all_time": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "per_day_year": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "peak_p50": 221929.44288049405,
+    "peak_p90": 223883.6711514944,
+    "p_all_time_raw": 0.0,
+    "p_year_raw": 0.0
+  },
+  "record_status": {
+    "experimental": true,
+    "skill": {
+      "all_time": -0.30994773518890684,
+      "year": 0.24142608486444395
+    },
+    "threshold": 0.05,
+    "method": "platt",
+    "events": {
+      "all_time": 18,
+      "year": 26
+    }
+  },
+  "models": [
+    "ensemble",
+    "grid_india",
+    "lgbm",
+    "lstm",
+    "tft"
+  ]
+}

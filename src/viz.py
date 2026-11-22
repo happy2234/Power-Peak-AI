@@ -295,6 +295,21 @@ def grid_india_trace(x, y, unit: str, name: str = "Grid-India", line: bool = Tru
                       hovertemplate=f"%{{y:{nf}}} {unit}<extra>{name}</extra>")
 
 
+def recent_target_chart(df: pd.DataFrame, target: str, flag: str | None = None, title: str | None = None) -> go.Figure:
+    """The last days of one target (columns `date`, `<target>`, optional boolean `flag` column); days whose
+    `flag` is True (imputed by the cleaner) are marked with a red ring."""
+    div, unit = scale(target)
+    x, y = df["date"], df[target] / div
+    fig = go.Figure(actual_trace(x, y, unit, TARGET_LABELS[target]))
+    if flag is not None and df[flag].any():
+        m = df[flag].astype(bool)
+        fig.add_trace(go.Scatter(x=x[m], y=y[m], mode="markers", name="Imputed day",
+                                 marker=dict(color=ALERT, size=10, symbol="circle-open", line=dict(width=2)),
+                                 hovertemplate=f"%{{y:{NUM_FMT.get(unit, ',.1f')}}} {unit}<extra>Imputed day</extra>"))
+    return style(fig, title=title or TARGET_LABELS[target], height=300, ytitle=unit, legend=False,
+                 subtitle=f"{unit}, last {len(df)} days")
+
+
 # ============================================================================ forecasts
 def forecast_fan(hist: pd.Series, fc: pd.DataFrame, target: str, models: list[str] | None = None,
                  best: str | None = None, gi: pd.DataFrame | None = None, title: str | None = None,

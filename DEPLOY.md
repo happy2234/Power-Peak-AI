@@ -27,6 +27,7 @@ Everything else is ignored by `.gitignore` (an allow-list, not a block-list).
 | `app/`, `src/`, `scripts/`, `.streamlit/config.toml` | the code | ~1 MB |
 | `data/processed/*` (33 named files) | tables the app reads and the daily job updates: features, forecasts, scorecard, backtest, evaluation tables, run history | 60 MB* |
 | `data/raw/weather/{obs,obsx,fc,fcx}_<city>.parquet` | Open-Meteo history the daily job extends | 12 MB |
+| `data/raw/psp_latest/` (exactly ONE `DD.MM.YY_NLDC_PSP*.xls`) | the newest public Grid-India report, shown by the "Raw to processed" page; the daily job replaces it | 0.4 MB |
 | `models/{lgbm,lstm,tft}/<latest>/` + `latest.txt` + `best_params*.yaml` | trained models, used only by the daily job | 5 MB |
 | `reports/*.md`, `reports/training/*.csv` | what Model lab and Data quality show | 1 MB |
 | `tests/` (+ 1 MB of public Grid-India sample files) | the test suite the job runs | 1 MB |
@@ -41,7 +42,7 @@ Largest single files: `backtest_processed.parquet` 9.2 MB, `weather_fc.parquet` 
 string columns and the model files for `/home/`, user names, e-mail addresses, `key`, `secret`, `token`,
 `password`: no matches):
 
-* `data/raw/psp/` (355 MB of Grid-India downloads), `data/raw/forecast/`, `data/raw/_index/`: the job
+* `data/raw/psp/` (355 MB of Grid-India downloads; only its newest file is copied to `data/raw/psp_latest/`), `data/raw/forecast/`, `data/raw/_index/`: the job
   fetches what it needs and the pipeline skips days already parsed into `daily_summary.parquet`
 * `logs/` (pipeline log, lock file, run history with local paths), `*.log`, `run.log`
 * experiment outputs: `data/processed/accuracy_round`, `weather_nasa`, `weather_coverage`,
@@ -60,7 +61,7 @@ Python **3.12** (`.python-version`; Streamlit Community Cloud defaults to 3.12).
 python3.12 -m venv .venv && . .venv/bin/activate
 pip install -r requirements.txt
 POWER_PEAK_READONLY=1 streamlit run app/Home.py
-POWER_PEAK_READONLY=1 python scripts/smoke_app.py        # renders the five pages, checks the footer
+POWER_PEAK_READONLY=1 python scripts/smoke_app.py        # renders the pages, checks the footer
 
 # the daily pipeline and the full test suite: CPU-only PyTorch, no CUDA, no GPU needed
 pip install -r requirements-pipeline.txt                  # pulls torch==2.14.1+cpu from download.pytorch.org/whl/cpu
@@ -100,7 +101,7 @@ Runs daily at 06:23 UTC (11:53 IST) and on demand (Actions tab, "Run workflow").
    by this run and the actuals are at most 3 days old
 4. `python -m pytest -q` on the new data
 5. `scripts/ci_snapshot.py finish` (copies the run history and data-quality report next to the data)
-6. commit **only** the allow-listed paths (`data/processed`, `data/raw/weather`, `reports/data_quality*`) and
+6. commit **only** the allow-listed paths (`data/processed`, `data/raw/weather`, `data/raw/psp_latest`, `reports/data_quality*`) and
    push. Any other changed file aborts the job before the commit.
 
 If any step fails nothing is committed, the job shows red in the Actions tab, and the app keeps showing the previous snapshot. The next day's run retries.

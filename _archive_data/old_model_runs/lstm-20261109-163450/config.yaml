@@ -1,0 +1,110 @@
+best_val_pinball_std: 0.16490410268306732
+cqr:
+- 0.278430700302124
+- 0.20567147433757782
+- 0.2734946608543396
+dec_features:
+- tmax_ai
+- tmean_ai
+- app_tmax_ai
+- rh_mean_ai
+- precip_ai
+- rad_ai
+- cdd_ai
+- tmax_nr
+- tmax_wr
+- tmax_sr
+- tmax_er
+- tmax_ner
+- cdd_nr
+- cdd_wr
+- cdd_sr
+- cdd_er
+- cdd_ner
+- wx_source
+- d_tmax_ai
+- d_cdd_ai
+- d_app_tmax_ai
+- ref_holidays
+- solar_peak_lag7
+- solar_peak_lag14
+- solar_peak_lag364
+- evening_peak_lag7
+- evening_peak_lag14
+- evening_peak_lag364
+- energy_lag7
+- energy_lag14
+- energy_lag364
+- dow_sin
+- dow_cos
+- doy_sin
+- doy_cos
+- is_sunday
+- is_saturday
+- is_holiday
+- is_festival
+- diwali_window
+- is_bridge
+- days_to_festival
+- days_from_festival
+- fest_diwali
+- fest_holi
+- h_frac
+device: cuda
+enc_days: 60
+enc_features:
+- solar_peak_r
+- evening_peak_r
+- energy_r
+- solar_peak_mask
+- evening_peak_mask
+- energy_mask
+- tmax_ai
+- tmean_ai
+- app_tmax_ai
+- rh_mean_ai
+- precip_ai
+- rad_ai
+- cdd_ai
+- tmax_nr
+- tmax_wr
+- tmax_sr
+- tmax_er
+- tmax_ner
+- cdd_nr
+- cdd_wr
+- cdd_sr
+- cdd_er
+- cdd_ner
+- dow_sin
+- dow_cos
+- doy_sin
+- doy_cos
+- is_sunday
+- is_saturday
+- is_holiday
+- is_festival
+- diwali_window
+- is_bridge
+- is_imputed
+epochs: 39
+horizon: 7
+kind: lstm
+params:
+  batch_size: 32
+  batch_size_used: 32
+  dropout: 0.292797576724562
+  hidden: 128
+  layers: 2
+  lr: 0.0003574712922600243
+  weight_decay: 0.006351221010640704
+quantiles:
+- 0.1
+- 0.5
+- 0.9
+seed: 42
+targets:
+- solar_peak
+- evening_peak
+- energy
+train_end: '2026-10-31'

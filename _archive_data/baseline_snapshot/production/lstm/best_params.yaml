@@ -1,0 +1,14 @@
+best_params:
+  batch_size: 64
+  dropout: 0.3016565234937816
+  hidden: 48
+  layers: 1
+  lr: 0.000719316826288951
+  weight_decay: 9.311707771505481e-06
+best_value: 0.17375719547271729
+kind: lstm
+minutes: 2.9
+n_trials: 30
+tuned_on_origins:
+- '2023-06-01'
+- '2025-10-24'

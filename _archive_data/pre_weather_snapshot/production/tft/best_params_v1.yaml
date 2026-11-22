@@ -1,0 +1,16 @@
+best_params:
+  batch_size: 256
+  d_model: 32
+  dropout: 0.3648414393323743
+  heads: 1
+  lr: 0.002539873524344545
+  weight_decay: 3.963356021610455e-05
+best_value: 0.2029186189174652
+feature_set: v1
+kind: tft
+minutes: 3.9
+n_trials: 30
+note: copied from the previous round (tuned on exactly these inputs)
+tuned_on_origins:
+- '2023-06-01'
+- '2025-10-24'

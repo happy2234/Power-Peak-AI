@@ -1,0 +1,18 @@
+best_params:
+  batch_size: 32
+  d_model: 32
+  dropout: 0.07317571532967564
+  heads: 2
+  lr: 0.0016900354049539667
+  weight_decay: 8.204671498786969e-06
+best_value: 0.10515403002500534
+feature_set: v1
+fit_origins:
+- '2023-05-03'
+- '2024-12-24'
+kind: tft
+minutes: 3.3
+n_trials: 30
+validation_origins:
+- '2025-01-01'
+- '2025-03-24'

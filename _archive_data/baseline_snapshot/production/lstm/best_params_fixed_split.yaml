@@ -1,0 +1,18 @@
+best_params:
+  batch_size: 32
+  dropout: 0.34135916335339345
+  hidden: 96
+  layers: 1
+  lr: 0.0026427927654150713
+  weight_decay: 6.861050472834048e-06
+best_value: 0.11987471580505371
+feature_set: compact
+fit_origins:
+- '2023-05-03'
+- '2024-12-24'
+kind: lstm
+minutes: 1.8
+n_trials: 30
+validation_origins:
+- '2025-01-01'
+- '2025-03-24'

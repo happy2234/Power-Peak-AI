@@ -1,0 +1,73 @@
+{
+ "old": {
+  "ensemble": {
+   "MAPE": 2.6794845948687644,
+   "coverage": 68.92655367231639,
+   "MAPE_solar_peak": 3.1377919609319807,
+   "MAPE_evening_peak": 2.236430947033111,
+   "MAPE_energy": 2.6642308766412013
+  },
+  "lgbm": {
+   "MAPE": 2.8143745355174907,
+   "coverage": 68.41000807102502,
+   "MAPE_solar_peak": 3.332020170682436,
+   "MAPE_evening_peak": 2.30284883024065,
+   "MAPE_energy": 2.8082546056293873
+  },
+  "lstm": {
+   "MAPE": 2.7319057847757615,
+   "coverage": 69.49959644874899,
+   "MAPE_solar_peak": 3.0784642216022537,
+   "MAPE_evening_peak": 2.3676997422817667,
+   "MAPE_energy": 2.749553390443264
+  },
+  "rows": 37170
+ },
+ "new": {
+  "ensemble": {
+   "MAPE": 2.23106687760664,
+   "coverage": 71.54156577885392,
+   "MAPE_solar_peak": 2.6273414078810338,
+   "MAPE_evening_peak": 1.8794913273797076,
+   "MAPE_energy": 2.1863678975591787
+  },
+  "lgbm": {
+   "MAPE": 2.5799088676114703,
+   "coverage": 71.68684422921712,
+   "MAPE_solar_peak": 3.0992739981855166,
+   "MAPE_evening_peak": 2.087406216583665,
+   "MAPE_energy": 2.55304638806523
+  },
+  "lstm": {
+   "MAPE": 2.311266624502018,
+   "coverage": 70.30669895076674,
+   "MAPE_solar_peak": 2.682795272778884,
+   "MAPE_evening_peak": 1.9840095680381464,
+   "MAPE_energy": 2.266995032689024
+  },
+  "rows": 37170
+ },
+ "access": [
+  {
+   "at": "2026-11-15 11:56:52",
+   "purpose": "weather-nasa",
+   "what": "recipe '11 cities (production)' (seed 42), trained once, scored on the test period",
+   "rows": 37170,
+   "note": "{\"name\": \"11 cities (production)\", \"lead7_debias\": false, \"lgbm_extra\": [], \"lgbm_base\": \"ref7\", \"lgbm_halflife\": null, \"lgbm_params\": [], \"lstm_halflife\": null, \"lstm_params\": [], \"lstm_enc_days\": 60, \"members\": [\"lstm\", \"lgbm\"], \"residual\": false, \"wx_scheme\": \"cities\", \"note\": \"\"}"
+  },
+  {
+   "at": "2026-11-15 11:57:53",
+   "purpose": "weather-nasa",
+   "what": "recipe 'NASA POWER + Open-Meteo hybrid (33 points)' (seed 42), trained once, scored on the test period",
+   "rows": 37170,
+   "note": "{\"name\": \"NASA POWER + Open-Meteo hybrid (33 points)\", \"lead7_debias\": false, \"lgbm_extra\": [], \"lgbm_base\": \"ref7\", \"lgbm_halflife\": null, \"lgbm_params\": [], \"lstm_halflife\": null, \"lstm_params\": [], \"lstm_enc_days\": 60, \"members\": [\"lstm\", \"lgbm\"], \"residual\": false, \"wx_scheme\": \"nasa\", \"note\": \"\"}"
+  },
+  {
+   "at": "2026-11-15 12:41:18",
+   "purpose": "weather-nasa",
+   "what": "recipe 'NASA POWER + Open-Meteo hybrid (33 points)' (seed 42), trained once, scored on the test period",
+   "rows": 37170,
+   "note": "{\"name\": \"NASA POWER + Open-Meteo hybrid (33 points)\", \"lead7_debias\": false, \"lgbm_extra\": [], \"lgbm_base\": \"ref7\", \"lgbm_halflife\": null, \"lgbm_params\": [], \"lstm_halflife\": null, \"lstm_params\": [], \"lstm_enc_days\": 60, \"members\": [\"lstm\", \"lgbm\"], \"residual\": false, \"wx_scheme\": \"nasa\", \"note\": \"\"}"
+  }
+ ]
+}

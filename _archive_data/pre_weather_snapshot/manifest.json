@@ -1,0 +1,37 @@
+{
+ "created": "2026-11-12 09:53:58",
+ "production": {
+  "lgbm": "20261109-204711",
+  "lstm": "20261109-204722",
+  "tft": "20261109-204738"
+ },
+ "processed": [
+  "fixed_split_predictions.parquet",
+  "fixed_split_info.json",
+  "fixed_split_tables.parquet",
+  "fixed_split_grid_india.parquet",
+  "evaluation_comparison.parquet",
+  "model_selection.json",
+  "postprocess.json",
+  "best_model.txt",
+  "latest_meta.json",
+  "backtest_processed.parquet",
+  "eval_weather.parquet",
+  "eval_coverage.parquet",
+  "record_calibration.parquet",
+  "mc_corr.npy",
+  "latest_forecast.parquet",
+  "live_scorecard.parquet",
+  "features.parquet",
+  "weather_fc.parquet",
+  "region_weights.json",
+  "weather_normals.json",
+  "weather_city.parquet",
+  "latest_weather.parquet",
+  "latest_raw_weather.parquet",
+  "latest_explanations.parquet",
+  "weather_regimes.parquet",
+  "backtest_predictions.parquet"
+ ],
+ "metrics_from": "baseline_snapshot"
+}

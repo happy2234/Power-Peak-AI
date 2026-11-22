@@ -8,9 +8,13 @@ __pycache__/
 
 # Data & models. On the deploy-public branch ONLY the snapshot the public app and the daily job need is
 # committed: everything is ignored by default and listed below on purpose (see DEPLOY.md, "What is in the
-# repository"). Never allow raw downloads (data/raw/psp, data/raw/forecast, data/raw/_index), logs, .env
+# repository"). Never allow raw downloads, except the ONE newest Grid-India PSP file in data/raw/psp_latest (public, ~0.4 MB; never data/raw/psp, data/raw/forecast, data/raw/_index), logs, .env
 # files or experiment outputs (data/processed/accuracy_round, weather_nasa, ...).
 /data/raw/*
+!/data/raw/psp_latest/
+/data/raw/psp_latest/*
+!/data/raw/psp_latest/*.xls
+!/data/raw/psp_latest/*.xlsx
 !/data/raw/weather/
 /data/raw/weather/*
 !/data/raw/weather/obs_*.parquet

@@ -1,0 +1,27 @@
+{
+ "created": "2026-11-11 22:37:48",
+ "production": {
+  "lgbm": "20261109-204711",
+  "lstm": "20261109-204722",
+  "tft": "20261109-204738"
+ },
+ "processed": [
+  "fixed_split_predictions.parquet",
+  "fixed_split_info.json",
+  "fixed_split_tables.parquet",
+  "fixed_split_grid_india.parquet",
+  "evaluation_comparison.parquet",
+  "model_selection.json",
+  "postprocess.json",
+  "best_model.txt",
+  "latest_meta.json",
+  "backtest_processed.parquet",
+  "eval_weather.parquet",
+  "eval_coverage.parquet",
+  "record_calibration.parquet",
+  "mc_corr.npy",
+  "latest_forecast.parquet",
+  "live_scorecard.parquet"
+ ],
+ "baseline_test_rows": 61320
+}

@@ -1,0 +1,125 @@
+best_iters:
+  energy|0.1: 797
+  energy|0.5: 466
+  energy|0.9: 389
+  evening_peak|0.1: 685
+  evening_peak|0.5: 435
+  evening_peak|0.9: 417
+  solar_peak|0.1: 744
+  solar_peak|0.5: 195
+  solar_peak|0.9: 277
+cqr:
+  energy: 0.005151979950924018
+  evening_peak: 0.0024711147420627367
+  solar_peak: 0.01225697869778441
+feature_set: compact
+features:
+- h
+- solar_peak_last
+- solar_peak_lag7
+- solar_peak_lag14
+- solar_peak_lag364
+- solar_peak_roll30
+- solar_peak_std7
+- solar_peak_std30
+- evening_peak_last
+- evening_peak_lag7
+- evening_peak_lag14
+- evening_peak_lag364
+- evening_peak_roll30
+- evening_peak_std7
+- evening_peak_std30
+- energy_last
+- energy_lag7
+- energy_lag14
+- energy_lag364
+- energy_roll30
+- energy_std7
+- energy_std30
+- tmax_ai
+- tmin_ai
+- tmean_ai
+- app_tmax_ai
+- heat_index_ai
+- rh_mean_ai
+- dew_mean_ai
+- precip_ai
+- cloud_day_ai
+- rad_ai
+- gust_max_ai
+- cdd_ai
+- hdd_ai
+- tmax_nr
+- tmax_wr
+- tmax_sr
+- tmax_er
+- tmax_ner
+- tmin_nr
+- cdd_nr
+- cdd_wr
+- cdd_sr
+- cdd_er
+- cdd_ner
+- hdd_nr
+- fog_nr
+- tmax_ai_anom
+- precip_ai_anom
+- cloud_day_ai_anom
+- tmin_nr_anom
+- wx_source
+- rain3_ai
+- ref_tmax_ai
+- d_tmax_ai
+- ref_cdd_ai
+- d_cdd_ai
+- ref_app_tmax_ai
+- d_app_tmax_ai
+- ref_holidays
+- ref_imputed
+- dow
+- is_saturday
+- is_sunday
+- is_weekend
+- month
+- doy_sin
+- doy_cos
+- dow_sin
+- dow_cos
+- is_national_holiday
+- fest_diwali
+- fest_holi
+- fest_eid_ul_fitr
+- fest_eid_ul_adha
+- fest_dussehra
+- fest_durga_puja
+- fest_pongal
+- fest_ganesh_chaturthi
+- fest_christmas
+- diwali_window
+- is_festival
+- is_holiday
+- days_to_festival
+- days_from_festival
+- is_bridge
+kind: lgbm
+params:
+  batch_size: 64
+  colsample_bytree: 0.4792344261361077
+  dropout: 0.16358653022662617
+  learning_rate: 0.03514753980172514
+  lr: 0.00029537278219107544
+  max_bin: 127
+  min_child_samples: 8
+  n_estimators: 800
+  num_leaves: 8
+  reg_lambda: 0.26098036999135377
+  subsample: 0.6857433733446013
+  subsample_freq: 1
+  verbose: -1
+  weight_decay: 0.00013336063546514872
+quantiles:
+- 0.1
+- 0.5
+- 0.9
+regime_boost: 0.0
+train_end: '2026-11-07'
