@@ -16,7 +16,7 @@ sys.path[:0] = [str(ROOT), str(ROOT / "app")]
 from streamlit.testing.v1 import AppTest  # noqa: E402
 
 PAGES = {"views/overview.py": "Overview", "views/forecast.py": "7-day forecast",
-         "views/data_pipeline.py": "Data pipeline", "views/vs_grid_india.py": "Our forecast vs Grid-India",
+         "views/raw_to_processed.py": "Raw to processed", "views/data_pipeline.py": "Data pipeline", "views/vs_grid_india.py": "Our forecast vs Grid-India",
          "views/model_lab.py": "Model lab"}
 bad = []
 for page, title in PAGES.items():
