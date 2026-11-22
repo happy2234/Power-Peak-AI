@@ -1,8 +1,8 @@
 {
-  "origin": "2026-11-14",
+  "origin": "2026-11-21",
   "best_model": "ensemble",
   "weather_source": "open-meteo live forecast",
-  "issued_at": "2026-11-16 00:59:20",
+  "issued_at": "2026-11-23 00:04:07",
   "records": {
     "all_time": 270820.0,
     "all_time_date": "2026-05-21",
@@ -30,8 +30,8 @@
       0.0,
       0.0
     ],
-    "peak_p50": 222101.6533224287,
-    "peak_p90": 224044.8885648508,
+    "peak_p50": 225187.70492795762,
+    "peak_p90": 227831.2306251243,
     "p_all_time_raw": 0.0,
     "p_year_raw": 0.0
   },
