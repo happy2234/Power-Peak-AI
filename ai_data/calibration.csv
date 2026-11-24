@@ -1,0 +1,106 @@
+model,model_key,target,days_ahead,unit,coverage_before_pct,coverage_after_pct,width_before,width_after,target_coverage_pct,n_forecasts,width_change_pct
+Ensemble (LSTM+LightGBM),ensemble,energy,1,MU,88.4409,76.0753,362.76,342.236,80,372,-5.65769
+Ensemble (LSTM+LightGBM),ensemble,energy,2,MU,87.8706,77.3585,365.606,351.319,80,371,-3.90784
+Ensemble (LSTM+LightGBM),ensemble,energy,3,MU,83.2432,78.6486,365.407,369.777,80,370,1.19587
+Ensemble (LSTM+LightGBM),ensemble,energy,4,MU,82.1138,78.5908,371.184,396.458,80,369,6.80898
+Ensemble (LSTM+LightGBM),ensemble,energy,5,MU,80.4348,79.6196,376.345,438.658,80,368,16.5574
+Ensemble (LSTM+LightGBM),ensemble,energy,6,MU,79.564,81.1989,383.242,471.422,80,367,23.0089
+Ensemble (LSTM+LightGBM),ensemble,energy,7,MU,76.776,80.3279,391.243,527.177,80,366,34.7441
+Ensemble (LSTM+LightGBM),ensemble,evening_peak,1,MW,88.7097,79.0323,13784.4,14773.8,80,372,7.17817
+Ensemble (LSTM+LightGBM),ensemble,evening_peak,2,MW,87.062,79.7844,14013.6,14730.1,80,371,5.1134
+Ensemble (LSTM+LightGBM),ensemble,evening_peak,3,MW,84.0541,80.2703,14221.9,16750.9,80,370,17.7825
+Ensemble (LSTM+LightGBM),ensemble,evening_peak,4,MW,82.3848,79.1328,14418.4,17048.8,80,369,18.2435
+Ensemble (LSTM+LightGBM),ensemble,evening_peak,5,MW,81.5217,80.7065,14586.3,16250.9,80,368,11.4118
+Ensemble (LSTM+LightGBM),ensemble,evening_peak,6,MW,80.3815,80.9264,14739.7,19835.6,80,367,34.5724
+Ensemble (LSTM+LightGBM),ensemble,evening_peak,7,MW,76.776,80.8743,15048.1,20906.4,80,366,38.93
+Ensemble (LSTM+LightGBM),ensemble,solar_peak,1,MW,87.9032,81.4516,19899.2,17659.3,80,372,-11.2563
+Ensemble (LSTM+LightGBM),ensemble,solar_peak,2,MW,86.7925,80.3235,19531.3,18040.3,80,371,-7.63395
+Ensemble (LSTM+LightGBM),ensemble,solar_peak,3,MW,83.5135,80.8108,19569.8,18911.6,80,370,-3.3636
+Ensemble (LSTM+LightGBM),ensemble,solar_peak,4,MW,81.0298,81.0298,19950.3,20626.7,80,369,3.39065
+Ensemble (LSTM+LightGBM),ensemble,solar_peak,5,MW,78.5326,81.7935,20277.7,22821.7,80,368,12.5459
+Ensemble (LSTM+LightGBM),ensemble,solar_peak,6,MW,76.5668,82.0163,20333.7,24160.1,80,367,18.8183
+Ensemble (LSTM+LightGBM),ensemble,solar_peak,7,MW,73.4973,81.9672,20620.6,26060.7,80,366,26.3816
+LightGBM,lgbm@compact,energy,1,MU,86.5591,79.0323,359.709,369.613,80,372,2.75328
+LightGBM,lgbm@compact,energy,2,MU,81.1321,79.7844,372.846,395.266,80,371,6.01341
+LightGBM,lgbm@compact,energy,3,MU,79.4595,78.9189,386.964,426.368,80,370,10.1829
+LightGBM,lgbm@compact,energy,4,MU,80.2168,79.9458,401.287,470.182,80,369,17.1685
+LightGBM,lgbm@compact,energy,5,MU,79.3478,80.163,412.215,529.342,80,368,28.4141
+LightGBM,lgbm@compact,energy,6,MU,76.5668,81.1989,434.854,552.985,80,367,27.1655
+LightGBM,lgbm@compact,energy,7,MU,77.5956,81.9672,457.586,576.574,80,366,26.0034
+LightGBM,lgbm@compact,evening_peak,1,MW,88.9785,79.3011,13807.7,13931.5,80,372,0.896355
+LightGBM,lgbm@compact,evening_peak,2,MW,86.7925,80.0539,13983,16762.1,80,371,19.8745
+LightGBM,lgbm@compact,evening_peak,3,MW,81.8919,81.0811,14203.4,17313.6,80,370,21.8975
+LightGBM,lgbm@compact,evening_peak,4,MW,81.5718,80.7588,14465.1,18194.4,80,369,25.7815
+LightGBM,lgbm@compact,evening_peak,5,MW,80.163,81.25,14774.5,19719.6,80,368,33.4706
+LightGBM,lgbm@compact,evening_peak,6,MW,80.3815,82.0163,15407.3,22381.6,80,367,45.2664
+LightGBM,lgbm@compact,evening_peak,7,MW,80.8743,81.9672,16504.2,21805.9,80,366,32.1237
+LightGBM,lgbm@compact,solar_peak,1,MW,83.0645,80.914,20467.4,20066.6,80,372,-1.95834
+LightGBM,lgbm@compact,solar_peak,2,MW,80.0539,81.4016,20766,22232.2,80,371,7.06033
+LightGBM,lgbm@compact,solar_peak,3,MW,79.4595,82.7027,21416.9,23922.5,80,370,11.6996
+LightGBM,lgbm@compact,solar_peak,4,MW,75.8808,82.9268,22181.7,26346.6,80,369,18.7765
+LightGBM,lgbm@compact,solar_peak,5,MW,72.5543,82.337,22664.7,28398.4,80,368,25.2978
+LightGBM,lgbm@compact,solar_peak,6,MW,72.4796,81.4714,23436.5,30170.5,80,367,28.7329
+LightGBM,lgbm@compact,solar_peak,7,MW,69.3989,81.694,24565.7,31409.2,80,366,27.858
+LSTM,lstm_w@compact,energy,1,MU,87.9032,77.957,352.72,331.005,80,372,-6.15636
+LSTM,lstm_w@compact,energy,2,MU,85.7143,77.628,353.76,349.103,80,371,-1.31648
+LSTM,lstm_w@compact,energy,3,MU,82.1622,79.1892,356.624,362.617,80,370,1.68029
+LSTM,lstm_w@compact,energy,4,MU,79.6748,78.8618,361.035,394.399,80,369,9.24114
+LSTM,lstm_w@compact,energy,5,MU,78.5326,79.0761,365.211,429.848,80,368,17.6986
+LSTM,lstm_w@compact,energy,6,MU,76.2943,80.654,369.963,453.57,80,367,22.5988
+LSTM,lstm_w@compact,energy,7,MU,72.6776,80.8743,373.972,507.636,80,366,35.7416
+LSTM,lstm_w@compact,evening_peak,1,MW,85.2151,79.5699,13150.6,14643.9,80,372,11.3557
+LSTM,lstm_w@compact,evening_peak,2,MW,82.4798,80.0539,13282.8,16138.6,80,371,21.5004
+LSTM,lstm_w@compact,evening_peak,3,MW,81.3514,79.7297,13429.9,14459.1,80,370,7.66341
+LSTM,lstm_w@compact,evening_peak,4,MW,78.8618,80.2168,13593.1,16425.3,80,369,20.8352
+LSTM,lstm_w@compact,evening_peak,5,MW,77.7174,80.9783,13739.7,16175.2,80,368,17.7254
+LSTM,lstm_w@compact,evening_peak,6,MW,74.9319,81.7439,13893.2,17711.6,80,367,27.4842
+LSTM,lstm_w@compact,evening_peak,7,MW,72.6776,82.2404,14032.5,22799.2,80,366,62.4747
+LSTM,lstm_w@compact,solar_peak,1,MW,87.0968,80.1075,18500.1,16479.8,80,372,-10.9201
+LSTM,lstm_w@compact,solar_peak,2,MW,84.9057,80.0539,18581.8,18136.4,80,371,-2.3972
+LSTM,lstm_w@compact,solar_peak,3,MW,83.5135,81.3514,18818.3,20120.5,80,370,6.91971
+LSTM,lstm_w@compact,solar_peak,4,MW,82.6558,81.5718,19095.3,20040.9,80,369,4.95252
+LSTM,lstm_w@compact,solar_peak,5,MW,80.9783,82.6087,19335.5,21964.6,80,368,13.5973
+LSTM,lstm_w@compact,solar_peak,6,MW,78.2016,81.7439,19531.7,23888.1,80,367,22.3044
+LSTM,lstm_w@compact,solar_peak,7,MW,73.7705,82.7869,19704.2,27290,80,366,38.4983
+Seasonal naive,seasonal_naive,energy,1,MU,79.5699,80.3763,635.737,883.072,80,372,38.9051
+Seasonal naive,seasonal_naive,energy,2,MU,79.5148,81.4016,636.029,888.74,80,371,39.7326
+Seasonal naive,seasonal_naive,energy,3,MU,79.4595,81.6216,636.308,862.572,80,370,35.5589
+Seasonal naive,seasonal_naive,energy,4,MU,79.4038,81.8428,636.629,873.495,80,369,37.2062
+Seasonal naive,seasonal_naive,energy,5,MU,79.3478,81.25,636.971,852.011,80,368,33.7597
+Seasonal naive,seasonal_naive,energy,6,MU,79.2916,81.4714,637.303,849.34,80,367,33.2711
+Seasonal naive,seasonal_naive,energy,7,MU,79.235,80.8743,637.624,851.632,80,366,33.5633
+Seasonal naive,seasonal_naive,evening_peak,1,MW,79.8387,80.914,22818.6,39244,80,372,71.9828
+Seasonal naive,seasonal_naive,evening_peak,2,MW,79.7844,80.8625,22827.7,35890.7,80,371,57.2241
+Seasonal naive,seasonal_naive,evening_peak,3,MW,79.7297,80.8108,22836,35294.2,80,370,54.5554
+Seasonal naive,seasonal_naive,evening_peak,4,MW,79.6748,80.7588,22844.4,34693.7,80,369,51.8698
+Seasonal naive,seasonal_naive,evening_peak,5,MW,79.6196,80.7065,22852.4,34647.3,80,368,51.6138
+Seasonal naive,seasonal_naive,evening_peak,6,MW,79.564,80.9264,22860.5,34697.8,80,367,51.7807
+Seasonal naive,seasonal_naive,evening_peak,7,MW,79.5082,81.4208,22868.7,35591.9,80,366,55.6359
+Seasonal naive,seasonal_naive,solar_peak,1,MW,77.4194,82.5269,32830.5,45860.9,80,372,39.6899
+Seasonal naive,seasonal_naive,solar_peak,2,MW,77.3585,83.558,32848.6,47530,80,371,44.6943
+Seasonal naive,seasonal_naive,solar_peak,3,MW,77.2973,83.7838,32863.6,43826.5,80,370,33.3589
+Seasonal naive,seasonal_naive,solar_peak,4,MW,77.2358,83.1978,32880.4,43722,80,369,32.9725
+Seasonal naive,seasonal_naive,solar_peak,5,MW,77.1739,83.1522,32899.5,44201.5,80,368,34.3533
+Seasonal naive,seasonal_naive,solar_peak,6,MW,77.1117,83.9237,32918.1,45768.2,80,367,39.0367
+Seasonal naive,seasonal_naive,solar_peak,7,MW,77.0492,83.8798,32936.3,47208.4,80,366,43.3322
+TFT,tft@v1,energy,1,MU,90.3226,77.4194,407.127,338.168,80,372,-16.9381
+TFT,tft@v1,energy,2,MU,86.2534,79.2453,412.074,368.99,80,371,-10.4555
+TFT,tft@v1,energy,3,MU,83.2432,80.2703,416.055,414.092,80,370,-0.471684
+TFT,tft@v1,energy,4,MU,81.3008,80.2168,422.547,460.498,80,369,8.98145
+TFT,tft@v1,energy,5,MU,80.9783,80.163,430.184,489.679,80,368,13.8301
+TFT,tft@v1,energy,6,MU,79.8365,80.9264,441.99,513.36,80,367,16.1475
+TFT,tft@v1,energy,7,MU,79.235,81.1475,453.102,583.246,80,366,28.723
+TFT,tft@v1,evening_peak,1,MW,86.2903,77.6882,13840.1,14591.6,80,372,5.43043
+TFT,tft@v1,evening_peak,2,MW,83.2884,77.8976,14093.2,16960.2,80,371,20.3435
+TFT,tft@v1,evening_peak,3,MW,81.0811,77.8378,14286.1,16246.4,80,370,13.7219
+TFT,tft@v1,evening_peak,4,MW,81.3008,79.4038,14597.8,16986.8,80,369,16.3652
+TFT,tft@v1,evening_peak,5,MW,79.0761,79.0761,14963.4,16512.5,80,368,10.3522
+TFT,tft@v1,evening_peak,6,MW,78.2016,78.4741,15492,18338.4,80,367,18.3729
+TFT,tft@v1,evening_peak,7,MW,79.5082,78.6885,16051.8,19381.8,80,366,20.7454
+TFT,tft@v1,solar_peak,1,MW,86.5591,79.5699,21846.5,18991.8,80,372,-13.0671
+TFT,tft@v1,solar_peak,2,MW,84.9057,80.0539,22059.5,20760.6,80,371,-5.88797
+TFT,tft@v1,solar_peak,3,MW,83.7838,78.3784,22255.3,22874.4,80,370,2.78194
+TFT,tft@v1,solar_peak,4,MW,83.1978,79.1328,22605.2,25105.7,80,369,11.0617
+TFT,tft@v1,solar_peak,5,MW,79.8913,78.2609,23025.8,26379.8,80,368,14.5665
+TFT,tft@v1,solar_peak,6,MW,77.9292,78.4741,23584,29341.2,80,367,24.4113
+TFT,tft@v1,solar_peak,7,MW,77.3224,81.9672,24253.6,36478.4,80,366,50.4045

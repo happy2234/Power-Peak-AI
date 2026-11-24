@@ -1,0 +1,61 @@
+target,quantile,group,n_features,gain,pct_of_total
+energy,0.1,Calendar,26,4986.45,28.0805
+energy,0.1,Lag,12,3392.59,19.1049
+energy,0.1,Other,5,1036.83,5.83873
+energy,0.1,Rolling,9,2359.48,13.2871
+energy,0.1,Weather,35,5982.38,33.6889
+energy,0.5,Calendar,26,9041.59,26.7052
+energy,0.5,Lag,12,6370.95,18.8172
+energy,0.5,Other,5,1514.4,4.47294
+energy,0.5,Rolling,9,4073.06,12.0302
+energy,0.5,Weather,35,12857,37.9744
+energy,0.9,Calendar,26,1779.93,15.724
+energy,0.9,Lag,12,2716,23.9932
+energy,0.9,Other,5,523.97,4.62878
+energy,0.9,Rolling,9,1867.76,16.4999
+energy,0.9,Weather,35,4432.18,39.1541
+evening_peak,0.1,Calendar,26,5581.44,35.9066
+evening_peak,0.1,Lag,12,2633.71,16.9433
+evening_peak,0.1,Other,5,614.312,3.95201
+evening_peak,0.1,Rolling,9,1931.83,12.4279
+evening_peak,0.1,Weather,35,4783.01,30.7702
+evening_peak,0.5,Calendar,26,9569.72,30.1432
+evening_peak,0.5,Lag,12,5934.65,18.6932
+evening_peak,0.5,Other,5,1252.27,3.94447
+evening_peak,0.5,Rolling,9,3961.53,12.4782
+evening_peak,0.5,Weather,35,11029.4,34.7409
+evening_peak,0.9,Calendar,26,1926.03,15.9756
+evening_peak,0.9,Lag,12,2971.38,24.6464
+evening_peak,0.9,Other,5,446.634,3.70465
+evening_peak,0.9,Rolling,9,2227.09,18.4728
+evening_peak,0.9,Weather,35,4484.9,37.2005
+solar_peak,0.1,Calendar,26,4522.98,27.6252
+solar_peak,0.1,Lag,12,2890.9,17.6569
+solar_peak,0.1,Other,5,702.871,4.29296
+solar_peak,0.1,Rolling,9,2113.78,12.9104
+solar_peak,0.1,Weather,35,6142.11,37.5145
+solar_peak,0.5,Calendar,26,6789.44,29.7904
+solar_peak,0.5,Lag,12,4144.4,18.1846
+solar_peak,0.5,Other,5,777.137,3.40988
+solar_peak,0.5,Rolling,9,2430.52,10.6645
+solar_peak,0.5,Weather,35,8649.23,37.9506
+solar_peak,0.9,Calendar,26,1601.23,17.2349
+solar_peak,0.9,Lag,12,2086.5,22.4582
+solar_peak,0.9,Other,5,581.82,6.26244
+solar_peak,0.9,Rolling,9,1493.46,16.075
+solar_peak,0.9,Weather,35,3527.61,37.9695
+energy,mean of P10/P50/P90,Calendar,26,5269.32,23.5032
+energy,mean of P10/P50/P90,Lag,12,4159.84,20.6384
+energy,mean of P10/P50/P90,Other,5,1025.07,4.98015
+energy,mean of P10/P50/P90,Rolling,9,2766.77,13.9391
+energy,mean of P10/P50/P90,Weather,35,7757.18,36.9391
+evening_peak,mean of P10/P50/P90,Calendar,26,5692.39,27.3418
+evening_peak,mean of P10/P50/P90,Lag,12,3846.58,20.0943
+evening_peak,mean of P10/P50/P90,Other,5,771.073,3.86704
+evening_peak,mean of P10/P50/P90,Rolling,9,2706.81,14.4596
+evening_peak,mean of P10/P50/P90,Weather,35,6765.77,34.2372
+solar_peak,mean of P10/P50/P90,Calendar,26,4304.55,24.8835
+solar_peak,mean of P10/P50/P90,Lag,12,3040.6,19.4332
+solar_peak,mean of P10/P50/P90,Other,5,687.276,4.65509
+solar_peak,mean of P10/P50/P90,Rolling,9,2012.59,13.2166
+solar_peak,mean of P10/P50/P90,Weather,35,6106.32,37.8116

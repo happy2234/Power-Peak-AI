@@ -1,0 +1,862 @@
+section,name,date,days_ahead,target,model,value (raw / actual where known),unit,scaled_value,scaler_mean,scaler_sd,p10,p50,p90,source
+1 raw target value,solar_peak,2026-11-14,,solar_peak,,220750.0,MW,,,,,,,features.parquet (cleaned Grid-India value; imputed=False)
+1 raw target value,evening_peak,2026-11-14,,evening_peak,,211601.0,MW,,,,,,,features.parquet (cleaned Grid-India value; imputed=False)
+1 raw target value,energy,2026-11-14,,energy,,4582.83,MU,,,,,,,features.parquet (cleaned Grid-India value; imputed=False)
+"2 all-India weather (observed, demand-weighted)",tmax_ai,2026-11-14,,,,30.724945064477275,,,,,,,,features.parquet
+"2 all-India weather (observed, demand-weighted)",tmin_ai,2026-11-14,,,,20.956284783102472,,,,,,,,features.parquet
+"2 all-India weather (observed, demand-weighted)",tmean_ai,2026-11-14,,,,25.73471052026426,,,,,,,,features.parquet
+"2 all-India weather (observed, demand-weighted)",app_tmax_ai,2026-11-14,,,,31.925390195582693,,,,,,,,features.parquet
+"2 all-India weather (observed, demand-weighted)",heat_index_ai,2026-11-14,,,,30.531072652511067,,,,,,,,features.parquet
+"2 all-India weather (observed, demand-weighted)",rh_mean_ai,2026-11-14,,,,55.75461650260716,,,,,,,,features.parquet
+"2 all-India weather (observed, demand-weighted)",dew_mean_ai,2026-11-14,,,,15.166282380735002,,,,,,,,features.parquet
+"2 all-India weather (observed, demand-weighted)",precip_ai,2026-11-14,,,,0.19260807443778064,,,,,,,,features.parquet
+"2 all-India weather (observed, demand-weighted)",rain_day_ai,2026-11-14,,,,0.0,,,,,,,,features.parquet
+"2 all-India weather (observed, demand-weighted)",cloud_mean_ai,2026-11-14,,,,26.509391678573103,,,,,,,,features.parquet
+"2 all-India weather (observed, demand-weighted)",cloud_day_ai,2026-11-14,,,,25.157286144214805,,,,,,,,features.parquet
+"2 all-India weather (observed, demand-weighted)",rad_ai,2026-11-14,,,,16.977214834228924,,,,,,,,features.parquet
+"2 all-India weather (observed, demand-weighted)",wind_max_ai,2026-11-14,,,,9.676839183333255,,,,,,,,features.parquet
+"2 all-India weather (observed, demand-weighted)",gust_max_ai,2026-11-14,,,,26.002023288839247,,,,,,,,features.parquet
+"2 all-India weather (observed, demand-weighted)",cdd_ai,2026-11-14,,,,1.7468998248109833,,,,,,,,features.parquet
+"2 all-India weather (observed, demand-weighted)",hdd_ai,2026-11-14,,,,0.0,,,,,,,,features.parquet
+"2 all-India weather (observed, demand-weighted)",fog_ai,2026-11-14,,,,0.0,,,,,,,,features.parquet
+"2 all-India weather (observed, demand-weighted)",tmax_ai_anom,2026-11-14,,,,1.2038343472462536,,,,,,,,features.parquet
+"2 all-India weather (observed, demand-weighted)",tmin_ai_anom,2026-11-14,,,,1.6072050558321145,,,,,,,,features.parquet
+"2 all-India weather (observed, demand-weighted)",rh_mean_ai_anom,2026-11-14,,,,-9.318365921957778,,,,,,,,features.parquet
+"2 all-India weather (observed, demand-weighted)",dew_mean_ai_anom,2026-11-14,,,,-1.0755104936863447,,,,,,,,features.parquet
+"2 all-India weather (observed, demand-weighted)",precip_ai_anom,2026-11-14,,,,-1.8380213878663318,,,,,,,,features.parquet
+"2 all-India weather (observed, demand-weighted)",cloud_day_ai_anom,2026-11-14,,,,-8.821817908545828,,,,,,,,features.parquet
+"2 all-India weather (observed, demand-weighted)",rad_ai_anom,2026-11-14,,,,1.0827545561404825,,,,,,,,features.parquet
+"2 all-India weather (observed, demand-weighted)",wind_max_ai_anom,2026-11-14,,,,-2.5405203748663023,,,,,,,,features.parquet
+"2 all-India weather (observed, demand-weighted)",rain3_ai,2026-11-14,,,,0.45140093271825726,,,,,,,,features.parquet
+"2 all-India weather (observed, demand-weighted)",weather_regime,2026-11-14,,,,normal,,,,,,,,src.evaluate.weather_regimes
+3 lag/rolling (origin = example day),solar_peak_ref7 (7-day mean level),2026-11-14,,solar_peak,,206829.85714285713,MW,,,,,,,src.features.build.reference_levels
+3 lag/rolling (origin = example day),solar_peak_last (ratio to ref7),2026-11-14,,solar_peak,,1.0673023858810107,ratio,,,,,,,make_tabular
+3 lag/rolling (origin = example day),solar_peak_last (raw units),2026-11-14,,solar_peak,,220750.0,MW,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),solar_peak_roll30 (ratio to ref7),2026-11-14,,solar_peak,,1.079592842241852,ratio,,,,,,,make_tabular
+3 lag/rolling (origin = example day),solar_peak_roll30 (raw units),2026-11-14,,solar_peak,,223292.03333333333,MW,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),solar_peak_std7 (ratio to ref7),2026-11-14,,solar_peak,,0.0619781996888635,ratio,,,,,,,make_tabular
+3 lag/rolling (origin = example day),solar_peak_std7 (raw units),2026-11-14,,solar_peak,,12818.94218761911,MW,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),solar_peak_std30 (ratio to ref7),2026-11-14,,solar_peak,,0.0612017706943708,ratio,,,,,,,make_tabular
+3 lag/rolling (origin = example day),solar_peak_std30 (raw units),2026-11-14,,solar_peak,,12658.353489606612,MW,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),solar_peak_lag7 (ratio to ref7),2026-11-15,1,solar_peak,,0.9460578018233069,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),solar_peak_lag7 (raw units),2026-11-15,1,solar_peak,,195673.0,MW,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),solar_peak_lag7 (ratio to ref7),2026-11-16,2,solar_peak,,0.9177978586954495,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),solar_peak_lag7 (raw units),2026-11-16,2,solar_peak,,189828.0,MW,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),solar_peak_lag7 (ratio to ref7),2026-11-17,3,solar_peak,,0.9555051805866659,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),solar_peak_lag7 (raw units),2026-11-17,3,solar_peak,,197627.0,MW,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),solar_peak_lag7 (ratio to ref7),2026-11-18,4,solar_peak,,1.0005276939154268,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),solar_peak_lag7 (raw units),2026-11-18,4,solar_peak,,206939.00000000003,MW,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),solar_peak_lag7 (ratio to ref7),2026-11-19,5,solar_peak,,1.040463900970363,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),solar_peak_lag7 (raw units),2026-11-19,5,solar_peak,,215199.0,MW,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),solar_peak_lag7 (ratio to ref7),2026-11-20,6,solar_peak,,1.072345178127778,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),solar_peak_lag7 (raw units),2026-11-20,6,solar_peak,,221793.0,MW,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),solar_peak_lag7 (ratio to ref7),2026-11-21,7,solar_peak,,1.0673023858810107,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),solar_peak_lag7 (raw units),2026-11-21,7,solar_peak,,220750.0,MW,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),solar_peak_lag14 (ratio to ref7),2026-11-15,1,solar_peak,,1.0417403124307143,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),solar_peak_lag14 (raw units),2026-11-15,1,solar_peak,,215463.0,MW,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),solar_peak_lag14 (ratio to ref7),2026-11-16,2,solar_peak,,1.0949966466571213,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),solar_peak_lag14 (raw units),2026-11-16,2,solar_peak,,226478.0,MW,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),solar_peak_lag14 (ratio to ref7),2026-11-17,3,solar_peak,,1.0860375919751846,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),solar_peak_lag14 (raw units),2026-11-17,3,solar_peak,,224625.0,MW,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),solar_peak_lag14 (ratio to ref7),2026-11-18,4,solar_peak,,1.095489805630439,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),solar_peak_lag14 (raw units),2026-11-18,4,solar_peak,,226580.00000000003,MW,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),solar_peak_lag14 (ratio to ref7),2026-11-19,5,solar_peak,,1.088474377490401,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),solar_peak_lag14 (raw units),2026-11-19,5,solar_peak,,225129.0,MW,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),solar_peak_lag14 (ratio to ref7),2026-11-20,6,solar_peak,,1.1031676139601287,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),solar_peak_lag14 (raw units),2026-11-20,6,solar_peak,,228168.0,MW,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),solar_peak_lag14 (ratio to ref7),2026-11-21,7,solar_peak,,1.0564577233599184,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),solar_peak_lag14 (raw units),2026-11-21,7,solar_peak,,218507.0,MW,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),solar_peak_lag364 (ratio to ref7),2026-11-15,1,solar_peak,,0.9087566108512933,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),solar_peak_lag364 (raw units),2026-11-15,1,solar_peak,,187958.0,MW,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),solar_peak_lag364 (ratio to ref7),2026-11-16,2,solar_peak,,0.9527831364496284,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),solar_peak_lag364 (raw units),2026-11-16,2,solar_peak,,197064.0,MW,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),solar_peak_lag364 (ratio to ref7),2026-11-17,3,solar_peak,,0.958149866453379,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),solar_peak_lag364 (raw units),2026-11-17,3,solar_peak,,198174.0,MW,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),solar_peak_lag364 (ratio to ref7),2026-11-18,4,solar_peak,,0.9655955999720959,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),solar_peak_lag364 (raw units),2026-11-18,4,solar_peak,,199714.0,MW,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),solar_peak_lag364 (ratio to ref7),2026-11-19,5,solar_peak,,0.9835668931468171,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),solar_peak_lag364 (raw units),2026-11-19,5,solar_peak,,203431.0,MW,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),solar_peak_lag364 (ratio to ref7),2026-11-20,6,solar_peak,,1.0157382638179484,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),solar_peak_lag364 (raw units),2026-11-20,6,solar_peak,,210085.0,MW,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),solar_peak_lag364 (ratio to ref7),2026-11-21,7,solar_peak,,0.9878844516092938,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),solar_peak_lag364 (raw units),2026-11-21,7,solar_peak,,204324.0,MW,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),evening_peak_ref7 (7-day mean level),2026-11-14,,evening_peak,,197636.42857142858,MW,,,,,,,src.features.build.reference_levels
+3 lag/rolling (origin = example day),evening_peak_last (ratio to ref7),2026-11-14,,evening_peak,,1.0706578818971344,ratio,,,,,,,make_tabular
+3 lag/rolling (origin = example day),evening_peak_last (raw units),2026-11-14,,evening_peak,,211601.00000000003,MW,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),evening_peak_roll30 (ratio to ref7),2026-11-14,,evening_peak,,1.0807985562715567,ratio,,,,,,,make_tabular
+3 lag/rolling (origin = example day),evening_peak_roll30 (raw units),2026-11-14,,evening_peak,,213605.16666666666,MW,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),evening_peak_std7 (ratio to ref7),2026-11-14,,evening_peak,,0.0708890355012663,ratio,,,,,,,make_tabular
+3 lag/rolling (origin = example day),evening_peak_std7 (raw units),2026-11-14,,evening_peak,,14010.255801343481,MW,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),evening_peak_std30 (ratio to ref7),2026-11-14,,evening_peak,,0.06614747711524217,ratio,,,,,,,make_tabular
+3 lag/rolling (origin = example day),evening_peak_std30 (raw units),2026-11-14,,evening_peak,,13073.151136066766,MW,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),evening_peak_lag7 (ratio to ref7),2026-11-15,1,evening_peak,,0.8923557325680994,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),evening_peak_lag7 (raw units),2026-11-15,1,evening_peak,,176362.0,MW,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),evening_peak_lag7 (ratio to ref7),2026-11-16,2,evening_peak,,0.9288318015403464,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),evening_peak_lag7 (raw units),2026-11-16,2,evening_peak,,183571.0,MW,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),evening_peak_lag7 (ratio to ref7),2026-11-17,3,evening_peak,,0.9742434701526251,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),evening_peak_lag7 (raw units),2026-11-17,3,evening_peak,,192546.0,MW,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),evening_peak_lag7 (ratio to ref7),2026-11-18,4,evening_peak,,1.0097581778951972,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),evening_peak_lag7 (raw units),2026-11-18,4,evening_peak,,199565.0,MW,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),evening_peak_lag7 (ratio to ref7),2026-11-19,5,evening_peak,,1.0575378310100436,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),evening_peak_lag7 (raw units),2026-11-19,5,evening_peak,,209008.0,MW,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),evening_peak_lag7 (ratio to ref7),2026-11-20,6,evening_peak,,1.0666151049365538,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),evening_peak_lag7 (raw units),2026-11-20,6,evening_peak,,210802.0,MW,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),evening_peak_lag7 (ratio to ref7),2026-11-21,7,evening_peak,,1.0706578818971344,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),evening_peak_lag7 (raw units),2026-11-21,7,evening_peak,,211601.00000000003,MW,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),evening_peak_lag14 (ratio to ref7),2026-11-15,1,evening_peak,,1.0280088618711847,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),evening_peak_lag14 (raw units),2026-11-15,1,evening_peak,,203171.99999999997,MW,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),evening_peak_lag14 (ratio to ref7),2026-11-16,2,evening_peak,,1.1118952188542452,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),evening_peak_lag14 (raw units),2026-11-16,2,evening_peak,,219751.0,MW,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),evening_peak_lag14 (ratio to ref7),2026-11-17,3,evening_peak,,1.117501472762034,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),evening_peak_lag14 (raw units),2026-11-17,3,evening_peak,,220858.99999999997,MW,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),evening_peak_lag14 (ratio to ref7),2026-11-18,4,evening_peak,,1.113478934985236,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),evening_peak_lag14 (raw units),2026-11-18,4,evening_peak,,220063.99999999997,MW,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),evening_peak_lag14 (ratio to ref7),2026-11-19,5,evening_peak,,1.119677185018667,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),evening_peak_lag14 (raw units),2026-11-19,5,evening_peak,,221289.00000000003,MW,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),evening_peak_lag14 (ratio to ref7),2026-11-20,6,evening_peak,,1.0947728693741394,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),evening_peak_lag14 (raw units),2026-11-20,6,evening_peak,,216367.00000000003,MW,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),evening_peak_lag14 (ratio to ref7),2026-11-21,7,evening_peak,,1.0194780459068058,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),evening_peak_lag14 (raw units),2026-11-21,7,evening_peak,,201486.0,MW,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),evening_peak_lag364 (ratio to ref7),2026-11-15,1,evening_peak,,0.9122356708385888,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),evening_peak_lag364 (raw units),2026-11-15,1,evening_peak,,180291.0,MW,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),evening_peak_lag364 (ratio to ref7),2026-11-16,2,evening_peak,,0.9876418098167269,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),evening_peak_lag364 (raw units),2026-11-16,2,evening_peak,,195194.0,MW,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),evening_peak_lag364 (ratio to ref7),2026-11-17,3,evening_peak,,0.9954693141446596,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),evening_peak_lag364 (raw units),2026-11-17,3,evening_peak,,196741.0,MW,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),evening_peak_lag364 (ratio to ref7),2026-11-18,4,evening_peak,,0.9955148523081705,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),evening_peak_lag364 (raw units),2026-11-18,4,evening_peak,,196750.0,MW,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),evening_peak_lag364 (ratio to ref7),2026-11-19,5,evening_peak,,1.0012020629510898,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),evening_peak_lag364 (raw units),2026-11-19,5,evening_peak,,197874.0,MW,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),evening_peak_lag364 (ratio to ref7),2026-11-20,6,evening_peak,,0.992134908616471,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),evening_peak_lag364 (raw units),2026-11-20,6,evening_peak,,196082.0,MW,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),evening_peak_lag364 (ratio to ref7),2026-11-21,7,evening_peak,,0.9866298506275953,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),evening_peak_lag364 (raw units),2026-11-21,7,evening_peak,,194994.0,MW,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),energy_ref7 (7-day mean level),2026-11-14,,energy,,4300.398571428572,MU,,,,,,,src.features.build.reference_levels
+3 lag/rolling (origin = example day),energy_last (ratio to ref7),2026-11-14,,energy,,1.0656756400320369,ratio,,,,,,,make_tabular
+3 lag/rolling (origin = example day),energy_last (raw units),2026-11-14,,energy,,4582.83,MU,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),energy_roll30 (ratio to ref7),2026-11-14,,energy,,1.1009061729272713,ratio,,,,,,,make_tabular
+3 lag/rolling (origin = example day),energy_roll30 (raw units),2026-11-14,,energy,,4734.335333333333,MU,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),energy_std7 (ratio to ref7),2026-11-14,,energy,,0.05691523801853545,ratio,,,,,,,make_tabular
+3 lag/rolling (origin = example day),energy_std7 (raw units),2026-11-14,,energy,,244.758208267427,MU,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),energy_std30 (ratio to ref7),2026-11-14,,energy,,0.07100988698994813,ratio,,,,,,,make_tabular
+3 lag/rolling (origin = example day),energy_std30 (raw units),2026-11-14,,energy,,305.3708165688773,MU,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),energy_lag7 (ratio to ref7),2026-11-15,1,energy,,0.9458216331443031,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),energy_lag7 (raw units),2026-11-15,1,energy,,4067.41,MU,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),energy_lag7 (ratio to ref7),2026-11-16,2,energy,,0.9194496589850973,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),energy_lag7 (raw units),2026-11-16,2,energy,,3954.0,MU,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),energy_lag7 (ratio to ref7),2026-11-17,3,energy,,0.9716424955959231,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),energy_lag7 (raw units),2026-11-17,3,energy,,4178.45,MU,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),energy_lag7 (ratio to ref7),2026-11-18,4,energy,,1.0025210287817174,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),energy_lag7 (raw units),2026-11-18,4,energy,,4311.24,MU,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),energy_lag7 (ratio to ref7),2026-11-19,5,energy,,1.0335414092846544,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),energy_lag7 (raw units),2026-11-19,5,energy,,4444.64,MU,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),energy_lag7 (ratio to ref7),2026-11-20,6,energy,,1.0613481341762674,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),energy_lag7 (raw units),2026-11-20,6,energy,,4564.22,MU,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),energy_lag7 (ratio to ref7),2026-11-21,7,energy,,1.0656756400320369,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),energy_lag7 (raw units),2026-11-21,7,energy,,4582.83,MU,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),energy_lag14 (ratio to ref7),2026-11-15,1,energy,,1.0728819488160397,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),energy_lag14 (raw units),2026-11-15,1,energy,,4613.82,MU,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),energy_lag14 (ratio to ref7),2026-11-16,2,energy,,1.1104342820050899,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),energy_lag14 (raw units),2026-11-16,2,energy,,4775.31,MU,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),energy_lag14 (ratio to ref7),2026-11-17,3,energy,,1.118747464935974,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),energy_lag14 (raw units),2026-11-17,3,energy,,4811.0599999999995,MU,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),energy_lag14 (ratio to ref7),2026-11-18,4,energy,,1.1202263976196225,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),energy_lag14 (raw units),2026-11-18,4,energy,,4817.42,MU,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),energy_lag14 (ratio to ref7),2026-11-19,5,energy,,1.1179568405453446,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),energy_lag14 (raw units),2026-11-19,5,energy,,4807.66,MU,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),energy_lag14 (ratio to ref7),2026-11-20,6,energy,,1.1143781024948185,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),energy_lag14 (raw units),2026-11-20,6,energy,,4792.27,MU,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),energy_lag14 (ratio to ref7),2026-11-21,7,energy,,1.0651268536903058,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),energy_lag14 (raw units),2026-11-21,7,energy,,4580.47,MU,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),energy_lag364 (ratio to ref7),2026-11-15,1,energy,,0.9100016975170739,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),energy_lag364 (raw units),2026-11-15,1,energy,,3913.37,MU,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),energy_lag364 (ratio to ref7),2026-11-16,2,energy,,0.9445636102168602,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),energy_lag364 (raw units),2026-11-16,2,energy,,4062.0,MU,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),energy_lag364 (ratio to ref7),2026-11-17,3,energy,,0.9537046233920511,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),energy_lag364 (raw units),2026-11-17,3,energy,,4101.31,MU,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),energy_lag364 (ratio to ref7),2026-11-18,4,energy,,0.9644780433973064,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),energy_lag364 (raw units),2026-11-18,4,energy,,4147.64,MU,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),energy_lag364 (ratio to ref7),2026-11-19,5,energy,,0.9705100424246389,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),energy_lag364 (raw units),2026-11-19,5,energy,,4173.58,MU,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),energy_lag364 (ratio to ref7),2026-11-20,6,energy,,0.9882223541405962,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),energy_lag364 (raw units),2026-11-20,6,energy,,4249.75,MU,,,,,,,ratio x ref7
+3 lag/rolling (origin = example day),energy_lag364 (ratio to ref7),2026-11-21,7,energy,,0.9822019819425374,ratio,,,,,,,make_tabular (value of the day h ahead minus lag)
+3 lag/rolling (origin = example day),energy_lag364 (raw units),2026-11-21,7,energy,,4223.86,MU,,,,,,,ratio x ref7
+"4 LSTM encoder input, last day of the 60-day window",solar_peak_r,2026-11-14,,,,1.0673023462295532,raw,0.687407,0.993965,0.106687,,,,"make_sequences + scaler.npz (scaled = clip((raw-mu)/sd, -10, 10))"
+"4 LSTM encoder input, last day of the 60-day window",evening_peak_r,2026-11-14,,,,1.0706578493118286,raw,0.832121,0.992582,0.093828,,,,"make_sequences + scaler.npz (scaled = clip((raw-mu)/sd, -10, 10))"
+"4 LSTM encoder input, last day of the 60-day window",energy_r,2026-11-14,,,,1.0656756162643433,raw,0.969311,0.998842,0.0689495,,,,"make_sequences + scaler.npz (scaled = clip((raw-mu)/sd, -10, 10))"
+"4 LSTM encoder input, last day of the 60-day window",solar_peak_mask,2026-11-14,,,,1.0,raw,0.0772808,0.994068,0.0767618,,,,"make_sequences + scaler.npz (scaled = clip((raw-mu)/sd, -10, 10))"
+"4 LSTM encoder input, last day of the 60-day window",evening_peak_mask,2026-11-14,,,,1.0,raw,0.0772808,0.994068,0.0767618,,,,"make_sequences + scaler.npz (scaled = clip((raw-mu)/sd, -10, 10))"
+"4 LSTM encoder input, last day of the 60-day window",energy_mask,2026-11-14,,,,1.0,raw,0,1,1,,,,"make_sequences + scaler.npz (scaled = clip((raw-mu)/sd, -10, 10))"
+"4 LSTM encoder input, last day of the 60-day window",tmax_ai,2026-11-14,,,,30.724945068359375,raw,-0.175031,31.3737,3.7064,,,,"make_sequences + scaler.npz (scaled = clip((raw-mu)/sd, -10, 10))"
+"4 LSTM encoder input, last day of the 60-day window",tmean_ai,2026-11-14,,,,25.734710693359375,raw,-0.120008,26.1849,3.75095,,,,"make_sequences + scaler.npz (scaled = clip((raw-mu)/sd, -10, 10))"
+"4 LSTM encoder input, last day of the 60-day window",app_tmax_ai,2026-11-14,,,,31.925390243530273,raw,-0.399633,33.8588,4.83794,,,,"make_sequences + scaler.npz (scaled = clip((raw-mu)/sd, -10, 10))"
+"4 LSTM encoder input, last day of the 60-day window",rh_mean_ai,2026-11-14,,,,55.754615783691406,raw,-0.694427,65.0167,13.3377,,,,"make_sequences + scaler.npz (scaled = clip((raw-mu)/sd, -10, 10))"
+"4 LSTM encoder input, last day of the 60-day window",precip_ai,2026-11-14,,,,0.1926080733537674,raw,-0.733792,3.79539,4.90982,,,,"make_sequences + scaler.npz (scaled = clip((raw-mu)/sd, -10, 10))"
+"4 LSTM encoder input, last day of the 60-day window",rad_ai,2026-11-14,,,,16.977214813232422,raw,-0.447364,18.3431,3.05309,,,,"make_sequences + scaler.npz (scaled = clip((raw-mu)/sd, -10, 10))"
+"4 LSTM encoder input, last day of the 60-day window",cdd_ai,2026-11-14,,,,1.7468998432159424,raw,-0.539293,3.11208,2.53143,,,,"make_sequences + scaler.npz (scaled = clip((raw-mu)/sd, -10, 10))"
+"4 LSTM encoder input, last day of the 60-day window",tmax_nr,2026-11-14,,,,29.433332443237305,raw,-0.213102,30.7745,6.29344,,,,"make_sequences + scaler.npz (scaled = clip((raw-mu)/sd, -10, 10))"
+"4 LSTM encoder input, last day of the 60-day window",tmax_wr,2026-11-14,,,,33.266666412353516,raw,0.217435,32.5304,3.38595,,,,"make_sequences + scaler.npz (scaled = clip((raw-mu)/sd, -10, 10))"
+"4 LSTM encoder input, last day of the 60-day window",tmax_sr,2026-11-14,,,,29.866666793823242,raw,-0.352614,30.8414,2.76422,,,,"make_sequences + scaler.npz (scaled = clip((raw-mu)/sd, -10, 10))"
+"4 LSTM encoder input, last day of the 60-day window",tmax_er,2026-11-14,,,,29.200000762939453,raw,-0.492123,31.1642,3.99129,,,,"make_sequences + scaler.npz (scaled = clip((raw-mu)/sd, -10, 10))"
+"4 LSTM encoder input, last day of the 60-day window",tmax_ner,2026-11-14,,,,28.200000762939453,raw,-0.221685,29.023,3.71246,,,,"make_sequences + scaler.npz (scaled = clip((raw-mu)/sd, -10, 10))"
+"4 LSTM encoder input, last day of the 60-day window",cdd_nr,2026-11-14,,,,0.1666666716337204,raw,-0.913895,3.39898,3.53685,,,,"make_sequences + scaler.npz (scaled = clip((raw-mu)/sd, -10, 10))"
+"4 LSTM encoder input, last day of the 60-day window",cdd_wr,2026-11-14,,,,3.5333333015441895,raw,-0.0301411,3.61903,2.84333,,,,"make_sequences + scaler.npz (scaled = clip((raw-mu)/sd, -10, 10))"
+"4 LSTM encoder input, last day of the 60-day window",cdd_sr,2026-11-14,,,,1.5333333015441895,raw,-0.329087,2.17578,1.95219,,,,"make_sequences + scaler.npz (scaled = clip((raw-mu)/sd, -10, 10))"
+"4 LSTM encoder input, last day of the 60-day window",cdd_er,2026-11-14,,,,1.5,raw,-0.649347,3.24163,2.68212,,,,"make_sequences + scaler.npz (scaled = clip((raw-mu)/sd, -10, 10))"
+"4 LSTM encoder input, last day of the 60-day window",cdd_ner,2026-11-14,,,,0.0,raw,-0.901887,1.79159,1.98649,,,,"make_sequences + scaler.npz (scaled = clip((raw-mu)/sd, -10, 10))"
+"4 LSTM encoder input, last day of the 60-day window",tmin_ai,2026-11-14,,,,20.95628547668457,raw,-0.209651,21.8212,4.12565,,,,"make_sequences + scaler.npz (scaled = clip((raw-mu)/sd, -10, 10))"
+"4 LSTM encoder input, last day of the 60-day window",hdd_ai,2026-11-14,,,,0.0,raw,-0.399173,0.184707,0.462724,,,,"make_sequences + scaler.npz (scaled = clip((raw-mu)/sd, -10, 10))"
+"4 LSTM encoder input, last day of the 60-day window",tmin_nr,2026-11-14,,,,19.5,raw,-0.0818894,20.0536,6.76083,,,,"make_sequences + scaler.npz (scaled = clip((raw-mu)/sd, -10, 10))"
+"4 LSTM encoder input, last day of the 60-day window",hdd_nr,2026-11-14,,,,0.0,raw,-0.402717,0.610158,1.5151,,,,"make_sequences + scaler.npz (scaled = clip((raw-mu)/sd, -10, 10))"
+"4 LSTM encoder input, last day of the 60-day window",fog_nr,2026-11-14,,,,0.0,raw,-0.377092,0.0843851,0.223778,,,,"make_sequences + scaler.npz (scaled = clip((raw-mu)/sd, -10, 10))"
+"4 LSTM encoder input, last day of the 60-day window",cloud_day_ai,2026-11-14,,,,25.157285690307617,raw,-0.844129,48.594,27.7644,,,,"make_sequences + scaler.npz (scaled = clip((raw-mu)/sd, -10, 10))"
+"4 LSTM encoder input, last day of the 60-day window",dew_mean_ai,2026-11-14,,,,15.166282653808594,raw,-0.520449,17.7432,4.95129,,,,"make_sequences + scaler.npz (scaled = clip((raw-mu)/sd, -10, 10))"
+"4 LSTM encoder input, last day of the 60-day window",heat_index_ai,2026-11-14,,,,30.53107261657715,raw,-0.592949,33.5851,5.15061,,,,"make_sequences + scaler.npz (scaled = clip((raw-mu)/sd, -10, 10))"
+"4 LSTM encoder input, last day of the 60-day window",gust_max_ai,2026-11-14,,,,26.002023696899414,raw,-1.22703,33.0659,5.75691,,,,"make_sequences + scaler.npz (scaled = clip((raw-mu)/sd, -10, 10))"
+"4 LSTM encoder input, last day of the 60-day window",rain3_ai,2026-11-14,,,,0.4514009356498718,raw,-0.801567,11.3881,13.6442,,,,"make_sequences + scaler.npz (scaled = clip((raw-mu)/sd, -10, 10))"
+"4 LSTM encoder input, last day of the 60-day window",tmax_ai_anom,2026-11-14,,,,1.2038342952728271,raw,0.926555,0.0382295,1.258,,,,"make_sequences + scaler.npz (scaled = clip((raw-mu)/sd, -10, 10))"
+"4 LSTM encoder input, last day of the 60-day window",tmin_nr_anom,2026-11-14,,,,3.2276129722595215,raw,1.64245,0.157413,1.86928,,,,"make_sequences + scaler.npz (scaled = clip((raw-mu)/sd, -10, 10))"
+"4 LSTM encoder input, last day of the 60-day window",precip_ai_anom,2026-11-14,,,,-1.8380213975906372,raw,-0.574218,-0.034709,3.14047,,,,"make_sequences + scaler.npz (scaled = clip((raw-mu)/sd, -10, 10))"
+"4 LSTM encoder input, last day of the 60-day window",cloud_day_ai_anom,2026-11-14,,,,-8.821818351745605,raw,-0.514069,-0.994676,15.2259,,,,"make_sequences + scaler.npz (scaled = clip((raw-mu)/sd, -10, 10))"
+"4 LSTM encoder input, last day of the 60-day window",dow_sin,2026-11-14,,,,-0.9749279022216797,raw,-1.37874,0,0.707115,,,,"make_sequences + scaler.npz (scaled = clip((raw-mu)/sd, -10, 10))"
+"4 LSTM encoder input, last day of the 60-day window",dow_cos,2026-11-14,,,,-0.22252093255519867,raw,-0.314606,-6.35231e-05,0.707099,,,,"make_sequences + scaler.npz (scaled = clip((raw-mu)/sd, -10, 10))"
+"4 LSTM encoder input, last day of the 60-day window",doy_sin,2026-11-14,,,,-0.7262248992919922,raw,-0.997792,-0.0293404,0.698427,,,,"make_sequences + scaler.npz (scaled = clip((raw-mu)/sd, -10, 10))"
+"4 LSTM encoder input, last day of the 60-day window",doy_cos,2026-11-14,,,,0.6874572038650513,raw,0.951255,0.00727567,0.715036,,,,"make_sequences + scaler.npz (scaled = clip((raw-mu)/sd, -10, 10))"
+"4 LSTM encoder input, last day of the 60-day window",is_sunday,2026-11-14,,,,0.0,raw,-0.40811,0.142844,0.350013,,,,"make_sequences + scaler.npz (scaled = clip((raw-mu)/sd, -10, 10))"
+"4 LSTM encoder input, last day of the 60-day window",is_saturday,2026-11-14,,,,1.0,raw,2.44878,0.142859,0.350028,,,,"make_sequences + scaler.npz (scaled = clip((raw-mu)/sd, -10, 10))"
+"4 LSTM encoder input, last day of the 60-day window",is_holiday,2026-11-14,,,,0.0,raw,-0.256103,0.0615976,0.240519,,,,"make_sequences + scaler.npz (scaled = clip((raw-mu)/sd, -10, 10))"
+"4 LSTM encoder input, last day of the 60-day window",is_festival,2026-11-14,,,,0.0,raw,-0.175972,0.030022,0.170606,,,,"make_sequences + scaler.npz (scaled = clip((raw-mu)/sd, -10, 10))"
+"4 LSTM encoder input, last day of the 60-day window",diwali_window,2026-11-14,,,,0.0,raw,-0.119708,0.0141243,0.11799,,,,"make_sequences + scaler.npz (scaled = clip((raw-mu)/sd, -10, 10))"
+"4 LSTM encoder input, last day of the 60-day window",is_bridge,2026-11-14,,,,0.0,raw,-0.10708,0.0113308,0.105817,,,,"make_sequences + scaler.npz (scaled = clip((raw-mu)/sd, -10, 10))"
+"4 LSTM encoder input, last day of the 60-day window",is_imputed,2026-11-14,,,,0.0,raw,-0.0614828,0.00376648,0.0612607,,,,"make_sequences + scaler.npz (scaled = clip((raw-mu)/sd, -10, 10))"
+5 LSTM decoder input (known-future features),tmax_ai,2026-11-15,1,,,30.121797561645508,raw,-0.443541,31.8363,3.86556,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmean_ai,2026-11-15,1,,,25.28600311279297,raw,-0.40051,26.8579,3.92467,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),app_tmax_ai,2026-11-15,1,,,31.483213424682617,raw,-0.536763,34.1089,4.89165,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),rh_mean_ai,2026-11-15,1,,,56.86912536621094,raw,-0.487582,63.613,13.8312,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),precip_ai,2026-11-15,1,,,0.17953452467918396,raw,-0.693266,3.43693,4.69862,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),rad_ai,2026-11-15,1,,,16.269094467163086,raw,-0.51983,18.2989,3.9047,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),cdd_ai,2026-11-15,1,,,1.6509366035461426,raw,-0.70262,3.65215,2.84821,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmax_nr,2026-11-15,1,,,27.700000762939453,raw,-0.576021,31.4296,6.47473,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmax_wr,2026-11-15,1,,,32.733333587646484,raw,0.00873664,32.7033,3.43935,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmax_sr,2026-11-15,1,,,30.200000762939453,raw,-0.371549,31.3651,3.1358,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmax_er,2026-11-15,1,,,29.200000762939453,raw,-0.608555,31.8036,4.27835,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmax_ner,2026-11-15,1,,,27.200000762939453,raw,-0.57405,29.3735,3.78618,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),cdd_nr,2026-11-15,1,,,0.0,raw,-0.994237,4.08353,4.1072,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),cdd_wr,2026-11-15,1,,,3.2902777194976807,raw,-0.256589,4.0475,2.9511,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),cdd_sr,2026-11-15,1,,,1.7708333730697632,raw,-0.415776,2.7189,2.28023,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),cdd_er,2026-11-15,1,,,1.225000023841858,raw,-0.848898,3.73021,2.95113,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),cdd_ner,2026-11-15,1,,,0.0,raw,-0.920075,2.19413,2.38473,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmin_ai,2026-11-15,1,,,20.891626358032227,raw,-0.39082,22.6088,4.39376,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),hdd_ai,2026-11-15,1,,,0.0,raw,-0.353035,0.133679,0.378656,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmin_nr,2026-11-15,1,,,19.100000381469727,raw,-0.313762,21.3113,7.04763,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),hdd_nr,2026-11-15,1,,,0.0,raw,-0.355964,0.444662,1.24918,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),fog_nr,2026-11-15,1,,,0.0,raw,-0.328648,0.055753,0.169644,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),cloud_day_ai,2026-11-15,1,,,29.418733596801758,raw,-0.728823,50.5006,28.9259,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),dew_mean_ai,2026-11-15,1,,,15.167967796325684,raw,-0.459697,17.5922,5.27363,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),heat_index_ai,2026-11-15,1,,,30.00629234313965,raw,-0.730337,33.8453,5.25654,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),gust_max_ai,2026-11-15,1,,,22.171850204467773,raw,-1.17579,29.0731,5.86947,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),rain3_ai,2026-11-15,1,,,0.5026351809501648,raw,-0.7655,10.8562,13.5252,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmax_ai_anom,2026-11-15,1,,,0.7113879323005676,raw,0.109164,0.537691,1.59116,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmin_nr_anom,2026-11-15,1,,,3.0390079021453857,raw,0.589537,1.55129,2.52354,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),precip_ai_anom,2026-11-15,1,,,-1.819735050201416,raw,-0.464089,-0.360796,3.14366,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),cloud_day_ai_anom,2026-11-15,1,,,-4.484727382659912,raw,-0.373238,1.19277,15.2115,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),wx_source,2026-11-15,1,,,0.0,raw,-0.152057,0.0451977,0.297242,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),d_tmax_ai,2026-11-15,1,,,-0.8898694515228271,raw,-0.842094,0.4821,1.62924,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),d_cdd_ai,2026-11-15,1,,,-0.3165533244609833,raw,-0.703275,0.547306,1.22834,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),d_app_tmax_ai,2026-11-15,1,,,-0.6102202534675598,raw,-0.525446,0.290664,1.71451,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),ref_holidays,2026-11-15,1,,,1.0,raw,0.804282,0.44162,0.69426,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),solar_peak_lag7,2026-11-15,1,,,0.9460577964782715,raw,-1.70763,1,0.031589,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),solar_peak_lag14,2026-11-15,1,,,1.0417402982711792,raw,0.806197,0.999858,0.0519506,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),solar_peak_lag364,2026-11-15,1,,,0.9087566137313843,raw,-1.36374,0.986799,0.0572271,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),evening_peak_lag7,2026-11-15,1,,,0.892355740070343,raw,-4.01604,1,0.0268036,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),evening_peak_lag14,2026-11-15,1,,,1.0280088186264038,raw,0.706813,0.999344,0.0405555,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),evening_peak_lag364,2026-11-15,1,,,0.912235677242279,raw,-1.57938,0.977528,0.0413403,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),energy_lag7,2026-11-15,1,,,0.9458216428756714,raw,-2.07276,1,0.0261382,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),energy_lag14,2026-11-15,1,,,1.0728819370269775,raw,1.6184,0.999474,0.0453585,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),energy_lag364,2026-11-15,1,,,0.9100016951560974,raw,-1.396,0.980397,0.050426,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),dow_sin,2026-11-15,1,,,-0.7818315029144287,raw,-1.10568,3.04678e-10,0.707107,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),dow_cos,2026-11-15,1,,,0.6234897971153259,raw,0.881748,3.1911e-09,0.707107,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),doy_sin,2026-11-15,1,,,-0.7142921090126038,raw,-0.979271,-0.0217011,0.707252,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),doy_cos,2026-11-15,1,,,0.6998476982116699,raw,0.9582,0.0231189,0.70625,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),is_sunday,2026-11-15,1,,,1.0,raw,2.44949,0.142857,0.349927,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),is_saturday,2026-11-15,1,,,0.0,raw,-0.408248,0.142857,0.349927,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),is_holiday,2026-11-15,1,,,0.0,raw,-0.260672,0.0636266,0.244087,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),is_festival,2026-11-15,1,,,0.0,raw,-0.176261,0.0301318,0.17095,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),diwali_window,2026-11-15,1,,,0.0,raw,-0.119694,0.0141243,0.118003,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),is_bridge,2026-11-15,1,,,0.0,raw,-0.113166,0.0126446,0.111735,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),days_to_festival,2026-11-15,1,,,30.0,raw,0.955719,19.8512,10.619,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),days_from_festival,2026-11-15,1,,,7.0,raw,-1.21013,19.8465,10.6158,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),fest_diwali,2026-11-15,1,,,0.0,raw,-0.0532246,0.00282486,0.0530743,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),fest_holi,2026-11-15,1,,,0.0,raw,-0.0532246,0.00282486,0.0530743,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),h_frac,2026-11-15,1,,,0.1428571492433548,raw,-1.5,0.571429,0.285714,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmax_ai,2026-11-16,2,,,30.153636932373047,raw,-0.435304,31.8363,3.86556,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmean_ai,2026-11-16,2,,,24.887941360473633,raw,-0.501936,26.8579,3.92467,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),app_tmax_ai,2026-11-16,2,,,30.92728614807129,raw,-0.650411,34.1089,4.89165,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),rh_mean_ai,2026-11-16,2,,,56.67433166503906,raw,-0.501666,63.613,13.8312,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),precip_ai,2026-11-16,2,,,0.007313582580536604,raw,-0.72992,3.43693,4.69862,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),rad_ai,2026-11-16,2,,,16.81389617919922,raw,-0.380306,18.2989,3.9047,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),cdd_ai,2026-11-16,2,,,1.7081763744354248,raw,-0.682524,3.65215,2.84821,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmax_nr,2026-11-16,2,,,27.100000381469727,raw,-0.668689,31.4296,6.47473,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmax_wr,2026-11-16,2,,,32.83333206176758,raw,0.0378114,32.7033,3.43935,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmax_sr,2026-11-16,2,,,30.600000381469727,raw,-0.24399,31.3651,3.1358,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmax_er,2026-11-16,2,,,30.0,raw,-0.421567,31.8036,4.27835,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmax_ner,2026-11-16,2,,,25.5,raw,-1.02305,29.3735,3.78618,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),cdd_nr,2026-11-16,2,,,0.0,raw,-0.994237,4.08353,4.1072,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),cdd_wr,2026-11-16,2,,,3.320833444595337,raw,-0.246235,4.0475,2.9511,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),cdd_sr,2026-11-16,2,,,1.9694443941116333,raw,-0.328675,2.7189,2.28023,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),cdd_er,2026-11-16,2,,,1.1875,raw,-0.861605,3.73021,2.95113,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),cdd_ner,2026-11-16,2,,,0.0,raw,-0.920075,2.19413,2.38473,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmin_ai,2026-11-16,2,,,20.284929275512695,raw,-0.528902,22.6088,4.39376,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),hdd_ai,2026-11-16,2,,,0.0,raw,-0.353035,0.133679,0.378656,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmin_nr,2026-11-16,2,,,17.100000381469727,raw,-0.597545,21.3113,7.04763,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),hdd_nr,2026-11-16,2,,,0.0,raw,-0.355964,0.444662,1.24918,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),fog_nr,2026-11-16,2,,,0.0,raw,-0.328648,0.055753,0.169644,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),cloud_day_ai,2026-11-16,2,,,20.46267318725586,raw,-1.03844,50.5006,28.9259,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),dew_mean_ai,2026-11-16,2,,,14.754399299621582,raw,-0.538119,17.5922,5.27363,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),heat_index_ai,2026-11-16,2,,,30.039161682128906,raw,-0.724084,33.8453,5.25654,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),gust_max_ai,2026-11-16,2,,,24.430845260620117,raw,-0.790921,29.0731,5.86947,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),rain3_ai,2026-11-16,2,,,0.37945616245269775,raw,-0.774608,10.8562,13.5252,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmax_ai_anom,2026-11-16,2,,,0.8547828793525696,raw,0.199284,0.537691,1.59116,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmin_nr_anom,2026-11-16,2,,,1.2502700090408325,raw,-0.119285,1.55129,2.52354,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),precip_ai_anom,2026-11-16,2,,,-1.9606387615203857,raw,-0.50891,-0.360796,3.14366,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),cloud_day_ai_anom,2026-11-16,2,,,-13.37588119506836,raw,-0.957742,1.19277,15.2115,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),wx_source,2026-11-16,2,,,0.0,raw,-0.152057,0.0451977,0.297242,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),d_tmax_ai,2026-11-16,2,,,-0.8580313920974731,raw,-0.822552,0.4821,1.62924,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),d_cdd_ai,2026-11-16,2,,,-0.2593136429786682,raw,-0.656676,0.547306,1.22834,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),d_app_tmax_ai,2026-11-16,2,,,-1.1661478281021118,raw,-0.849694,0.290664,1.71451,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),ref_holidays,2026-11-16,2,,,1.0,raw,0.804282,0.44162,0.69426,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),solar_peak_lag7,2026-11-16,2,,,0.917797863483429,raw,-2.60224,1,0.031589,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),solar_peak_lag14,2026-11-16,2,,,1.094996690750122,raw,1.83133,0.999858,0.0519506,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),solar_peak_lag364,2026-11-16,2,,,0.9527831077575684,raw,-0.59441,0.986799,0.0572271,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),evening_peak_lag7,2026-11-16,2,,,0.9288318157196045,raw,-2.65517,1,0.0268036,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),evening_peak_lag14,2026-11-16,2,,,1.111895203590393,raw,2.77524,0.999344,0.0405555,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),evening_peak_lag364,2026-11-16,2,,,0.9876418113708496,raw,0.244651,0.977528,0.0413403,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),energy_lag7,2026-11-16,2,,,0.9194496870040894,raw,-3.08171,1,0.0261382,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),energy_lag14,2026-11-16,2,,,1.1104342937469482,raw,2.4463,0.999474,0.0453585,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),energy_lag364,2026-11-16,2,,,0.944563627243042,raw,-0.710603,0.980397,0.050426,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),dow_sin,2026-11-16,2,,,0.0,raw,-4.3088e-10,3.04678e-10,0.707107,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),dow_cos,2026-11-16,2,,,1.0,raw,1.41421,3.1911e-09,0.707107,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),doy_sin,2026-11-16,2,,,-0.7021479606628418,raw,-0.9621,-0.0217011,0.707252,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),doy_cos,2026-11-16,2,,,0.7120310664176941,raw,0.975451,0.0231189,0.70625,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),is_sunday,2026-11-16,2,,,0.0,raw,-0.408248,0.142857,0.349927,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),is_saturday,2026-11-16,2,,,0.0,raw,-0.408248,0.142857,0.349927,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),is_holiday,2026-11-16,2,,,0.0,raw,-0.260672,0.0636266,0.244087,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),is_festival,2026-11-16,2,,,0.0,raw,-0.176261,0.0301318,0.17095,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),diwali_window,2026-11-16,2,,,0.0,raw,-0.119694,0.0141243,0.118003,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),is_bridge,2026-11-16,2,,,0.0,raw,-0.113166,0.0126446,0.111735,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),days_to_festival,2026-11-16,2,,,30.0,raw,0.955719,19.8512,10.619,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),days_from_festival,2026-11-16,2,,,8.0,raw,-1.11593,19.8465,10.6158,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),fest_diwali,2026-11-16,2,,,0.0,raw,-0.0532246,0.00282486,0.0530743,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),fest_holi,2026-11-16,2,,,0.0,raw,-0.0532246,0.00282486,0.0530743,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),h_frac,2026-11-16,2,,,0.2857142984867096,raw,-1,0.571429,0.285714,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmax_ai,2026-11-17,3,,,29.832483291625977,raw,-0.518385,31.8363,3.86556,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmean_ai,2026-11-17,3,,,24.463890075683594,raw,-0.609983,26.8579,3.92467,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),app_tmax_ai,2026-11-17,3,,,30.171892166137695,raw,-0.804836,34.1089,4.89165,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),rh_mean_ai,2026-11-17,3,,,53.04356002807617,raw,-0.764172,63.613,13.8312,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),precip_ai,2026-11-17,3,,,0.0012189304688945413,raw,-0.731217,3.43693,4.69862,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),rad_ai,2026-11-17,3,,,17.020566940307617,raw,-0.327377,18.2989,3.9047,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),cdd_ai,2026-11-17,3,,,1.657504916191101,raw,-0.700314,3.65215,2.84821,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmax_nr,2026-11-17,3,,,26.133333206176758,raw,-0.817987,31.4296,6.47473,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmax_wr,2026-11-17,3,,,33.13333511352539,raw,0.125038,32.7033,3.43935,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmax_sr,2026-11-17,3,,,30.233333587646484,raw,-0.360919,31.3651,3.1358,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmax_er,2026-11-17,3,,,29.600000381469727,raw,-0.515061,31.8036,4.27835,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmax_ner,2026-11-17,3,,,26.200000762939453,raw,-0.838169,29.3735,3.78618,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),cdd_nr,2026-11-17,3,,,0.0,raw,-0.994237,4.08353,4.1072,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),cdd_wr,2026-11-17,3,,,3.6152777671813965,raw,-0.146461,4.0475,2.9511,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),cdd_sr,2026-11-17,3,,,1.5486111640930176,raw,-0.513232,2.7189,2.28023,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),cdd_er,2026-11-17,3,,,0.887499988079071,raw,-0.963261,3.73021,2.95113,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),cdd_ner,2026-11-17,3,,,0.0,raw,-0.920075,2.19413,2.38473,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmin_ai,2026-11-17,3,,,19.62625503540039,raw,-0.678813,22.6088,4.39376,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),hdd_ai,2026-11-17,3,,,0.0,raw,-0.353035,0.133679,0.378656,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmin_nr,2026-11-17,3,,,15.0,raw,-0.895518,21.3113,7.04763,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),hdd_nr,2026-11-17,3,,,0.0,raw,-0.355964,0.444662,1.24918,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),fog_nr,2026-11-17,3,,,0.0,raw,-0.328648,0.055753,0.169644,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),cloud_day_ai,2026-11-17,3,,,25.642351150512695,raw,-0.859376,50.5006,28.9259,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),dew_mean_ai,2026-11-17,3,,,13.336177825927734,raw,-0.807046,17.5922,5.27363,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),heat_index_ai,2026-11-17,3,,,29.420839309692383,raw,-0.841713,33.8453,5.25654,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),gust_max_ai,2026-11-17,3,,,26.196500778198242,raw,-0.490101,29.0731,5.86947,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),rain3_ai,2026-11-17,3,,,0.18806703388690948,raw,-0.788758,10.8562,13.5252,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmax_ai_anom,2026-11-17,3,,,0.6458951234817505,raw,0.0680035,0.537691,1.59116,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmin_nr_anom,2026-11-17,3,,,-0.6387731432914734,raw,-0.867854,1.55129,2.52354,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),precip_ai_anom,2026-11-17,3,,,-1.9354108572006226,raw,-0.500885,-0.360796,3.14366,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),cloud_day_ai_anom,2026-11-17,3,,,-8.14145278930664,raw,-0.613631,1.19277,15.2115,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),wx_source,2026-11-17,3,,,0.0,raw,-0.152057,0.0451977,0.297242,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),d_tmax_ai,2026-11-17,3,,,-1.1791850328445435,raw,-1.01967,0.4821,1.62924,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),d_cdd_ai,2026-11-17,3,,,-0.3099850118160248,raw,-0.697928,0.547306,1.22834,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),d_app_tmax_ai,2026-11-17,3,,,-1.9215425252914429,raw,-1.29028,0.290664,1.71451,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),ref_holidays,2026-11-17,3,,,1.0,raw,0.804282,0.44162,0.69426,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),solar_peak_lag7,2026-11-17,3,,,0.9555051922798157,raw,-1.40855,1,0.031589,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),solar_peak_lag14,2026-11-17,3,,,1.0860376358032227,raw,1.65888,0.999858,0.0519506,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),solar_peak_lag364,2026-11-17,3,,,0.9581498503684998,raw,-0.500631,0.986799,0.0572271,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),evening_peak_lag7,2026-11-17,3,,,0.9742434620857239,raw,-0.960936,1,0.0268036,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),evening_peak_lag14,2026-11-17,3,,,1.1175014972686768,raw,2.91348,0.999344,0.0405555,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),evening_peak_lag364,2026-11-17,3,,,0.995469331741333,raw,0.433995,0.977528,0.0413403,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),energy_lag7,2026-11-17,3,,,0.9716424942016602,raw,-1.08491,1,0.0261382,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),energy_lag14,2026-11-17,3,,,1.1187474727630615,raw,2.62957,0.999474,0.0453585,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),energy_lag364,2026-11-17,3,,,0.9537045955657959,raw,-0.529328,0.980397,0.050426,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),dow_sin,2026-11-17,3,,,0.7818315029144287,raw,1.10568,3.04678e-10,0.707107,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),dow_cos,2026-11-17,3,,,0.6234897971153259,raw,0.881748,3.1911e-09,0.707107,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),doy_sin,2026-11-17,3,,,-0.6897960305213928,raw,-0.944635,-0.0217011,0.707252,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),doy_cos,2026-11-17,3,,,0.724003791809082,raw,0.992403,0.0231189,0.70625,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),is_sunday,2026-11-17,3,,,0.0,raw,-0.408248,0.142857,0.349927,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),is_saturday,2026-11-17,3,,,0.0,raw,-0.408248,0.142857,0.349927,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),is_holiday,2026-11-17,3,,,0.0,raw,-0.260672,0.0636266,0.244087,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),is_festival,2026-11-17,3,,,0.0,raw,-0.176261,0.0301318,0.17095,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),diwali_window,2026-11-17,3,,,0.0,raw,-0.119694,0.0141243,0.118003,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),is_bridge,2026-11-17,3,,,0.0,raw,-0.113166,0.0126446,0.111735,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),days_to_festival,2026-11-17,3,,,30.0,raw,0.955719,19.8512,10.619,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),days_from_festival,2026-11-17,3,,,9.0,raw,-1.02173,19.8465,10.6158,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),fest_diwali,2026-11-17,3,,,0.0,raw,-0.0532246,0.00282486,0.0530743,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),fest_holi,2026-11-17,3,,,0.0,raw,-0.0532246,0.00282486,0.0530743,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),h_frac,2026-11-17,3,,,0.4285714328289032,raw,-0.5,0.571429,0.285714,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmax_ai,2026-11-18,4,,,29.310260772705078,raw,-0.653481,31.8363,3.86556,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmean_ai,2026-11-18,4,,,23.954050064086914,raw,-0.73989,26.8579,3.92467,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),app_tmax_ai,2026-11-18,4,,,29.064069747924805,raw,-1.03131,34.1089,4.89165,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),rh_mean_ai,2026-11-18,4,,,49.28324890136719,raw,-1.03604,63.613,13.8312,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),precip_ai,2026-11-18,4,,,0.1391921043395996,raw,-0.701852,3.43693,4.69862,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),rad_ai,2026-11-18,4,,,16.957866668701172,raw,-0.343435,18.2989,3.9047,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),cdd_ai,2026-11-18,4,,,1.408558964729309,raw,-0.787718,3.65215,2.84821,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmax_nr,2026-11-18,4,,,25.633333206176758,raw,-0.89521,31.4296,6.47473,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmax_wr,2026-11-18,4,,,32.733333587646484,raw,0.00873664,32.7033,3.43935,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmax_sr,2026-11-18,4,,,29.899999618530273,raw,-0.467219,31.3651,3.1358,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmax_er,2026-11-18,4,,,28.0,raw,-0.889037,31.8036,4.27835,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmax_ner,2026-11-18,4,,,28.100000381469727,raw,-0.336344,29.3735,3.78618,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),cdd_nr,2026-11-18,4,,,0.0,raw,-0.994237,4.08353,4.1072,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),cdd_wr,2026-11-18,4,,,3.3972222805023193,raw,-0.220351,4.0475,2.9511,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),cdd_sr,2026-11-18,4,,,1.2527778148651123,raw,-0.64297,2.7189,2.28023,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),cdd_er,2026-11-18,4,,,0.0,raw,-1.26399,3.73021,2.95113,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),cdd_ner,2026-11-18,4,,,0.0,raw,-0.920075,2.19413,2.38473,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmin_ai,2026-11-18,4,,,19.180208206176758,raw,-0.780331,22.6088,4.39376,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),hdd_ai,2026-11-18,4,,,0.0,raw,-0.353035,0.133679,0.378656,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmin_nr,2026-11-18,4,,,14.466666221618652,raw,-0.971194,21.3113,7.04763,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),hdd_nr,2026-11-18,4,,,0.0,raw,-0.355964,0.444662,1.24918,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),fog_nr,2026-11-18,4,,,0.0,raw,-0.328648,0.055753,0.169644,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),cloud_day_ai,2026-11-18,4,,,39.832759857177734,raw,-0.368799,50.5006,28.9259,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),dew_mean_ai,2026-11-18,4,,,11.663042068481445,raw,-1.12431,17.5922,5.27363,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),heat_index_ai,2026-11-18,4,,,28.50113868713379,raw,-1.01668,33.8453,5.25654,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),gust_max_ai,2026-11-18,4,,,24.3776798248291,raw,-0.799979,29.0731,5.86947,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),rain3_ai,2026-11-18,4,,,0.14772461354732513,raw,-0.791741,10.8562,13.5252,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmax_ai_anom,2026-11-18,4,,,0.2364995777606964,raw,-0.18929,0.537691,1.59116,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmin_nr_anom,2026-11-18,4,,,-0.9616284966468811,raw,-0.995792,1.55129,2.52354,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),precip_ai_anom,2026-11-18,4,,,-1.7660655975341797,raw,-0.447016,-0.360796,3.14366,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),cloud_day_ai_anom,2026-11-18,4,,,6.094139099121094,raw,0.322215,1.19277,15.2115,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),wx_source,2026-11-18,4,,,0.0,raw,-0.152057,0.0451977,0.297242,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),d_tmax_ai,2026-11-18,4,,,-1.701406478881836,raw,-1.3402,0.4821,1.62924,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),d_cdd_ai,2026-11-18,4,,,-0.5589309334754944,raw,-0.900597,0.547306,1.22834,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),d_app_tmax_ai,2026-11-18,4,,,-3.029365301132202,raw,-1.93643,0.290664,1.71451,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),ref_holidays,2026-11-18,4,,,1.0,raw,0.804282,0.44162,0.69426,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),solar_peak_lag7,2026-11-18,4,,,1.0005277395248413,raw,0.0167064,1,0.031589,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),solar_peak_lag14,2026-11-18,4,,,1.0954898595809937,raw,1.84082,0.999858,0.0519506,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),solar_peak_lag364,2026-11-18,4,,,0.9655956029891968,raw,-0.370522,0.986799,0.0572271,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),evening_peak_lag7,2026-11-18,4,,,1.0097582340240479,raw,0.364065,1,0.0268036,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),evening_peak_lag14,2026-11-18,4,,,1.1134788990020752,raw,2.81429,0.999344,0.0405555,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),evening_peak_lag364,2026-11-18,4,,,0.9955148696899414,raw,0.435096,0.977528,0.0413403,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),energy_lag7,2026-11-18,4,,,1.00252103805542,raw,0.0964502,1,0.0261382,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),energy_lag14,2026-11-18,4,,,1.1202263832092285,raw,2.66218,0.999474,0.0453585,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),energy_lag364,2026-11-18,4,,,0.9644780158996582,raw,-0.31568,0.980397,0.050426,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),dow_sin,2026-11-18,4,,,0.9749279022216797,raw,1.37876,3.04678e-10,0.707107,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),dow_cos,2026-11-18,4,,,-0.22252093255519867,raw,-0.314692,3.1911e-09,0.707107,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),doy_sin,2026-11-18,4,,,-0.6772399544715881,raw,-0.926882,-0.0217011,0.707252,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),doy_cos,2026-11-18,4,,,0.7357622385025024,raw,1.00905,0.0231189,0.70625,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),is_sunday,2026-11-18,4,,,0.0,raw,-0.408248,0.142857,0.349927,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),is_saturday,2026-11-18,4,,,0.0,raw,-0.408248,0.142857,0.349927,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),is_holiday,2026-11-18,4,,,0.0,raw,-0.260672,0.0636266,0.244087,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),is_festival,2026-11-18,4,,,0.0,raw,-0.176261,0.0301318,0.17095,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),diwali_window,2026-11-18,4,,,0.0,raw,-0.119694,0.0141243,0.118003,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),is_bridge,2026-11-18,4,,,0.0,raw,-0.113166,0.0126446,0.111735,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),days_to_festival,2026-11-18,4,,,30.0,raw,0.955719,19.8512,10.619,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),days_from_festival,2026-11-18,4,,,10.0,raw,-0.927535,19.8465,10.6158,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),fest_diwali,2026-11-18,4,,,0.0,raw,-0.0532246,0.00282486,0.0530743,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),fest_holi,2026-11-18,4,,,0.0,raw,-0.0532246,0.00282486,0.0530743,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),h_frac,2026-11-18,4,,,0.5714285969734192,raw,0,0.571429,0.285714,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmax_ai,2026-11-19,5,,,28.61238670349121,raw,-0.834018,31.8363,3.86556,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmean_ai,2026-11-19,5,,,23.267555236816406,raw,-0.914807,26.8579,3.92467,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),app_tmax_ai,2026-11-19,5,,,28.415122985839844,raw,-1.16397,34.1089,4.89165,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),rh_mean_ai,2026-11-19,5,,,53.83164978027344,raw,-0.707192,63.613,13.8312,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),precip_ai,2026-11-19,5,,,3.314743757247925,raw,-0.0260044,3.43693,4.69862,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),rad_ai,2026-11-19,5,,,15.503836631774902,raw,-0.715814,18.2989,3.9047,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),cdd_ai,2026-11-19,5,,,1.0855900049209595,raw,-0.901112,3.65215,2.84821,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmax_nr,2026-11-19,5,,,25.133333206176758,raw,-0.972434,31.4296,6.47473,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmax_wr,2026-11-19,5,,,31.66666603088379,raw,-0.3014,32.7033,3.43935,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmax_sr,2026-11-19,5,,,30.200000762939453,raw,-0.371549,31.3651,3.1358,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmax_er,2026-11-19,5,,,25.399999618530273,raw,-1.49675,31.8036,4.27835,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmax_ner,2026-11-19,5,,,28.899999618530273,raw,-0.125049,29.3735,3.78618,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),cdd_nr,2026-11-19,5,,,0.0,raw,-0.994237,4.08353,4.1072,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),cdd_wr,2026-11-19,5,,,2.4625000953674316,raw,-0.537087,4.0475,2.9511,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),cdd_sr,2026-11-19,5,,,1.1555556058883667,raw,-0.685607,2.7189,2.28023,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),cdd_er,2026-11-19,5,,,0.0,raw,-1.26399,3.73021,2.95113,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),cdd_ner,2026-11-19,5,,,0.0,raw,-0.920075,2.19413,2.38473,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmin_ai,2026-11-19,5,,,19.024539947509766,raw,-0.81576,22.6088,4.39376,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),hdd_ai,2026-11-19,5,,,0.0,raw,-0.353035,0.133679,0.378656,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmin_nr,2026-11-19,5,,,14.033333778381348,raw,-1.03268,21.3113,7.04763,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),hdd_nr,2026-11-19,5,,,0.0,raw,-0.355964,0.444662,1.24918,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),fog_nr,2026-11-19,5,,,0.0,raw,-0.328648,0.055753,0.169644,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),cloud_day_ai,2026-11-19,5,,,36.217411041259766,raw,-0.493785,50.5006,28.9259,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),dew_mean_ai,2026-11-19,5,,,12.344538688659668,raw,-0.995084,17.5922,5.27363,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),heat_index_ai,2026-11-19,5,,,27.915403366088867,raw,-1.12811,33.8453,5.25654,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),gust_max_ai,2026-11-19,5,,,32.071929931640625,raw,0.510914,29.0731,5.86947,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),rain3_ai,2026-11-19,5,,,3.4551548957824707,raw,-0.547203,10.8562,13.5252,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmax_ai_anom,2026-11-19,5,,,-0.3481387495994568,raw,-0.556719,0.537691,1.59116,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmin_nr_anom,2026-11-19,5,,,-1.1851366758346558,raw,-1.08436,1.55129,2.52354,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),precip_ai_anom,2026-11-19,5,,,1.4409480094909668,raw,0.573135,-0.360796,3.14366,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),cloud_day_ai_anom,2026-11-19,5,,,2.5150017738342285,raw,0.0869232,1.19277,15.2115,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),wx_source,2026-11-19,5,,,0.0,raw,-0.152057,0.0451977,0.297242,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),d_tmax_ai,2026-11-19,5,,,-2.3992810249328613,raw,-1.76855,0.4821,1.62924,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),d_cdd_ai,2026-11-19,5,,,-0.8819000124931335,raw,-1.16353,0.547306,1.22834,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),d_app_tmax_ai,2026-11-19,5,,,-3.6783111095428467,raw,-2.31493,0.290664,1.71451,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),ref_holidays,2026-11-19,5,,,1.0,raw,0.804282,0.44162,0.69426,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),solar_peak_lag7,2026-11-19,5,,,1.040463924407959,raw,1.28095,1,0.031589,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),solar_peak_lag14,2026-11-19,5,,,1.0884743928909302,raw,1.70578,0.999858,0.0519506,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),solar_peak_lag364,2026-11-19,5,,,0.9835668802261353,raw,-0.0564872,0.986799,0.0572271,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),evening_peak_lag7,2026-11-19,5,,,1.0575377941131592,raw,2.14665,1,0.0268036,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),evening_peak_lag14,2026-11-19,5,,,1.119677186012268,raw,2.96713,0.999344,0.0405555,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),evening_peak_lag364,2026-11-19,5,,,1.00120210647583,raw,0.572668,0.977528,0.0413403,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),energy_lag7,2026-11-19,5,,,1.0335414409637451,raw,1.28323,1,0.0261382,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),energy_lag14,2026-11-19,5,,,1.1179568767547607,raw,2.61214,0.999474,0.0453585,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),energy_lag364,2026-11-19,5,,,0.9705100655555725,raw,-0.196058,0.980397,0.050426,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),dow_sin,2026-11-19,5,,,0.4338837265968323,raw,0.613604,3.04678e-10,0.707107,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),dow_cos,2026-11-19,5,,,-0.9009688496589661,raw,-1.27416,3.1911e-09,0.707107,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),doy_sin,2026-11-19,5,,,-0.6644834876060486,raw,-0.908845,-0.0217011,0.707252,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),doy_cos,2026-11-19,5,,,0.7473029494285583,raw,1.02539,0.0231189,0.70625,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),is_sunday,2026-11-19,5,,,0.0,raw,-0.408248,0.142857,0.349927,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),is_saturday,2026-11-19,5,,,0.0,raw,-0.408248,0.142857,0.349927,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),is_holiday,2026-11-19,5,,,0.0,raw,-0.260672,0.0636266,0.244087,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),is_festival,2026-11-19,5,,,0.0,raw,-0.176261,0.0301318,0.17095,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),diwali_window,2026-11-19,5,,,0.0,raw,-0.119694,0.0141243,0.118003,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),is_bridge,2026-11-19,5,,,0.0,raw,-0.113166,0.0126446,0.111735,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),days_to_festival,2026-11-19,5,,,30.0,raw,0.955719,19.8512,10.619,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),days_from_festival,2026-11-19,5,,,11.0,raw,-0.833336,19.8465,10.6158,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),fest_diwali,2026-11-19,5,,,0.0,raw,-0.0532246,0.00282486,0.0530743,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),fest_holi,2026-11-19,5,,,0.0,raw,-0.0532246,0.00282486,0.0530743,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),h_frac,2026-11-19,5,,,0.7142857313156128,raw,0.5,0.571429,0.285714,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmax_ai,2026-11-20,6,,,27.447771072387695,raw,-1.1353,31.8363,3.86556,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmean_ai,2026-11-20,6,,,23.065929412841797,raw,-0.966181,26.8579,3.92467,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),app_tmax_ai,2026-11-20,6,,,28.242435455322266,raw,-1.19928,34.1089,4.89165,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),rh_mean_ai,2026-11-20,6,,,56.62277603149414,raw,-0.505393,63.613,13.8312,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),precip_ai,2026-11-20,6,,,3.8630592823028564,raw,0.0906927,3.43693,4.69862,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),rad_ai,2026-11-20,6,,,16.191829681396484,raw,-0.539618,18.2989,3.9047,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),cdd_ai,2026-11-20,6,,,0.6235861778259277,raw,-1.06332,3.65215,2.84821,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmax_nr,2026-11-20,6,,,23.633333206176758,raw,-1.2041,31.4296,6.47473,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmax_wr,2026-11-20,6,,,29.33333396911621,raw,-0.979822,32.7033,3.43935,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmax_sr,2026-11-20,6,,,30.16666603088379,raw,-0.382179,31.3651,3.1358,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmax_er,2026-11-20,6,,,25.600000381469727,raw,-1.45,31.8036,4.27835,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmax_ner,2026-11-20,6,,,29.200000762939453,raw,-0.0458135,29.3735,3.78618,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),cdd_nr,2026-11-20,6,,,0.0,raw,-0.994237,4.08353,4.1072,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),cdd_wr,2026-11-20,6,,,1.0,raw,-1.03266,4.0475,2.9511,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),cdd_sr,2026-11-20,6,,,1.1694444417953491,raw,-0.679516,2.7189,2.28023,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),cdd_er,2026-11-20,6,,,0.0,raw,-1.26399,3.73021,2.95113,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),cdd_ner,2026-11-20,6,,,0.0,raw,-0.920075,2.19413,2.38473,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmin_ai,2026-11-20,6,,,18.253694534301758,raw,-0.991201,22.6088,4.39376,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),hdd_ai,2026-11-20,6,,,0.0,raw,-0.353035,0.133679,0.378656,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmin_nr,2026-11-20,6,,,13.966666221618652,raw,-1.04214,21.3113,7.04763,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),hdd_nr,2026-11-20,6,,,0.0,raw,-0.355964,0.444662,1.24918,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),fog_nr,2026-11-20,6,,,0.0,raw,-0.328648,0.055753,0.169644,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),cloud_day_ai,2026-11-20,6,,,35.73668670654297,raw,-0.510404,50.5006,28.9259,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),dew_mean_ai,2026-11-20,6,,,12.61465072631836,raw,-0.943864,17.5922,5.27363,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),heat_index_ai,2026-11-20,6,,,26.82710838317871,raw,-1.33514,33.8453,5.25654,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),gust_max_ai,2026-11-20,6,,,23.10559844970703,raw,-1.01671,29.0731,5.86947,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),rain3_ai,2026-11-20,6,,,7.316995143890381,raw,-0.261674,10.8562,13.5252,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmax_ai_anom,2026-11-20,6,,,-1.3992589712142944,raw,-1.21732,0.537691,1.59116,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmin_nr_anom,2026-11-20,6,,,-1.0428054332733154,raw,-1.02796,1.55129,2.52354,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),precip_ai_anom,2026-11-20,6,,,2.0208520889282227,raw,0.757603,-0.360796,3.14366,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),cloud_day_ai_anom,2026-11-20,6,,,2.062108039855957,raw,0.05715,1.19277,15.2115,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),wx_source,2026-11-20,6,,,0.0,raw,-0.152057,0.0451977,0.297242,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),d_tmax_ai,2026-11-20,6,,,-3.563896417617798,raw,-2.48337,0.4821,1.62924,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),d_cdd_ai,2026-11-20,6,,,-1.3439037799835205,raw,-1.53965,0.547306,1.22834,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),d_app_tmax_ai,2026-11-20,6,,,-3.850999593734741,raw,-2.41565,0.290664,1.71451,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),ref_holidays,2026-11-20,6,,,1.0,raw,0.804282,0.44162,0.69426,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),solar_peak_lag7,2026-11-20,6,,,1.0723451375961304,raw,2.2902,1,0.031589,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),solar_peak_lag14,2026-11-20,6,,,1.1031676530838013,raw,1.98861,0.999858,0.0519506,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),solar_peak_lag364,2026-11-20,6,,,1.0157382488250732,raw,0.505683,0.986799,0.0572271,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),evening_peak_lag7,2026-11-20,6,,,1.066615104675293,raw,2.48531,1,0.0268036,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),evening_peak_lag14,2026-11-20,6,,,1.0947728157043457,raw,2.35305,0.999344,0.0405555,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),evening_peak_lag364,2026-11-20,6,,,0.9921349287033081,raw,0.353337,0.977528,0.0413403,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),energy_lag7,2026-11-20,6,,,1.0613480806350708,raw,2.34706,1,0.0261382,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),energy_lag14,2026-11-20,6,,,1.1143780946731567,raw,2.53324,0.999474,0.0453585,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),energy_lag364,2026-11-20,6,,,0.9882223606109619,raw,0.155195,0.980397,0.050426,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),dow_sin,2026-11-20,6,,,-0.4338837265968323,raw,-0.613604,3.04678e-10,0.707107,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),dow_cos,2026-11-20,6,,,-0.9009688496589661,raw,-1.27416,3.1911e-09,0.707107,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),doy_sin,2026-11-20,6,,,-0.651530385017395,raw,-0.89053,-0.0217011,0.707252,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),doy_cos,2026-11-20,6,,,0.7586225867271423,raw,1.04142,0.0231189,0.70625,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),is_sunday,2026-11-20,6,,,0.0,raw,-0.408248,0.142857,0.349927,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),is_saturday,2026-11-20,6,,,0.0,raw,-0.408248,0.142857,0.349927,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),is_holiday,2026-11-20,6,,,0.0,raw,-0.260672,0.0636266,0.244087,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),is_festival,2026-11-20,6,,,0.0,raw,-0.176261,0.0301318,0.17095,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),diwali_window,2026-11-20,6,,,0.0,raw,-0.119694,0.0141243,0.118003,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),is_bridge,2026-11-20,6,,,0.0,raw,-0.113166,0.0126446,0.111735,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),days_to_festival,2026-11-20,6,,,30.0,raw,0.955719,19.8512,10.619,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),days_from_festival,2026-11-20,6,,,12.0,raw,-0.739137,19.8465,10.6158,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),fest_diwali,2026-11-20,6,,,0.0,raw,-0.0532246,0.00282486,0.0530743,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),fest_holi,2026-11-20,6,,,0.0,raw,-0.0532246,0.00282486,0.0530743,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),h_frac,2026-11-20,6,,,0.8571428656578064,raw,1,0.571429,0.285714,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmax_ai,2026-11-21,7,,,27.843734741210938,raw,-1.03286,31.8363,3.86556,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmean_ai,2026-11-21,7,,,23.572410583496094,raw,-0.837131,26.8579,3.92467,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),app_tmax_ai,2026-11-21,7,,,29.317903518676758,raw,-0.979417,34.1089,4.89165,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),rh_mean_ai,2026-11-21,7,,,61.65605545043945,raw,-0.141486,63.613,13.8312,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),precip_ai,2026-11-21,7,,,5.064187526702881,raw,0.346327,3.43693,4.69862,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),rad_ai,2026-11-21,7,,,15.215965270996094,raw,-0.789538,18.2989,3.9047,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),cdd_ai,2026-11-21,7,,,1.0543824434280396,raw,-0.912069,3.65215,2.84821,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmax_nr,2026-11-21,7,,,23.899999618530273,raw,-1.16292,31.4296,6.47473,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmax_wr,2026-11-21,7,,,30.266666412353516,raw,-0.708453,32.7033,3.43935,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmax_sr,2026-11-21,7,,,30.866666793823242,raw,-0.158951,31.3651,3.1358,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmax_er,2026-11-21,7,,,24.299999237060547,raw,-1.75386,31.8036,4.27835,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmax_ner,2026-11-21,7,,,28.200000762939453,raw,-0.309932,29.3735,3.78618,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),cdd_nr,2026-11-21,7,,,0.0,raw,-0.994237,4.08353,4.1072,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),cdd_wr,2026-11-21,7,,,1.4513888359069824,raw,-0.879708,4.0475,2.9511,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),cdd_sr,2026-11-21,7,,,2.269444465637207,raw,-0.197109,2.7189,2.28023,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),cdd_er,2026-11-21,7,,,0.0,raw,-1.26399,3.73021,2.95113,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),cdd_ner,2026-11-21,7,,,0.0,raw,-0.920075,2.19413,2.38473,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmin_ai,2026-11-21,7,,,19.026859283447266,raw,-0.815233,22.6088,4.39376,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),hdd_ai,2026-11-21,7,,,0.0,raw,-0.353035,0.133679,0.378656,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmin_nr,2026-11-21,7,,,14.666666984558105,raw,-0.942815,21.3113,7.04763,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),hdd_nr,2026-11-21,7,,,0.0,raw,-0.355964,0.444662,1.24918,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),fog_nr,2026-11-21,7,,,0.0,raw,-0.328648,0.055753,0.169644,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),cloud_day_ai,2026-11-21,7,,,22.048681259155273,raw,-0.983614,50.5006,28.9259,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),dew_mean_ai,2026-11-21,7,,,14.694905281066895,raw,-0.549401,17.5922,5.27363,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),heat_index_ai,2026-11-21,7,,,27.535350799560547,raw,-1.20041,33.8453,5.25654,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),gust_max_ai,2026-11-21,7,,,22.607101440429688,raw,-1.10164,29.0731,5.86947,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),rain3_ai,2026-11-21,7,,,12.24199104309082,raw,0.10246,10.8562,13.5252,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmax_ai_anom,2026-11-21,7,,,-0.8896936774253845,raw,-0.897072,0.537691,1.59116,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),tmin_nr_anom,2026-11-21,7,,,-0.13480888307094574,raw,-0.668149,1.55129,2.52354,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),precip_ai_anom,2026-11-21,7,,,3.2537286281585693,raw,1.14978,-0.360796,3.14366,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),cloud_day_ai_anom,2026-11-21,7,,,-11.605847358703613,raw,-0.84138,1.19277,15.2115,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),wx_source,2026-11-21,7,,,0.0,raw,-0.152057,0.0451977,0.297242,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),d_tmax_ai,2026-11-21,7,,,-3.167933464050293,raw,-2.24033,0.4821,1.62924,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),d_cdd_ai,2026-11-21,7,,,-0.9131075143814087,raw,-1.18894,0.547306,1.22834,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),d_app_tmax_ai,2026-11-21,7,,,-2.7755300998687744,raw,-1.78838,0.290664,1.71451,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),ref_holidays,2026-11-21,7,,,1.0,raw,0.804282,0.44162,0.69426,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),solar_peak_lag7,2026-11-21,7,,,1.0673023462295532,raw,2.13056,1,0.031589,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),solar_peak_lag14,2026-11-21,7,,,1.056457757949829,raw,1.08949,0.999858,0.0519506,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),solar_peak_lag364,2026-11-21,7,,,0.9878844618797302,raw,0.0189593,0.986799,0.0572271,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),evening_peak_lag7,2026-11-21,7,,,1.0706578493118286,raw,2.63613,1,0.0268036,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),evening_peak_lag14,2026-11-21,7,,,1.0194780826568604,raw,0.496466,0.999344,0.0405555,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),evening_peak_lag364,2026-11-21,7,,,0.986629843711853,raw,0.220172,0.977528,0.0413403,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),energy_lag7,2026-11-21,7,,,1.0656756162643433,raw,2.51263,1,0.0261382,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),energy_lag14,2026-11-21,7,,,1.065126895904541,raw,1.44742,0.999474,0.0453585,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),energy_lag364,2026-11-21,7,,,0.9822019934654236,raw,0.0358046,0.980397,0.050426,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),dow_sin,2026-11-21,7,,,-0.9749279022216797,raw,-1.37876,3.04678e-10,0.707107,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),dow_cos,2026-11-21,7,,,-0.22252093255519867,raw,-0.314692,3.1911e-09,0.707107,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),doy_sin,2026-11-21,7,,,-0.6383844614028931,raw,-0.871943,-0.0217011,0.707252,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),doy_cos,2026-11-21,7,,,0.7697176933288574,raw,1.05713,0.0231189,0.70625,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),is_sunday,2026-11-21,7,,,0.0,raw,-0.408248,0.142857,0.349927,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),is_saturday,2026-11-21,7,,,1.0,raw,2.44949,0.142857,0.349927,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),is_holiday,2026-11-21,7,,,0.0,raw,-0.260672,0.0636266,0.244087,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),is_festival,2026-11-21,7,,,0.0,raw,-0.176261,0.0301318,0.17095,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),diwali_window,2026-11-21,7,,,0.0,raw,-0.119694,0.0141243,0.118003,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),is_bridge,2026-11-21,7,,,0.0,raw,-0.113166,0.0126446,0.111735,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),days_to_festival,2026-11-21,7,,,30.0,raw,0.955719,19.8512,10.619,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),days_from_festival,2026-11-21,7,,,13.0,raw,-0.644937,19.8465,10.6158,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),fest_diwali,2026-11-21,7,,,0.0,raw,-0.0532246,0.00282486,0.0530743,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),fest_holi,2026-11-21,7,,,0.0,raw,-0.0532246,0.00282486,0.0530743,,,,make_sequences + scaler.npz
+5 LSTM decoder input (known-future features),h_frac,2026-11-21,7,,,1.0,raw,1.5,0.571429,0.285714,,,,make_sequences + scaler.npz
+6 forecast issued on the example day (origin 2026-11-14),ensemble forecast,2026-11-15,1,energy,ensemble,,MU,,,,4274.07,4372.7,4439.86,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),ensemble forecast,2026-11-16,2,energy,ensemble,,MU,,,,4468.59,4550.79,4615.55,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),ensemble forecast,2026-11-17,3,energy,ensemble,,MU,,,,4533.05,4590.87,4645.72,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),ensemble forecast,2026-11-18,4,energy,ensemble,,MU,,,,4527.1,4586.14,4643.52,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),ensemble forecast,2026-11-19,5,energy,ensemble,,MU,,,,4519.59,4568.88,4601.09,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),ensemble forecast,2026-11-20,6,energy,ensemble,,MU,,,,4493.84,4536.98,4560.05,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),ensemble forecast,2026-11-21,7,energy,ensemble,,MU,,,,4421.38,4482.71,4535.76,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),ensemble forecast,2026-11-15,1,evening_peak,ensemble,,MW,,,,194577,200219,203612,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),ensemble forecast,2026-11-16,2,evening_peak,ensemble,,MW,,,,206024,209984,212363,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),ensemble forecast,2026-11-17,3,evening_peak,ensemble,,MW,,,,207212,211046,213425,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),ensemble forecast,2026-11-18,4,evening_peak,ensemble,,MW,,,,206931,210444,212265,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),ensemble forecast,2026-11-19,5,evening_peak,ensemble,,MW,,,,206142,210075,210370,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),ensemble forecast,2026-11-20,6,evening_peak,ensemble,,MW,,,,205276,208108,209298,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),ensemble forecast,2026-11-21,7,evening_peak,ensemble,,MW,,,,202110,205756,206205,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),ensemble forecast,2026-11-15,1,solar_peak,ensemble,,MW,,,,205834,209410,211671,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),ensemble forecast,2026-11-16,2,solar_peak,ensemble,,MW,,,,216112,219964,223049,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),ensemble forecast,2026-11-17,3,solar_peak,ensemble,,MW,,,,219748,221535,223562,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),ensemble forecast,2026-11-18,4,solar_peak,ensemble,,MW,,,,220300,221322,223079,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),ensemble forecast,2026-11-19,5,solar_peak,ensemble,,MW,,,,221291,221291,221650,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),ensemble forecast,2026-11-20,6,solar_peak,ensemble,,MW,,,,219951,220333,221411,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),ensemble forecast,2026-11-21,7,solar_peak,ensemble,,MW,,,,214566,216648,219008,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),grid_india forecast,2026-11-15,1,energy,grid_india,,MU,,,,,4510.43,,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),grid_india forecast,2026-11-16,2,energy,grid_india,,MU,,,,,4707.95,,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),grid_india forecast,2026-11-17,3,energy,grid_india,,MU,,,,,4789.74,,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),grid_india forecast,2026-11-18,4,energy,grid_india,,MU,,,,,4828.61,,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),grid_india forecast,2026-11-19,5,energy,grid_india,,MU,,,,,4849.48,,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),grid_india forecast,2026-11-20,6,energy,grid_india,,MU,,,,,4844.14,,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),grid_india forecast,2026-11-21,7,energy,grid_india,,MU,,,,,4807.59,,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),grid_india forecast,2026-11-15,1,evening_peak,grid_india,,MW,,,,,198941,,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),grid_india forecast,2026-11-16,2,evening_peak,grid_india,,MW,,,,,216964,,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),grid_india forecast,2026-11-17,3,evening_peak,grid_india,,MW,,,,,218520,,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),grid_india forecast,2026-11-18,4,evening_peak,grid_india,,MW,,,,,219636,,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),grid_india forecast,2026-11-19,5,evening_peak,grid_india,,MW,,,,,221291,,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),grid_india forecast,2026-11-20,6,evening_peak,grid_india,,MW,,,,,221141,,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),grid_india forecast,2026-11-21,7,evening_peak,grid_india,,MW,,,,,220222,,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),grid_india forecast,2026-11-15,1,solar_peak,grid_india,,MW,,,,,209236,,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),grid_india forecast,2026-11-16,2,solar_peak,grid_india,,MW,,,,,222031,,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),grid_india forecast,2026-11-17,3,solar_peak,grid_india,,MW,,,,,224429,,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),grid_india forecast,2026-11-18,4,solar_peak,grid_india,,MW,,,,,227051,,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),grid_india forecast,2026-11-19,5,solar_peak,grid_india,,MW,,,,,227002,,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),grid_india forecast,2026-11-20,6,solar_peak,grid_india,,MW,,,,,228173,,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),grid_india forecast,2026-11-21,7,solar_peak,grid_india,,MW,,,,,224857,,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),lgbm forecast,2026-11-15,1,energy,lgbm,,MU,,,,4264.45,4359.46,4377.07,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),lgbm forecast,2026-11-16,2,energy,lgbm,,MU,,,,4401.46,4554.53,4559.41,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),lgbm forecast,2026-11-17,3,energy,lgbm,,MU,,,,4414.71,4566.99,4582.88,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),lgbm forecast,2026-11-18,4,energy,lgbm,,MU,,,,4426.07,4501.1,4538.91,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),lgbm forecast,2026-11-19,5,energy,lgbm,,MU,,,,4412.28,4487.33,4487.33,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),lgbm forecast,2026-11-20,6,energy,lgbm,,MU,,,,4313.7,4439.01,4462.39,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),lgbm forecast,2026-11-21,7,energy,lgbm,,MU,,,,4270.61,4417.68,4438.45,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),lgbm forecast,2026-11-15,1,evening_peak,lgbm,,MW,,,,193136,200313,203741,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),lgbm forecast,2026-11-16,2,evening_peak,lgbm,,MW,,,,205799,211068,212504,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),lgbm forecast,2026-11-17,3,evening_peak,lgbm,,MW,,,,205815,211511,212907,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),lgbm forecast,2026-11-18,4,evening_peak,lgbm,,MW,,,,205258,210194,211478,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),lgbm forecast,2026-11-19,5,evening_peak,lgbm,,MW,,,,204533,210062,210207,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),lgbm forecast,2026-11-20,6,evening_peak,lgbm,,MW,,,,204117,207944,208441,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),lgbm forecast,2026-11-21,7,evening_peak,lgbm,,MW,,,,201457,206463,206519,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),lgbm forecast,2026-11-15,1,solar_peak,lgbm,,MW,,,,206289,209563,210736,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),lgbm forecast,2026-11-16,2,solar_peak,lgbm,,MW,,,,212267,221468,222276,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),lgbm forecast,2026-11-17,3,solar_peak,lgbm,,MW,,,,211771,222010,223188,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),lgbm forecast,2026-11-18,4,solar_peak,lgbm,,MW,,,,211294,220098,220098,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),lgbm forecast,2026-11-19,5,solar_peak,lgbm,,MW,,,,208883,217418,218877,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),lgbm forecast,2026-11-20,6,solar_peak,lgbm,,MW,,,,205604,216401,218694,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),lgbm forecast,2026-11-21,7,solar_peak,lgbm,,MW,,,,201626,214747,219847,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),lstm forecast,2026-11-15,1,energy,lstm,,MU,,,,4250.25,4381.52,4511.95,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),lstm forecast,2026-11-16,2,energy,lstm,,MU,,,,4450.77,4550.13,4655.12,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),lstm forecast,2026-11-17,3,energy,lstm,,MU,,,,4521.5,4592.13,4666.81,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),lstm forecast,2026-11-18,4,energy,lstm,,MU,,,,4511.34,4590.62,4670.11,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),lstm forecast,2026-11-19,5,energy,lstm,,MU,,,,4524.74,4583.28,4638.12,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),lstm forecast,2026-11-20,6,energy,lstm,,MU,,,,4508.67,4554.27,4594.23,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),lstm forecast,2026-11-21,7,energy,lstm,,MU,,,,4421.54,4482.71,4535.6,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),lstm forecast,2026-11-15,1,evening_peak,lstm,,MW,,,,196640,200126,202861,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),lstm forecast,2026-11-16,2,evening_peak,lstm,,MW,,,,205971,209261,212472,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),lstm forecast,2026-11-17,3,evening_peak,lstm,,MW,,,,206557,210796,215112,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),lstm forecast,2026-11-18,4,evening_peak,lstm,,MW,,,,207622,210695,214033,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),lstm forecast,2026-11-19,5,evening_peak,lstm,,MW,,,,207009,210106,213636,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),lstm forecast,2026-11-20,6,evening_peak,lstm,,MW,,,,206151,208308,210886,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),lstm forecast,2026-11-21,7,evening_peak,lstm,,MW,,,,202966,204441,205978,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),lstm forecast,2026-11-15,1,solar_peak,lstm,,MW,,,,202962,209359,214702,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),lstm forecast,2026-11-16,2,solar_peak,lstm,,MW,,,,215839,219698,224137,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),lstm forecast,2026-11-17,3,solar_peak,lstm,,MW,,,,219729,221510,224020,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),lstm forecast,2026-11-18,4,solar_peak,lstm,,MW,,,,220691,221322,222688,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),lstm forecast,2026-11-19,5,solar_peak,lstm,,MW,,,,221291,221291,221512,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),lstm forecast,2026-11-20,6,solar_peak,lstm,,MW,,,,219714,220333,221648,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),lstm forecast,2026-11-21,7,solar_peak,lstm,,MW,,,,215683,216648,217890,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),tft forecast,2026-11-15,1,energy,tft,,MU,,,,4311.69,4390.37,4458.4,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),tft forecast,2026-11-16,2,energy,tft,,MU,,,,4542.07,4600.23,4684.35,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),tft forecast,2026-11-17,3,energy,tft,,MU,,,,4584.16,4635.44,4717.33,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),tft forecast,2026-11-18,4,energy,tft,,MU,,,,4584.38,4606.44,4650.29,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),tft forecast,2026-11-19,5,energy,tft,,MU,,,,4615.86,4615.86,4623.45,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),tft forecast,2026-11-20,6,energy,tft,,MU,,,,4575.52,4583.28,4603.12,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),tft forecast,2026-11-21,7,energy,tft,,MU,,,,4481.99,4498.15,4518.78,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),tft forecast,2026-11-15,1,evening_peak,tft,,MW,,,,195757,197923,200689,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),tft forecast,2026-11-16,2,evening_peak,tft,,MW,,,,212210,212555,214623,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),tft forecast,2026-11-17,3,evening_peak,tft,,MW,,,,213927,213927,215942,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),tft forecast,2026-11-18,4,evening_peak,tft,,MW,,,,211261,211261,212670,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),tft forecast,2026-11-19,5,evening_peak,tft,,MW,,,,211602,211602,212494,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),tft forecast,2026-11-20,6,evening_peak,tft,,MW,,,,208949,209494,210783,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),tft forecast,2026-11-21,7,evening_peak,tft,,MW,,,,205389,206115,207222,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),tft forecast,2026-11-15,1,solar_peak,tft,,MW,,,,209157,213457,218560,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),tft forecast,2026-11-16,2,solar_peak,tft,,MW,,,,220782,224269,230502,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),tft forecast,2026-11-17,3,solar_peak,tft,,MW,,,,224539,225830,230007,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),tft forecast,2026-11-18,4,solar_peak,tft,,MW,,,,224271,225945,229907,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),tft forecast,2026-11-19,5,solar_peak,tft,,MW,,,,226347,226413,228732,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),tft forecast,2026-11-20,6,solar_peak,tft,,MW,,,,223265,225601,229655,forecast_history.parquet
+6 forecast issued on the example day (origin 2026-11-14),tft forecast,2026-11-21,7,solar_peak,tft,,MW,,,,217572,221385,226458,forecast_history.parquet
+7 latest stored forecast (origin 2026-11-21),ensemble forecast,2026-11-22,1,energy,ensemble,,MU,,,,4218.69,4319.14,4460.03,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),ensemble forecast,2026-11-23,2,energy,ensemble,,MU,,,,4292.37,4401.9,4513.97,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),ensemble forecast,2026-11-24,3,energy,ensemble,,MU,,,,4251.3,4351.14,4441.12,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),ensemble forecast,2026-11-25,4,energy,ensemble,,MU,,,,4303.93,4402.31,4486.46,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),ensemble forecast,2026-11-26,5,energy,ensemble,,MU,,,,4381.03,4459.78,4522.52,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),ensemble forecast,2026-11-27,6,energy,ensemble,,MU,,,,4423.51,4490.99,4539.58,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),ensemble forecast,2026-11-28,7,energy,ensemble,,MU,,,,4402.19,4482.91,4549.64,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),ensemble forecast,2026-11-22,1,evening_peak,ensemble,,MW,,,,193734,199403,205106,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),ensemble forecast,2026-11-23,2,evening_peak,ensemble,,MW,,,,202379,207532,210853,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),ensemble forecast,2026-11-24,3,evening_peak,ensemble,,MW,,,,200170,205235,209847,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),ensemble forecast,2026-11-25,4,evening_peak,ensemble,,MW,,,,205557,209338,212182,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),ensemble forecast,2026-11-26,5,evening_peak,ensemble,,MW,,,,209917,211592,212660,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),ensemble forecast,2026-11-27,6,evening_peak,ensemble,,MW,,,,209110,211655,212919,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),ensemble forecast,2026-11-28,7,evening_peak,ensemble,,MW,,,,209288,210821,212352,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),ensemble forecast,2026-11-22,1,solar_peak,ensemble,,MW,,,,209466,214549,218187,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),ensemble forecast,2026-11-23,2,solar_peak,ensemble,,MW,,,,216560,222223,226736,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),ensemble forecast,2026-11-24,3,solar_peak,ensemble,,MW,,,,214887,219520,222603,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),ensemble forecast,2026-11-25,4,solar_peak,ensemble,,MW,,,,217985,221424,223708,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),ensemble forecast,2026-11-26,5,solar_peak,ensemble,,MW,,,,221495,223163,224067,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),ensemble forecast,2026-11-27,6,solar_peak,ensemble,,MW,,,,222299,224515,226171,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),ensemble forecast,2026-11-28,7,solar_peak,ensemble,,MW,,,,220949,224283,227056,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),grid_india forecast,2026-11-22,1,energy,grid_india,,MU,,,,,4626.91,,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),grid_india forecast,2026-11-23,2,energy,grid_india,,MU,,,,,4667.41,,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),grid_india forecast,2026-11-24,3,energy,grid_india,,MU,,,,,4657.5,,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),grid_india forecast,2026-11-25,4,energy,grid_india,,MU,,,,,4759.06,,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),grid_india forecast,2026-11-26,5,energy,grid_india,,MU,,,,,4820.53,,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),grid_india forecast,2026-11-27,6,energy,grid_india,,MU,,,,,4812.77,,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),grid_india forecast,2026-11-28,7,energy,grid_india,,MU,,,,,4762.44,,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),grid_india forecast,2026-11-22,1,evening_peak,grid_india,,MW,,,,,207999,,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),grid_india forecast,2026-11-23,2,evening_peak,grid_india,,MW,,,,,220000,,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),grid_india forecast,2026-11-24,3,evening_peak,grid_india,,MW,,,,,216000,,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),grid_india forecast,2026-11-25,4,evening_peak,grid_india,,MW,,,,,219000,,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),grid_india forecast,2026-11-26,5,evening_peak,grid_india,,MW,,,,,222500,,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),grid_india forecast,2026-11-27,6,evening_peak,grid_india,,MW,,,,,222000,,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),grid_india forecast,2026-11-28,7,evening_peak,grid_india,,MW,,,,,220000,,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),grid_india forecast,2026-11-22,1,solar_peak,grid_india,,MW,,,,,215952,,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),grid_india forecast,2026-11-23,2,solar_peak,grid_india,,MW,,,,,223500,,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),grid_india forecast,2026-11-24,3,solar_peak,grid_india,,MW,,,,,219500,,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),grid_india forecast,2026-11-25,4,solar_peak,grid_india,,MW,,,,,225000,,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),grid_india forecast,2026-11-26,5,solar_peak,grid_india,,MW,,,,,228500,,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),grid_india forecast,2026-11-27,6,solar_peak,grid_india,,MW,,,,,228000,,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),grid_india forecast,2026-11-28,7,solar_peak,grid_india,,MW,,,,,224500,,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),lgbm forecast,2026-11-22,1,energy,lgbm,,MU,,,,4318.07,4348.91,4510.3,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),lgbm forecast,2026-11-23,2,energy,lgbm,,MU,,,,4422.56,4495.86,4627.53,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),lgbm forecast,2026-11-24,3,energy,lgbm,,MU,,,,4401.3,4457.87,4615.79,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),lgbm forecast,2026-11-25,4,energy,lgbm,,MU,,,,4466.21,4522.62,4619.2,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),lgbm forecast,2026-11-26,5,energy,lgbm,,MU,,,,4512.27,4571.35,4621.47,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),lgbm forecast,2026-11-27,6,energy,lgbm,,MU,,,,4475.48,4590.86,4669.94,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),lgbm forecast,2026-11-28,7,energy,lgbm,,MU,,,,4494.35,4548.97,4628.98,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),lgbm forecast,2026-11-22,1,evening_peak,lgbm,,MW,,,,195834,200024,207707,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),lgbm forecast,2026-11-23,2,evening_peak,lgbm,,MW,,,,208061,211411,214354,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),lgbm forecast,2026-11-24,3,evening_peak,lgbm,,MW,,,,204371,207086,213529,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),lgbm forecast,2026-11-25,4,evening_peak,lgbm,,MW,,,,208216,210892,213806,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),lgbm forecast,2026-11-26,5,evening_peak,lgbm,,MW,,,,211230,212494,213671,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),lgbm forecast,2026-11-27,6,evening_peak,lgbm,,MW,,,,211192,212781,213384,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),lgbm forecast,2026-11-28,7,evening_peak,lgbm,,MW,,,,210252,211119,212858,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),lgbm forecast,2026-11-22,1,solar_peak,lgbm,,MW,,,,216968,216968,222212,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),lgbm forecast,2026-11-23,2,solar_peak,lgbm,,MW,,,,222043,226223,232312,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),lgbm forecast,2026-11-24,3,solar_peak,lgbm,,MW,,,,218089,224820,232771,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),lgbm forecast,2026-11-25,4,solar_peak,lgbm,,MW,,,,222744,227443,232443,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),lgbm forecast,2026-11-26,5,solar_peak,lgbm,,MW,,,,223532,229792,234847,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),lgbm forecast,2026-11-27,6,solar_peak,lgbm,,MW,,,,222140,230582,236846,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),lgbm forecast,2026-11-28,7,solar_peak,lgbm,,MW,,,,221341,229388,237318,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),lstm forecast,2026-11-22,1,energy,lstm,,MU,,,,4122.82,4299.3,4456.14,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),lstm forecast,2026-11-23,2,energy,lstm,,MU,,,,4240.73,4385.32,4522.6,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),lstm forecast,2026-11-24,3,energy,lstm,,MU,,,,4226.53,4345.52,4448.8,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),lstm forecast,2026-11-25,4,energy,lstm,,MU,,,,4275.16,4395.98,4499.71,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),lstm forecast,2026-11-26,5,energy,lstm,,MU,,,,4344.49,4440.09,4518.44,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),lstm forecast,2026-11-27,6,energy,lstm,,MU,,,,4397.19,4473.36,4533.72,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),lstm forecast,2026-11-28,7,energy,lstm,,MU,,,,4402.35,4482.91,4549.49,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),lstm forecast,2026-11-22,1,evening_peak,lstm,,MW,,,,192250,198783,201890,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),lstm forecast,2026-11-23,2,evening_peak,lstm,,MW,,,,198387,204946,208723,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),lstm forecast,2026-11-24,3,evening_peak,lstm,,MW,,,,196541,204237,209232,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),lstm forecast,2026-11-25,4,evening_peak,lstm,,MW,,,,201918,207784,211538,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),lstm forecast,2026-11-26,5,evening_peak,lstm,,MW,,,,203948,209487,213207,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),lstm forecast,2026-11-27,6,evening_peak,lstm,,MW,,,,206016,210277,212901,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),lstm forecast,2026-11-28,7,evening_peak,lstm,,MW,,,,207136,210268,211774,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),lstm forecast,2026-11-22,1,solar_peak,lstm,,MW,,,,204181,213742,219616,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),lstm forecast,2026-11-23,2,solar_peak,lstm,,MW,,,,214634,221517,226711,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),lstm forecast,2026-11-24,3,solar_peak,lstm,,MW,,,,214282,219241,222504,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),lstm forecast,2026-11-25,4,solar_peak,lstm,,MW,,,,218377,221424,223317,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),lstm forecast,2026-11-26,5,solar_peak,lstm,,MW,,,,221635,223163,223927,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),lstm forecast,2026-11-27,6,solar_peak,lstm,,MW,,,,222058,224515,226413,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),lstm forecast,2026-11-28,7,solar_peak,lstm,,MW,,,,222106,224283,225899,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),tft forecast,2026-11-22,1,energy,tft,,MU,,,,4263.89,4375.86,4454.81,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),tft forecast,2026-11-23,2,energy,tft,,MU,,,,4325.92,4522.5,4701.09,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),tft forecast,2026-11-24,3,energy,tft,,MU,,,,4280.16,4438.77,4559.32,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),tft forecast,2026-11-25,4,energy,tft,,MU,,,,4424.78,4500.19,4553.59,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),tft forecast,2026-11-26,5,energy,tft,,MU,,,,4496.96,4526.02,4528.61,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),tft forecast,2026-11-27,6,energy,tft,,MU,,,,4534.59,4563.07,4569.3,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),tft forecast,2026-11-28,7,energy,tft,,MU,,,,4506.42,4529.63,4544.87,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),tft forecast,2026-11-22,1,evening_peak,tft,,MW,,,,197744,201248,203742,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),tft forecast,2026-11-23,2,evening_peak,tft,,MW,,,,205149,209673,212947,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),tft forecast,2026-11-24,3,evening_peak,tft,,MW,,,,199304,204022,208057,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),tft forecast,2026-11-25,4,evening_peak,tft,,MW,,,,209190,210788,211492,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),tft forecast,2026-11-26,5,evening_peak,tft,,MW,,,,210773,211816,211816,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),tft forecast,2026-11-27,6,evening_peak,tft,,MW,,,,211343,212671,212831,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),tft forecast,2026-11-28,7,evening_peak,tft,,MW,,,,209294,210743,211291,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),tft forecast,2026-11-22,1,solar_peak,tft,,MW,,,,208643,214811,218862,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),tft forecast,2026-11-23,2,solar_peak,tft,,MW,,,,219554,228670,238790,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),tft forecast,2026-11-24,3,solar_peak,tft,,MW,,,,217373,223256,227999,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),tft forecast,2026-11-25,4,solar_peak,tft,,MW,,,,221803,225705,228600,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),tft forecast,2026-11-26,5,solar_peak,tft,,MW,,,,225425,226689,227482,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),tft forecast,2026-11-27,6,solar_peak,tft,,MW,,,,226159,228868,231062,latest_forecast.parquet
+7 latest stored forecast (origin 2026-11-21),tft forecast,2026-11-28,7,solar_peak,tft,,MW,,,,221848,226502,230178,latest_forecast.parquet

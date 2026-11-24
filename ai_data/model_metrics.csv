@@ -1,0 +1,49 @@
+window,model,model_key,target,unit,mape_pct,mae,rmse,bias,bias_pct,pinball_mean,coverage_p10_p90_pct,n_days,n_forecasts
+rolling_12m_backtest,Seasonal naive,seasonal_naive,solar_peak,MW,4.73587,11058.1,14396.8,-777.02,-0.199184,3869.36,83.4301,372,2583
+rolling_12m_backtest,Seasonal naive,seasonal_naive,evening_peak,MW,3.15244,7045.44,9737.31,-378.18,-0.08787,2769.83,80.9137,372,2583
+rolling_12m_backtest,Seasonal naive,seasonal_naive,energy,MU,3.93432,200.765,272.871,-12.705,-0.151098,72.861,81.2621,372,2583
+rolling_12m_backtest,Seasonal naive,seasonal_naive,overall_mean_of_3_targets,%,3.94088,,,,-0.146051,,81.8686,372,
+rolling_12m_backtest,LightGBM,lgbm@compact,solar_peak,MW,2.78329,6532.73,8752.75,-1531.75,-0.54321,2256.36,81.9202,372,2583
+rolling_12m_backtest,LightGBM,lgbm@compact,evening_peak,MW,1.80833,4032.72,5371.27,-889.868,-0.32993,1458.15,80.9137,372,2583
+rolling_12m_backtest,LightGBM,lgbm@compact,energy,MU,2.25787,114.981,157.042,-35.0844,-0.584172,40.3465,80.1394,372,2583
+rolling_12m_backtest,LightGBM,lgbm@compact,overall_mean_of_3_targets,%,2.28316,,,,-0.485771,,80.9911,372,
+rolling_12m_backtest,LSTM,lstm_w@compact,solar_peak,MW,2.39184,5581.57,7351.03,-171.007,0.0204628,1886.03,81.4557,372,2583
+rolling_12m_backtest,LSTM,lstm_w@compact,evening_peak,MW,1.91133,4244.27,5500.77,-91.8372,0.0401114,1461.85,80.6427,372,2583
+rolling_12m_backtest,LSTM,lstm_w@compact,energy,MU,2.05724,103.775,136.403,-10.5344,-0.106165,35.9283,79.1715,372,2583
+rolling_12m_backtest,LSTM,lstm_w@compact,overall_mean_of_3_targets,%,2.12014,,,,-0.0151969,,80.4233,372,
+rolling_12m_backtest,TFT,tft@v1,solar_peak,MW,2.80041,6508.03,8510.54,-1225.29,-0.449374,2276.73,79.4038,372,2583
+rolling_12m_backtest,TFT,tft@v1,evening_peak,MW,1.96076,4359.36,5759.26,-440.534,-0.144295,1514.11,78.4359,372,2583
+rolling_12m_backtest,TFT,tft@v1,energy,MU,2.32307,117.411,153.371,-23.5122,-0.384723,40.6338,79.9071,372,2583
+rolling_12m_backtest,TFT,tft@v1,overall_mean_of_3_targets,%,2.36142,,,,-0.32613,,79.2489,372,
+rolling_12m_backtest,Ensemble (LSTM+LightGBM),ensemble,solar_peak,MW,2.39915,5607.29,7467.69,-508.205,-0.118939,1888.22,81.3395,372,2583
+rolling_12m_backtest,Ensemble (LSTM+LightGBM),ensemble,evening_peak,MW,1.79144,3985.93,5266.73,-389.353,-0.0964101,1412.34,80.1007,372,2583
+rolling_12m_backtest,Ensemble (LSTM+LightGBM),ensemble,energy,MU,2.00141,101.444,135.777,-17.3985,-0.241561,35.5562,78.8231,372,2583
+rolling_12m_backtest,Ensemble (LSTM+LightGBM),ensemble,overall_mean_of_3_targets,%,2.064,,,,-0.152303,,80.0878,372,
+rolling_12m_backtest,Grid-India,grid_india,solar_peak,MW,4.72829,10801.5,13675.6,2957.04,1.42334,,,366,366
+rolling_12m_backtest,Grid-India,grid_india,evening_peak,MW,3.07693,6810.25,8887.63,4133.97,1.87347,,,366,366
+rolling_12m_backtest,Grid-India,grid_india,energy,MU,3.8701,192.084,247.054,106.529,2.20077,,,366,366
+rolling_12m_backtest,Grid-India,grid_india,overall_mean_of_3_targets,%,3.89177,,,,1.83253,,,366,
+fixed_test_split,Seasonal naive,seasonal_naive,solar_peak,MW,4.80321,10753.6,14099.1,-71.1184,0.164096,3705.59,60.4941,587,4088
+fixed_test_split,Seasonal naive,seasonal_naive,evening_peak,MW,3.40829,7422.89,10138.3,-41.149,0.0936571,2631.24,60.5186,587,4088
+fixed_test_split,Seasonal naive,seasonal_naive,energy,MU,4.10918,203.789,273.287,1.53343,0.183552,69.8228,70.181,587,4088
+fixed_test_split,Seasonal naive,seasonal_naive,overall_mean_of_3_targets,%,4.10689,,,,0.147102,,63.7312,587,
+fixed_test_split,LightGBM,lgbm@compact,solar_peak,MW,3.31292,7500.13,9713.57,-3335.26,-1.33083,2479.04,66.9031,587,4088
+fixed_test_split,LightGBM,lgbm@compact,evening_peak,MW,2.27389,4978.14,6465.82,-1545.16,-0.603812,1635.31,67.5881,587,4088
+fixed_test_split,LightGBM,lgbm@compact,energy,MU,2.76612,137.541,179.253,-40.7185,-0.681897,45.2908,71.5509,587,4088
+fixed_test_split,LightGBM,lgbm@compact,overall_mean_of_3_targets,%,2.78431,,,,-0.87218,,68.6807,587,
+fixed_test_split,LSTM,lstm_w@compact,solar_peak,MW,3.07134,6967.37,9084.15,-2298.64,-0.940607,2269.42,68.8845,587,4088
+fixed_test_split,LSTM,lstm_w@compact,evening_peak,MW,2.37477,5241.74,6689.15,-2521.67,-1.07558,1676.2,69.1292,587,4088
+fixed_test_split,LSTM,lstm_w@compact,energy,MU,2.75333,137.918,176.26,-76.5963,-1.45818,43.6337,70.3033,587,4088
+fixed_test_split,LSTM,lstm_w@compact,overall_mean_of_3_targets,%,2.73315,,,,-1.15812,,69.439,587,
+fixed_test_split,TFT,tft@v1,solar_peak,MW,3.17798,7113.89,9117.14,-1549.29,-0.59802,2383.35,61.5705,587,4088
+fixed_test_split,TFT,tft@v1,evening_peak,MW,2.15257,4676.83,6258.14,204.899,0.151901,1543.62,69.3004,587,4088
+fixed_test_split,TFT,tft@v1,energy,MU,2.61019,128.444,168.37,-17.3304,-0.262776,42.6799,66.047,587,4088
+fixed_test_split,TFT,tft@v1,overall_mean_of_3_targets,%,2.64691,,,,-0.236298,,65.6393,587,
+fixed_test_split,Ensemble (LSTM+LightGBM),ensemble,solar_peak,MW,3.12083,7076.85,9264.23,-3020.36,-1.20807,2342.36,67.2945,587,4088
+fixed_test_split,Ensemble (LSTM+LightGBM),ensemble,evening_peak,MW,2.22558,4898.48,6277.54,-1983.27,-0.816303,1567.05,68.4932,587,4088
+fixed_test_split,Ensemble (LSTM+LightGBM),ensemble,energy,MU,2.65598,133.084,170.456,-66.0286,-1.23192,42.2915,71.3796,587,4088
+fixed_test_split,Ensemble (LSTM+LightGBM),ensemble,overall_mean_of_3_targets,%,2.66746,,,,-1.08543,,69.0558,587,
+fixed_test_split,Grid-India,grid_india,solar_peak,MW,4.86654,10706.9,13612.6,3997.54,2.01435,,,522,522
+fixed_test_split,Grid-India,grid_india,evening_peak,MW,3.29022,7138.16,9175,3610.45,1.70066,,,522,522
+fixed_test_split,Grid-India,grid_india,energy,MU,4.17382,201.784,259.684,108.205,2.34247,,,522,522
+fixed_test_split,Grid-India,grid_india,overall_mean_of_3_targets,%,4.1102,,,,2.01916,,,522,

@@ -1,0 +1,181 @@
+model,model_key,target,rank,date,actual,forecast,pct_error,n_forecasts,signed_pct_error,weather_condition,weekday,holiday_festival,unit
+Ensemble (LSTM+LightGBM),ensemble,energy,1,2026-03-20,4398.81,4803.86,9.20815,7,9.20815,rainy,Fri,none,MU
+Ensemble (LSTM+LightGBM),ensemble,energy,2,2026-05-01,4795.23,5191.56,8.26515,7,8.26515,normal,Fri,national holiday,MU
+Ensemble (LSTM+LightGBM),ensemble,energy,3,2026-01-26,4344.9,4672.85,7.54789,7,7.54789,cold/fog,Mon,national holiday,MU
+Ensemble (LSTM+LightGBM),ensemble,energy,4,2026-03-22,4299.29,4619.77,7.45425,7,7.45425,normal,Sun,none,MU
+Ensemble (LSTM+LightGBM),ensemble,energy,5,2026-03-04,4418.86,4735,7.15441,7,7.15441,normal,Wed,"national holiday, Holi",MU
+Ensemble (LSTM+LightGBM),ensemble,energy,6,2026-06-27,5806.19,5400.08,6.9944,7,-6.9944,hot,Sat,none,MU
+Ensemble (LSTM+LightGBM),ensemble,energy,7,2026-03-21,4385.99,4682.83,6.76798,7,6.76798,normal,Sat,"national holiday, Eid Ul Fitr",MU
+Ensemble (LSTM+LightGBM),ensemble,energy,8,2026-06-28,5668.82,5287.12,6.73327,7,-6.73327,hot,Sun,none,MU
+Ensemble (LSTM+LightGBM),ensemble,energy,9,2026-03-19,4549.88,4855.21,6.71066,7,6.71066,rainy,Thu,none,MU
+Ensemble (LSTM+LightGBM),ensemble,energy,10,2026-05-03,4797.22,5114.48,6.61337,7,6.61337,normal,Sun,none,MU
+Ensemble (LSTM+LightGBM),ensemble,evening_peak,1,2026-03-04,183675,204868,11.5382,7,11.5382,normal,Wed,"national holiday, Holi",MW
+Ensemble (LSTM+LightGBM),ensemble,evening_peak,2,2026-11-08,176362,193559,9.75074,7,9.75074,normal,Sun,"national holiday, Diwali",MW
+Ensemble (LSTM+LightGBM),ensemble,evening_peak,3,2026-05-04,209015,226287,8.26339,7,8.26339,rainy,Mon,none,MW
+Ensemble (LSTM+LightGBM),ensemble,evening_peak,4,2026-01-26,196059,211613,7.93319,7,7.93319,cold/fog,Mon,national holiday,MW
+Ensemble (LSTM+LightGBM),ensemble,evening_peak,5,2026-03-19,196534,209772,6.73553,7,6.73553,rainy,Thu,none,MW
+Ensemble (LSTM+LightGBM),ensemble,evening_peak,6,2026-01-14,206172,219364,6.39836,7,6.39836,cold/fog,Wed,none,MW
+Ensemble (LSTM+LightGBM),ensemble,evening_peak,7,2026-05-30,221943,235297,6.01672,7,6.01672,heavy rain/storm,Sat,none,MW
+Ensemble (LSTM+LightGBM),ensemble,evening_peak,8,2026-01-01,201879,212947,5.48265,7,5.48265,cold/fog,Thu,none,MW
+Ensemble (LSTM+LightGBM),ensemble,evening_peak,9,2026-06-28,246190,233637,5.09875,7,-5.09875,hot,Sun,none,MW
+Ensemble (LSTM+LightGBM),ensemble,evening_peak,10,2026-06-29,250242,237977,4.90136,7,-4.90136,hot,Mon,none,MW
+Ensemble (LSTM+LightGBM),ensemble,solar_peak,1,2026-05-01,210130,232112,10.4612,7,10.4612,normal,Fri,national holiday,MW
+Ensemble (LSTM+LightGBM),ensemble,solar_peak,2,2026-03-20,198385,217802,9.78754,7,9.78754,rainy,Fri,none,MW
+Ensemble (LSTM+LightGBM),ensemble,solar_peak,3,2026-03-04,209874,230209,9.68926,7,9.68926,normal,Wed,"national holiday, Holi",MW
+Ensemble (LSTM+LightGBM),ensemble,solar_peak,4,2026-01-26,220642,240109,8.82283,7,8.82283,cold/fog,Mon,national holiday,MW
+Ensemble (LSTM+LightGBM),ensemble,solar_peak,5,2026-07-16,270203,246563,8.74897,7,-8.74897,rainy,Thu,none,MW
+Ensemble (LSTM+LightGBM),ensemble,solar_peak,6,2026-07-14,266068,242879,8.7153,7,-8.7153,cloudy,Tue,none,MW
+Ensemble (LSTM+LightGBM),ensemble,solar_peak,7,2026-06-27,264768,242536,8.39696,7,-8.39696,hot,Sat,none,MW
+Ensemble (LSTM+LightGBM),ensemble,solar_peak,8,2026-07-15,266291,244299,8.2587,7,-8.2587,rainy,Wed,none,MW
+Ensemble (LSTM+LightGBM),ensemble,solar_peak,9,2026-05-31,215476,233251,8.24926,7,8.24926,normal,Sun,none,MW
+Ensemble (LSTM+LightGBM),ensemble,solar_peak,10,2026-05-03,209493,226490,8.11325,7,8.11325,normal,Sun,none,MW
+Grid-India,grid_india,energy,1,2026-03-20,4398.81,5169.83,17.528,1,17.528,rainy,Fri,none,MU
+Grid-India,grid_india,energy,2,2026-03-21,4385.99,5088.17,16.0097,1,16.0097,normal,Sat,"national holiday, Eid Ul Fitr",MU
+Grid-India,grid_india,energy,3,2026-03-22,4299.29,4981.4,15.8658,1,15.8658,normal,Sun,none,MU
+Grid-India,grid_india,energy,4,2026-09-26,4889.39,5630.81,15.164,1,15.164,rainy,Sat,none,MU
+Grid-India,grid_india,energy,5,2026-05-01,4795.23,5477.58,14.2298,1,14.2298,normal,Fri,national holiday,MU
+Grid-India,grid_india,energy,6,2025-11-02,3859.67,4396.41,13.9063,1,13.9063,normal,Sun,none,MU
+Grid-India,grid_india,energy,7,2025-11-01,4017.37,4564.36,13.6156,1,13.6156,rainy,Sat,none,MU
+Grid-India,grid_india,energy,8,2026-09-25,5009.51,5690.85,13.601,1,13.601,heavy rain/storm,Fri,none,MU
+Grid-India,grid_india,energy,9,2026-11-08,4067.41,4611.75,13.3829,1,13.3829,normal,Sun,"national holiday, Diwali",MU
+Grid-India,grid_india,energy,10,2026-09-27,4872,5522.19,13.3454,1,13.3454,normal,Sun,none,MU
+Grid-India,grid_india,evening_peak,1,2026-11-08,176362,203000,15.1042,1,15.1042,normal,Sun,"national holiday, Diwali",MW
+Grid-India,grid_india,evening_peak,2,2026-05-04,209015,235909,12.867,1,12.867,rainy,Mon,none,MW
+Grid-India,grid_india,evening_peak,3,2026-03-19,196534,220570,12.2299,1,12.2299,rainy,Thu,none,MW
+Grid-India,grid_india,evening_peak,4,2026-04-30,219227,246022,12.2225,1,12.2225,normal,Thu,none,MW
+Grid-India,grid_india,evening_peak,5,2026-03-20,199609,221664,11.0491,1,11.0491,rainy,Fri,none,MW
+Grid-India,grid_india,evening_peak,6,2026-05-30,221943,245783,10.7414,1,10.7414,heavy rain/storm,Sat,none,MW
+Grid-India,grid_india,evening_peak,7,2026-03-22,192928,212589,10.1908,1,10.1908,normal,Sun,none,MW
+Grid-India,grid_india,evening_peak,8,2026-09-25,222441,245000,10.1416,1,10.1416,heavy rain/storm,Fri,none,MW
+Grid-India,grid_india,evening_peak,9,2025-11-01,189169,207999,9.95406,1,9.95406,rainy,Sat,none,MW
+Grid-India,grid_india,evening_peak,10,2026-03-21,197313,216455,9.70131,1,9.70131,normal,Sat,"national holiday, Eid Ul Fitr",MW
+Grid-India,grid_india,solar_peak,1,2026-03-20,198385,245076,23.5355,1,23.5355,rainy,Fri,none,MW
+Grid-India,grid_india,solar_peak,2,2026-03-21,200141,239103,19.4674,1,19.4674,normal,Sat,"national holiday, Eid Ul Fitr",MW
+Grid-India,grid_india,solar_peak,3,2026-03-22,194118,231217,19.1116,1,19.1116,normal,Sun,none,MW
+Grid-India,grid_india,solar_peak,4,2026-03-19,208390,244810,17.4768,1,17.4768,rainy,Thu,none,MW
+Grid-India,grid_india,solar_peak,5,2026-09-25,222647,258500,16.1031,1,16.1031,heavy rain/storm,Fri,none,MW
+Grid-India,grid_india,solar_peak,6,2026-09-26,222533,256500,15.2638,1,15.2638,rainy,Sat,none,MW
+Grid-India,grid_india,solar_peak,7,2025-12-21,226534,192935,14.8318,1,-14.8318,cold/fog,Sun,none,MW
+Grid-India,grid_india,solar_peak,8,2026-05-30,225629,258758,14.683,1,14.683,heavy rain/storm,Sat,none,MW
+Grid-India,grid_india,solar_peak,9,2026-09-27,217755,248500,14.1191,1,14.1191,normal,Sun,none,MW
+Grid-India,grid_india,solar_peak,10,2026-05-07,217814,246954,13.3784,1,13.3784,normal,Thu,none,MW
+LightGBM,lgbm@compact,energy,1,2026-03-20,4398.81,4863.17,10.5564,7,10.5564,rainy,Fri,none,MU
+LightGBM,lgbm@compact,energy,2,2026-11-08,4067.41,4483.79,10.2369,7,10.2369,normal,Sun,"national holiday, Diwali",MU
+LightGBM,lgbm@compact,energy,3,2026-03-22,4299.29,4723.12,9.85809,7,9.85809,normal,Sun,none,MU
+LightGBM,lgbm@compact,energy,4,2026-05-01,4795.23,5246.49,9.41066,7,9.41066,normal,Fri,national holiday,MU
+LightGBM,lgbm@compact,energy,5,2026-03-21,4385.99,4774.91,8.86737,7,8.86737,normal,Sat,"national holiday, Eid Ul Fitr",MU
+LightGBM,lgbm@compact,energy,6,2026-01-26,4344.9,4685.96,7.8496,7,7.8496,cold/fog,Mon,national holiday,MU
+LightGBM,lgbm@compact,energy,7,2026-03-19,4549.88,4906.43,7.83636,7,7.83636,rainy,Thu,none,MU
+LightGBM,lgbm@compact,energy,8,2026-05-03,4797.22,5155.29,7.4641,7,7.4641,normal,Sun,none,MU
+LightGBM,lgbm@compact,energy,9,2026-03-04,4418.86,4744.44,7.36796,7,7.36796,normal,Wed,"national holiday, Holi",MU
+LightGBM,lgbm@compact,energy,10,2026-05-31,4879.65,5221.45,7.00461,7,7.00461,normal,Sun,none,MU
+LightGBM,lgbm@compact,evening_peak,1,2026-11-08,176362,197622,12.0547,7,12.0547,normal,Sun,"national holiday, Diwali",MW
+LightGBM,lgbm@compact,evening_peak,2,2026-03-04,183675,204571,11.3765,7,11.3765,normal,Wed,"national holiday, Holi",MW
+LightGBM,lgbm@compact,evening_peak,3,2026-05-04,209015,225889,8.07317,7,8.07317,rainy,Mon,none,MW
+LightGBM,lgbm@compact,evening_peak,4,2026-01-26,196059,211575,7.91402,7,7.91402,cold/fog,Mon,national holiday,MW
+LightGBM,lgbm@compact,evening_peak,5,2026-03-19,196534,209842,6.77142,7,6.77142,rainy,Thu,none,MW
+LightGBM,lgbm@compact,evening_peak,6,2026-05-30,221943,235408,6.06695,7,6.06695,heavy rain/storm,Sat,none,MW
+LightGBM,lgbm@compact,evening_peak,7,2026-05-02,220756,233959,5.98081,7,5.98081,heavy rain/storm,Sat,none,MW
+LightGBM,lgbm@compact,evening_peak,8,2026-05-03,216101,228465,5.7215,7,5.7215,normal,Sun,none,MW
+LightGBM,lgbm@compact,evening_peak,9,2026-08-28,233160,244670,4.93669,7,4.93669,rainy,Fri,none,MW
+LightGBM,lgbm@compact,evening_peak,10,2026-04-30,219227,229972,4.90112,7,4.90112,normal,Thu,none,MW
+LightGBM,lgbm@compact,solar_peak,1,2026-05-01,210130,237105,12.8371,7,12.8371,normal,Fri,national holiday,MW
+LightGBM,lgbm@compact,solar_peak,2,2026-03-20,198385,220948,11.3733,7,11.3733,rainy,Fri,none,MW
+LightGBM,lgbm@compact,solar_peak,3,2026-03-04,209874,232652,10.8532,7,10.8532,normal,Wed,"national holiday, Holi",MW
+LightGBM,lgbm@compact,solar_peak,4,2026-03-22,194118,214851,10.6804,7,10.6804,normal,Sun,none,MW
+LightGBM,lgbm@compact,solar_peak,5,2026-07-16,270203,242079,10.4086,7,-10.4086,rainy,Thu,none,MW
+LightGBM,lgbm@compact,solar_peak,6,2026-07-14,266068,239189,10.1024,7,-10.1024,cloudy,Tue,none,MW
+LightGBM,lgbm@compact,solar_peak,7,2026-07-15,266291,239984,9.87896,7,-9.87896,rainy,Wed,none,MW
+LightGBM,lgbm@compact,solar_peak,8,2026-07-17,269537,243460,9.67472,7,-9.67472,rainy,Fri,none,MW
+LightGBM,lgbm@compact,solar_peak,9,2026-03-21,200141,218477,9.16131,7,9.16131,normal,Sat,"national holiday, Eid Ul Fitr",MW
+LightGBM,lgbm@compact,solar_peak,10,2026-01-26,220642,240652,9.06893,7,9.06893,cold/fog,Mon,national holiday,MW
+LSTM,lstm_w@compact,energy,1,2026-03-20,4398.81,4760.25,8.21673,7,8.21673,rainy,Fri,none,MU
+LSTM,lstm_w@compact,energy,2,2026-05-01,4795.23,5183.19,8.0905,7,8.0905,normal,Fri,national holiday,MU
+LSTM,lstm_w@compact,energy,3,2026-01-26,4344.9,4666.47,7.40119,7,7.40119,cold/fog,Mon,national holiday,MU
+LSTM,lstm_w@compact,energy,4,2026-05-04,4830.67,5177.96,7.18936,7,7.18936,rainy,Mon,none,MU
+LSTM,lstm_w@compact,energy,5,2026-06-27,5806.19,5402.13,6.95905,7,-6.95905,hot,Sat,none,MU
+LSTM,lstm_w@compact,energy,6,2026-03-04,4418.86,4719.15,6.79569,7,6.79569,normal,Wed,"national holiday, Holi",MU
+LSTM,lstm_w@compact,energy,7,2026-05-03,4797.22,5114.46,6.6129,7,6.6129,normal,Sun,none,MU
+LSTM,lstm_w@compact,energy,8,2026-06-28,5668.82,5301.77,6.47495,7,-6.47495,hot,Sun,none,MU
+LSTM,lstm_w@compact,energy,9,2026-05-30,5046.88,5358.2,6.16852,7,6.16852,heavy rain/storm,Sat,none,MU
+LSTM,lstm_w@compact,energy,10,2026-05-31,4879.65,5171.65,5.98402,7,5.98402,normal,Sun,none,MU
+LSTM,lstm_w@compact,evening_peak,1,2026-03-04,183675,205107,11.6683,7,11.6683,normal,Wed,"national holiday, Holi",MW
+LSTM,lstm_w@compact,evening_peak,2,2026-05-04,209015,227705,8.94209,7,8.94209,rainy,Mon,none,MW
+LSTM,lstm_w@compact,evening_peak,3,2026-01-26,196059,211688,7.97154,7,7.97154,cold/fog,Mon,national holiday,MW
+LSTM,lstm_w@compact,evening_peak,4,2026-01-14,206172,220773,7.08199,7,7.08199,cold/fog,Wed,none,MW
+LSTM,lstm_w@compact,evening_peak,5,2026-01-01,201879,215786,6.88885,7,6.88885,cold/fog,Thu,none,MW
+LSTM,lstm_w@compact,evening_peak,6,2026-03-19,196534,209900,6.80092,7,6.80092,rainy,Thu,none,MW
+LSTM,lstm_w@compact,evening_peak,7,2026-11-08,176362,188291,6.76411,7,6.76411,normal,Sun,"national holiday, Diwali",MW
+LSTM,lstm_w@compact,evening_peak,8,2026-10-20,202877,216089,6.51231,7,6.51231,normal,Tue,"national holiday, Dussehra",MW
+LSTM,lstm_w@compact,evening_peak,9,2026-05-30,221943,236314,6.47504,7,6.47504,heavy rain/storm,Sat,none,MW
+LSTM,lstm_w@compact,evening_peak,10,2026-05-24,247975,234292,5.51794,7,-5.51794,heavy rain/storm,Sun,none,MW
+LSTM,lstm_w@compact,solar_peak,1,2026-05-01,210130,231088,9.97363,7,9.97363,normal,Fri,national holiday,MW
+LSTM,lstm_w@compact,solar_peak,2,2026-06-27,264768,240093,9.31965,7,-9.31965,hot,Sat,none,MW
+LSTM,lstm_w@compact,solar_peak,3,2026-05-31,215476,234594,8.87237,7,8.87237,normal,Sun,none,MW
+LSTM,lstm_w@compact,solar_peak,4,2026-01-26,220642,239906,8.73067,7,8.73067,cold/fog,Mon,national holiday,MW
+LSTM,lstm_w@compact,solar_peak,5,2026-03-20,198385,215343,8.54783,7,8.54783,rainy,Fri,none,MW
+LSTM,lstm_w@compact,solar_peak,6,2026-05-03,209493,227242,8.47231,7,8.47231,normal,Sun,none,MW
+LSTM,lstm_w@compact,solar_peak,7,2026-05-30,225629,244605,8.4102,7,8.4102,heavy rain/storm,Sat,none,MW
+LSTM,lstm_w@compact,solar_peak,8,2026-03-04,209874,227080,8.19846,7,8.19846,normal,Wed,"national holiday, Holi",MW
+LSTM,lstm_w@compact,solar_peak,9,2026-04-25,256117,236182,7.78364,7,-7.78364,hot,Sat,none,MW
+LSTM,lstm_w@compact,solar_peak,10,2026-01-23,228472,246242,7.77768,7,7.77768,rainy,Fri,none,MW
+Seasonal naive,seasonal_naive,energy,1,2026-03-20,4398.81,5150.11,17.0796,7,17.0796,rainy,Fri,none,MU
+Seasonal naive,seasonal_naive,energy,2,2026-03-21,4385.99,5093.21,16.1245,7,16.1245,normal,Sat,"national holiday, Eid Ul Fitr",MU
+Seasonal naive,seasonal_naive,energy,3,2026-05-01,4795.23,5561.92,15.9886,7,15.9886,normal,Fri,national holiday,MU
+Seasonal naive,seasonal_naive,energy,4,2026-05-05,4852,5604.46,15.5082,7,15.5082,normal,Tue,none,MU
+Seasonal naive,seasonal_naive,energy,5,2026-05-04,4830.67,5562.39,15.1474,7,15.1474,rainy,Mon,none,MU
+Seasonal naive,seasonal_naive,energy,6,2026-10-20,4758.82,5453.02,14.5876,7,14.5876,normal,Tue,"national holiday, Dussehra",MU
+Seasonal naive,seasonal_naive,energy,7,2026-07-23,5254.25,6002.3,14.237,7,14.237,heavy rain/storm,Thu,none,MU
+Seasonal naive,seasonal_naive,energy,8,2026-03-11,5152.39,4418.86,14.2367,7,-14.2367,normal,Wed,none,MU
+Seasonal naive,seasonal_naive,energy,9,2026-05-30,5046.88,5755.94,14.0495,7,14.0495,heavy rain/storm,Sat,none,MU
+Seasonal naive,seasonal_naive,energy,10,2026-11-08,4067.41,4613.82,13.4339,7,13.4339,normal,Sun,"national holiday, Diwali",MU
+Seasonal naive,seasonal_naive,evening_peak,1,2026-10-20,202877,236683,16.6633,7,16.6633,normal,Tue,"national holiday, Dussehra",MW
+Seasonal naive,seasonal_naive,evening_peak,2,2026-03-11,220323,183675,16.6338,7,-16.6338,normal,Wed,none,MW
+Seasonal naive,seasonal_naive,evening_peak,3,2026-11-08,176362,203172,15.2017,7,15.2017,normal,Sun,"national holiday, Diwali",MW
+Seasonal naive,seasonal_naive,evening_peak,4,2026-03-04,183675,210311,14.5017,7,14.5017,normal,Wed,"national holiday, Holi",MW
+Seasonal naive,seasonal_naive,evening_peak,5,2026-05-04,209015,238207,13.9665,7,13.9665,rainy,Mon,none,MW
+Seasonal naive,seasonal_naive,evening_peak,6,2026-05-05,215423,244025,13.2771,7,13.2771,normal,Tue,none,MW
+Seasonal naive,seasonal_naive,evening_peak,7,2026-05-30,221943,248605,12.013,7,12.013,heavy rain/storm,Sat,none,MW
+Seasonal naive,seasonal_naive,evening_peak,8,2026-03-19,196534,218632,11.2439,7,11.2439,rainy,Thu,none,MW
+Seasonal naive,seasonal_naive,evening_peak,9,2026-03-21,197313,219218,11.1017,7,11.1017,normal,Sat,"national holiday, Eid Ul Fitr",MW
+Seasonal naive,seasonal_naive,evening_peak,10,2026-05-31,223711,247975,10.8461,7,10.8461,normal,Sun,none,MW
+Seasonal naive,seasonal_naive,solar_peak,1,2026-05-01,210130,252075,19.9615,7,19.9615,normal,Fri,national holiday,MW
+Seasonal naive,seasonal_naive,solar_peak,2,2026-03-20,198385,237362,19.6472,7,19.6472,rainy,Fri,none,MW
+Seasonal naive,seasonal_naive,solar_peak,3,2026-07-23,229035,270203,17.9745,7,17.9745,heavy rain/storm,Thu,none,MW
+Seasonal naive,seasonal_naive,solar_peak,4,2026-07-24,229883,269537,17.2496,7,17.2496,heavy rain/storm,Fri,none,MW
+Seasonal naive,seasonal_naive,solar_peak,5,2026-07-16,270203,224250,17.0068,7,-17.0068,rainy,Thu,none,MW
+Seasonal naive,seasonal_naive,solar_peak,6,2026-10-20,221448,256002,15.6037,7,15.6037,normal,Tue,"national holiday, Dussehra",MW
+Seasonal naive,seasonal_naive,solar_peak,7,2026-05-04,221648,255859,15.4348,7,15.4348,rainy,Mon,none,MW
+Seasonal naive,seasonal_naive,solar_peak,8,2026-07-15,266291,225396,15.3573,7,-15.3573,rainy,Wed,none,MW
+Seasonal naive,seasonal_naive,solar_peak,9,2026-03-21,200141,230534,15.1858,7,15.1858,normal,Sat,"national holiday, Eid Ul Fitr",MW
+Seasonal naive,seasonal_naive,solar_peak,10,2026-05-30,225629,259812,15.1501,7,15.1501,heavy rain/storm,Sat,none,MW
+TFT,tft@v1,energy,1,2026-03-20,4398.81,4838.6,9.99801,7,9.99801,rainy,Fri,none,MU
+TFT,tft@v1,energy,2,2026-05-01,4795.23,5248.33,9.44904,7,9.44904,normal,Fri,national holiday,MU
+TFT,tft@v1,energy,3,2026-11-06,4792.27,4414.5,7.88294,7,-7.88294,normal,Fri,none,MU
+TFT,tft@v1,energy,4,2026-05-04,4830.67,5197.19,7.58729,7,7.58729,rainy,Mon,none,MU
+TFT,tft@v1,energy,5,2026-03-21,4385.99,4710.23,7.39264,7,7.39264,normal,Sat,"national holiday, Eid Ul Fitr",MU
+TFT,tft@v1,energy,6,2026-03-19,4549.88,4873.24,7.10706,7,7.10706,rainy,Thu,none,MU
+TFT,tft@v1,energy,7,2026-06-27,5806.19,5395.17,7.07898,7,-7.07898,hot,Sat,none,MU
+TFT,tft@v1,energy,8,2026-05-31,4879.65,5220.94,6.99422,7,6.99422,normal,Sun,none,MU
+TFT,tft@v1,energy,9,2026-01-26,4344.9,4648.32,6.98338,7,6.98338,cold/fog,Mon,national holiday,MU
+TFT,tft@v1,energy,10,2026-05-03,4797.22,5128.69,6.90964,7,6.90964,normal,Sun,none,MU
+TFT,tft@v1,evening_peak,1,2026-05-04,209015,231525,10.7693,7,10.7693,rainy,Mon,none,MW
+TFT,tft@v1,evening_peak,2,2026-11-08,176362,191339,8.49203,7,8.49203,normal,Sun,"national holiday, Diwali",MW
+TFT,tft@v1,evening_peak,3,2026-05-30,221943,239907,8.09418,7,8.09418,heavy rain/storm,Sat,none,MW
+TFT,tft@v1,evening_peak,4,2026-01-26,196059,211257,7.7518,7,7.7518,cold/fog,Mon,national holiday,MW
+TFT,tft@v1,evening_peak,5,2026-11-06,216367,199603,7.74809,7,-7.74809,normal,Fri,none,MW
+TFT,tft@v1,evening_peak,6,2026-10-20,202877,218114,7.51059,7,7.51059,normal,Tue,"national holiday, Dussehra",MW
+TFT,tft@v1,evening_peak,7,2026-03-19,196534,210835,7.27654,7,7.27654,rainy,Thu,none,MW
+TFT,tft@v1,evening_peak,8,2026-05-29,228895,244512,6.82275,7,6.82275,heavy rain/storm,Fri,none,MW
+TFT,tft@v1,evening_peak,9,2025-11-05,196314,183250,6.65472,4,-6.65472,normal,Wed,national holiday,MW
+TFT,tft@v1,evening_peak,10,2026-04-30,219227,233195,6.37154,7,6.37154,normal,Thu,none,MW
+TFT,tft@v1,solar_peak,1,2026-05-01,210130,233135,10.9481,7,10.9481,normal,Fri,national holiday,MW
+TFT,tft@v1,solar_peak,2,2026-07-14,266068,239046,10.156,7,-10.156,cloudy,Tue,none,MW
+TFT,tft@v1,solar_peak,3,2026-03-20,198385,218231,10.0038,7,10.0038,rainy,Fri,none,MW
+TFT,tft@v1,solar_peak,4,2026-07-16,270203,245191,9.25675,7,-9.25675,rainy,Thu,none,MW
+TFT,tft@v1,solar_peak,5,2026-05-31,215476,235213,9.15961,7,9.15961,normal,Sun,none,MW
+TFT,tft@v1,solar_peak,6,2026-06-27,264768,240684,9.0964,7,-9.0964,hot,Sat,none,MW
+TFT,tft@v1,solar_peak,7,2026-05-30,225629,246050,9.05053,7,9.05053,heavy rain/storm,Sat,none,MW
+TFT,tft@v1,solar_peak,8,2026-07-15,266291,242650,8.87798,7,-8.87798,rainy,Wed,none,MW
+TFT,tft@v1,solar_peak,9,2026-07-17,269537,245982,8.73914,7,-8.73914,rainy,Fri,none,MW
+TFT,tft@v1,solar_peak,10,2025-11-14,199057,181790,8.67433,7,-8.67433,normal,Fri,none,MW

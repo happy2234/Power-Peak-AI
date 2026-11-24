@@ -1,0 +1,7 @@
+step,model,model_key,solar_peak_mape_pct,evening_peak_mape_pct,energy_mape_pct,overall_mape_pct,overall_change_vs_previous_step_pp,improves_on_previous_step,rank_overall (1=best)
+1,Seasonal naive,seasonal_naive,4.73587,3.15244,3.93432,3.94088,,,6
+2,LightGBM,lgbm@compact,2.78329,1.80833,2.25787,2.28316,-1.65771,True,3
+3,LSTM,lstm_w@compact,2.39184,1.91133,2.05724,2.12014,-0.163029,True,2
+4,TFT,tft@v1,2.80041,1.96076,2.32307,2.36142,0.24128,False,4
+5,Ensemble (LSTM+LightGBM),ensemble,2.39915,1.79144,2.00141,2.064,-0.297416,True,1
+6,Grid-India,grid_india,4.72829,3.07693,3.8701,3.89177,1.82778,False,5

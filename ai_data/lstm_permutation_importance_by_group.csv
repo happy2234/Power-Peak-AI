@@ -1,0 +1,13 @@
+group,target,sum_of_single_feature_increase_pp,joint_permutation_increase_pp
+Calendar,energy,1.46373,1.72054
+Calendar,evening_peak,1.27767,1.46781
+Calendar,solar_peak,1.71645,1.93222
+Lag,energy,0.374582,0.469535
+Lag,evening_peak,0.343817,0.425447
+Lag,solar_peak,0.617034,0.595914
+Other,energy,0.0991185,0.14637
+Other,evening_peak,0.0311443,0.0510108
+Other,solar_peak,0.0677642,0.123617
+Weather,energy,2.12476,2.44232
+Weather,evening_peak,1.20624,1.45371
+Weather,solar_peak,2.57171,3.00105

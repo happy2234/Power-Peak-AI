@@ -1,0 +1,667 @@
+model,model_key,target,group_type,group,mape_pct,bias_pct,n_days,n_forecasts
+Ensemble (LSTM+LightGBM),ensemble,energy,month,01 Jan,2.29905,2.26368,31,217
+Ensemble (LSTM+LightGBM),ensemble,energy,month,02 Feb,0.665296,0.302046,28,196
+Ensemble (LSTM+LightGBM),ensemble,energy,month,03 Mar,3.24507,0.215055,31,217
+Ensemble (LSTM+LightGBM),ensemble,energy,month,04 Apr,1.81433,-0.277398,30,210
+Ensemble (LSTM+LightGBM),ensemble,energy,month,05 May,2.87666,0.221724,31,217
+Ensemble (LSTM+LightGBM),ensemble,energy,month,06 Jun,2.99885,-2.47959,30,210
+Ensemble (LSTM+LightGBM),ensemble,energy,month,07 Jul,2.3526,-1.07153,31,217
+Ensemble (LSTM+LightGBM),ensemble,energy,month,08 Aug,1.98175,0.0671701,31,217
+Ensemble (LSTM+LightGBM),ensemble,energy,month,09 Sep,1.42922,-0.351929,30,210
+Ensemble (LSTM+LightGBM),ensemble,energy,month,10 Oct,1.29943,-0.411077,31,217
+Ensemble (LSTM+LightGBM),ensemble,energy,month,11 Nov,1.9613,-1.05069,37,238
+Ensemble (LSTM+LightGBM),ensemble,energy,month,12 Dec,0.975591,-0.272189,31,217
+Ensemble (LSTM+LightGBM),ensemble,evening_peak,month,01 Jan,2.1127,1.99316,31,217
+Ensemble (LSTM+LightGBM),ensemble,evening_peak,month,02 Feb,0.925077,0.581527,28,196
+Ensemble (LSTM+LightGBM),ensemble,evening_peak,month,03 Mar,2.3239,0.165527,31,217
+Ensemble (LSTM+LightGBM),ensemble,evening_peak,month,04 Apr,1.50824,-0.326879,30,210
+Ensemble (LSTM+LightGBM),ensemble,evening_peak,month,05 May,2.7569,0.0789879,31,217
+Ensemble (LSTM+LightGBM),ensemble,evening_peak,month,06 Jun,2.29335,-1.6983,30,210
+Ensemble (LSTM+LightGBM),ensemble,evening_peak,month,07 Jul,1.99652,-0.648504,31,217
+Ensemble (LSTM+LightGBM),ensemble,evening_peak,month,08 Aug,1.3473,-0.304618,31,217
+Ensemble (LSTM+LightGBM),ensemble,evening_peak,month,09 Sep,1.68356,-0.062777,30,210
+Ensemble (LSTM+LightGBM),ensemble,evening_peak,month,10 Oct,1.41269,-0.028583,31,217
+Ensemble (LSTM+LightGBM),ensemble,evening_peak,month,11 Nov,1.83452,-0.310753,37,238
+Ensemble (LSTM+LightGBM),ensemble,evening_peak,month,12 Dec,1.21803,-0.567381,31,217
+Ensemble (LSTM+LightGBM),ensemble,solar_peak,month,01 Jan,2.54578,2.47301,31,217
+Ensemble (LSTM+LightGBM),ensemble,solar_peak,month,02 Feb,1.50861,1.13008,28,196
+Ensemble (LSTM+LightGBM),ensemble,solar_peak,month,03 Mar,2.90241,1.31614,31,217
+Ensemble (LSTM+LightGBM),ensemble,solar_peak,month,04 Apr,2.79201,-0.346675,30,210
+Ensemble (LSTM+LightGBM),ensemble,solar_peak,month,05 May,3.27259,0.51676,31,217
+Ensemble (LSTM+LightGBM),ensemble,solar_peak,month,06 Jun,2.59338,-1.63616,30,210
+Ensemble (LSTM+LightGBM),ensemble,solar_peak,month,07 Jul,3.1333,-1.1892,31,217
+Ensemble (LSTM+LightGBM),ensemble,solar_peak,month,08 Aug,2.51611,-0.19188,31,217
+Ensemble (LSTM+LightGBM),ensemble,solar_peak,month,09 Sep,1.95498,-0.490411,30,210
+Ensemble (LSTM+LightGBM),ensemble,solar_peak,month,10 Oct,1.7366,-0.713168,31,217
+Ensemble (LSTM+LightGBM),ensemble,solar_peak,month,11 Nov,2.40154,-1.9157,37,238
+Ensemble (LSTM+LightGBM),ensemble,solar_peak,month,12 Dec,1.35073,-0.153589,31,217
+Grid-India,grid_india,energy,month,01 Jan,2.08357,1.53657,31,31
+Grid-India,grid_india,energy,month,02 Feb,0.936233,0.262044,28,28
+Grid-India,grid_india,energy,month,03 Mar,4.82693,1.95844,31,31
+Grid-India,grid_india,energy,month,04 Apr,4.16364,-0.00444697,30,30
+Grid-India,grid_india,energy,month,05 May,6.60972,2.50468,31,31
+Grid-India,grid_india,energy,month,06 Jun,2.67507,1.49719,30,30
+Grid-India,grid_india,energy,month,07 Jul,5.18459,5.17545,24,24
+Grid-India,grid_india,energy,month,08 Aug,3.67225,3.21097,31,31
+Grid-India,grid_india,energy,month,09 Sep,4.99053,4.90246,30,30
+Grid-India,grid_india,energy,month,10 Oct,4.25266,3.69757,31,31
+Grid-India,grid_india,energy,month,11 Nov,4.66348,3.95978,38,38
+Grid-India,grid_india,energy,month,12 Dec,2.22336,-2.21127,31,31
+Grid-India,grid_india,evening_peak,month,01 Jan,2.07583,1.795,31,31
+Grid-India,grid_india,evening_peak,month,02 Feb,1.28669,0.889172,28,28
+Grid-India,grid_india,evening_peak,month,03 Mar,3.83029,0.688398,31,31
+Grid-India,grid_india,evening_peak,month,04 Apr,2.57486,0.100501,30,30
+Grid-India,grid_india,evening_peak,month,05 May,4.96347,2.4288,31,31
+Grid-India,grid_india,evening_peak,month,06 Jun,1.94049,1.64557,30,30
+Grid-India,grid_india,evening_peak,month,07 Jul,4.91671,4.81648,24,24
+Grid-India,grid_india,evening_peak,month,08 Aug,2.61785,2.52129,31,31
+Grid-India,grid_india,evening_peak,month,09 Sep,5.0739,5.0739,30,30
+Grid-India,grid_india,evening_peak,month,10 Oct,3.04146,2.71312,31,31
+Grid-India,grid_india,evening_peak,month,11 Nov,2.5373,2.0451,38,38
+Grid-India,grid_india,evening_peak,month,12 Dec,2.43996,-1.66642,31,31
+Grid-India,grid_india,solar_peak,month,01 Jan,2.22924,1.319,31,31
+Grid-India,grid_india,solar_peak,month,02 Feb,2.16139,2.10427,28,28
+Grid-India,grid_india,solar_peak,month,03 Mar,6.27771,6.10667,31,31
+Grid-India,grid_india,solar_peak,month,04 Apr,6.29514,-0.0622176,30,30
+Grid-India,grid_india,solar_peak,month,05 May,7.68752,1.10303,31,31
+Grid-India,grid_india,solar_peak,month,06 Jun,3.40345,2.02389,30,30
+Grid-India,grid_india,solar_peak,month,07 Jul,7.04243,7.04243,24,24
+Grid-India,grid_india,solar_peak,month,08 Aug,3.47515,1.73099,31,31
+Grid-India,grid_india,solar_peak,month,09 Sep,5.30934,2.72451,30,30
+Grid-India,grid_india,solar_peak,month,10 Oct,3.51441,1.16063,31,31
+Grid-India,grid_india,solar_peak,month,11 Nov,4.15297,-0.71975,38,38
+Grid-India,grid_india,solar_peak,month,12 Dec,5.62128,-5.62128,31,31
+LightGBM,lgbm@compact,energy,month,01 Jan,1.90892,1.87396,31,217
+LightGBM,lgbm@compact,energy,month,02 Feb,0.777161,0.353702,28,196
+LightGBM,lgbm@compact,energy,month,03 Mar,3.66575,0.526823,31,217
+LightGBM,lgbm@compact,energy,month,04 Apr,2.16925,-1.22094,30,210
+LightGBM,lgbm@compact,energy,month,05 May,3.06709,0.209219,31,217
+LightGBM,lgbm@compact,energy,month,06 Jun,2.96226,-2.2411,30,210
+LightGBM,lgbm@compact,energy,month,07 Jul,2.92463,-1.18318,31,217
+LightGBM,lgbm@compact,energy,month,08 Aug,2.32094,-1.31953,31,217
+LightGBM,lgbm@compact,energy,month,09 Sep,1.76759,-0.260998,30,210
+LightGBM,lgbm@compact,energy,month,10 Oct,2.0256,-1.45403,31,217
+LightGBM,lgbm@compact,energy,month,11 Nov,2.27214,-1.42117,37,238
+LightGBM,lgbm@compact,energy,month,12 Dec,1.09251,-0.76463,31,217
+LightGBM,lgbm@compact,evening_peak,month,01 Jan,1.48516,1.36821,31,217
+LightGBM,lgbm@compact,evening_peak,month,02 Feb,0.836767,0.558035,28,196
+LightGBM,lgbm@compact,evening_peak,month,03 Mar,2.30673,0.232553,31,217
+LightGBM,lgbm@compact,evening_peak,month,04 Apr,1.67453,-0.885972,30,210
+LightGBM,lgbm@compact,evening_peak,month,05 May,2.91601,0.224205,31,217
+LightGBM,lgbm@compact,evening_peak,month,06 Jun,2.23444,-1.54121,30,210
+LightGBM,lgbm@compact,evening_peak,month,07 Jul,2.07484,-0.645774,31,217
+LightGBM,lgbm@compact,evening_peak,month,08 Aug,1.502,-0.726768,31,217
+LightGBM,lgbm@compact,evening_peak,month,09 Sep,1.72943,-0.234009,30,210
+LightGBM,lgbm@compact,evening_peak,month,10 Oct,1.34615,-0.632453,31,217
+LightGBM,lgbm@compact,evening_peak,month,11 Nov,2.02441,-0.590795,37,238
+LightGBM,lgbm@compact,evening_peak,month,12 Dec,1.46141,-1.02793,31,217
+LightGBM,lgbm@compact,solar_peak,month,01 Jan,1.94893,1.77691,31,217
+LightGBM,lgbm@compact,solar_peak,month,02 Feb,1.62424,1.19457,28,196
+LightGBM,lgbm@compact,solar_peak,month,03 Mar,3.46316,1.70174,31,217
+LightGBM,lgbm@compact,solar_peak,month,04 Apr,2.83097,-1.26792,30,210
+LightGBM,lgbm@compact,solar_peak,month,05 May,3.52057,0.514175,31,217
+LightGBM,lgbm@compact,solar_peak,month,06 Jun,2.66868,-1.36742,30,210
+LightGBM,lgbm@compact,solar_peak,month,07 Jul,3.80796,-1.30647,31,217
+LightGBM,lgbm@compact,solar_peak,month,08 Aug,3.16262,-1.69921,31,217
+LightGBM,lgbm@compact,solar_peak,month,09 Sep,3.05907,-0.850534,30,210
+LightGBM,lgbm@compact,solar_peak,month,10 Oct,2.78017,-1.76111,31,217
+LightGBM,lgbm@compact,solar_peak,month,11 Nov,2.87684,-2.27196,37,238
+LightGBM,lgbm@compact,solar_peak,month,12 Dec,1.54181,-0.905706,31,217
+LSTM,lstm_w@compact,energy,month,01 Jan,2.51558,2.40756,31,217
+LSTM,lstm_w@compact,energy,month,02 Feb,0.65369,0.255332,28,196
+LSTM,lstm_w@compact,energy,month,03 Mar,3.02646,-0.0214463,31,217
+LSTM,lstm_w@compact,energy,month,04 Apr,2.10754,0.269518,30,210
+LSTM,lstm_w@compact,energy,month,05 May,3.00904,0.472939,31,217
+LSTM,lstm_w@compact,energy,month,06 Jun,3.09319,-2.54206,30,210
+LSTM,lstm_w@compact,energy,month,07 Jul,2.06852,-1.06385,31,217
+LSTM,lstm_w@compact,energy,month,08 Aug,2.03683,0.318205,31,217
+LSTM,lstm_w@compact,energy,month,09 Sep,1.40385,-0.302747,30,210
+LSTM,lstm_w@compact,energy,month,10 Oct,1.2584,-0.0918514,31,217
+LSTM,lstm_w@compact,energy,month,11 Nov,2.26842,-0.816974,37,238
+LSTM,lstm_w@compact,energy,month,12 Dec,1.10305,-0.127631,31,217
+LSTM,lstm_w@compact,evening_peak,month,01 Jan,2.4197,2.2511,31,217
+LSTM,lstm_w@compact,evening_peak,month,02 Feb,1.01087,0.593338,28,196
+LSTM,lstm_w@compact,evening_peak,month,03 Mar,2.50088,0.165034,31,217
+LSTM,lstm_w@compact,evening_peak,month,04 Apr,1.84492,0.0623474,30,210
+LSTM,lstm_w@compact,evening_peak,month,05 May,2.75592,0.095816,31,217
+LSTM,lstm_w@compact,evening_peak,month,06 Jun,2.38166,-1.94024,30,210
+LSTM,lstm_w@compact,evening_peak,month,07 Jul,1.89568,-0.814357,31,217
+LSTM,lstm_w@compact,evening_peak,month,08 Aug,1.44553,0.210001,31,217
+LSTM,lstm_w@compact,evening_peak,month,09 Sep,1.72472,0.105465,30,210
+LSTM,lstm_w@compact,evening_peak,month,10 Oct,1.68289,0.396455,31,217
+LSTM,lstm_w@compact,evening_peak,month,11 Nov,1.87583,-0.224365,37,238
+LSTM,lstm_w@compact,evening_peak,month,12 Dec,1.3207,-0.401174,31,217
+LSTM,lstm_w@compact,solar_peak,month,01 Jan,2.78412,2.65054,31,217
+LSTM,lstm_w@compact,solar_peak,month,02 Feb,1.48546,1.08706,28,196
+LSTM,lstm_w@compact,solar_peak,month,03 Mar,2.64179,0.976069,31,217
+LSTM,lstm_w@compact,solar_peak,month,04 Apr,3.11918,0.0357786,30,210
+LSTM,lstm_w@compact,solar_peak,month,05 May,3.43812,0.783395,31,217
+LSTM,lstm_w@compact,solar_peak,month,06 Jun,2.83454,-1.75114,30,210
+LSTM,lstm_w@compact,solar_peak,month,07 Jul,2.70736,-1.14359,31,217
+LSTM,lstm_w@compact,solar_peak,month,08 Aug,2.51037,0.30637,31,217
+LSTM,lstm_w@compact,solar_peak,month,09 Sep,1.76782,-0.316969,30,210
+LSTM,lstm_w@compact,solar_peak,month,10 Oct,1.63654,-0.463522,31,217
+LSTM,lstm_w@compact,solar_peak,month,11 Nov,2.3347,-1.71028,37,238
+LSTM,lstm_w@compact,solar_peak,month,12 Dec,1.37746,-0.00497744,31,217
+Seasonal naive,seasonal_naive,energy,month,01 Jan,2.01826,0.253953,31,217
+Seasonal naive,seasonal_naive,energy,month,02 Feb,1.54878,-1.41597,28,196
+Seasonal naive,seasonal_naive,energy,month,03 Mar,6.42945,0.013831,31,217
+Seasonal naive,seasonal_naive,energy,month,04 Apr,4.48234,-2.4134,30,210
+Seasonal naive,seasonal_naive,energy,month,05 May,7.59155,0.555491,31,217
+Seasonal naive,seasonal_naive,energy,month,06 Jun,3.93635,-1.16555,30,210
+Seasonal naive,seasonal_naive,energy,month,07 Jul,6.85106,1.33249,31,217
+Seasonal naive,seasonal_naive,energy,month,08 Aug,2.42605,-0.280701,31,217
+Seasonal naive,seasonal_naive,energy,month,09 Sep,3.18886,1.95687,30,210
+Seasonal naive,seasonal_naive,energy,month,10 Oct,4.63939,1.6399,31,217
+Seasonal naive,seasonal_naive,energy,month,11 Nov,2.36415,-0.750507,37,238
+Seasonal naive,seasonal_naive,energy,month,12 Dec,1.6504,-1.64171,31,217
+Seasonal naive,seasonal_naive,evening_peak,month,01 Jan,2.19573,0.650974,31,217
+Seasonal naive,seasonal_naive,evening_peak,month,02 Feb,1.23607,-0.493012,28,196
+Seasonal naive,seasonal_naive,evening_peak,month,03 Mar,5.11487,-0.163436,31,217
+Seasonal naive,seasonal_naive,evening_peak,month,04 Apr,3.61317,-2.23247,30,210
+Seasonal naive,seasonal_naive,evening_peak,month,05 May,6.46108,0.223306,31,217
+Seasonal naive,seasonal_naive,evening_peak,month,06 Jun,2.80502,-0.884566,30,210
+Seasonal naive,seasonal_naive,evening_peak,month,07 Jul,4.94876,1.00707,31,217
+Seasonal naive,seasonal_naive,evening_peak,month,08 Aug,1.59715,-0.168578,31,217
+Seasonal naive,seasonal_naive,evening_peak,month,09 Sep,2.85065,1.15339,30,210
+Seasonal naive,seasonal_naive,evening_peak,month,10 Oct,3.10184,1.27859,31,217
+Seasonal naive,seasonal_naive,evening_peak,month,11 Nov,2.15678,0.0169028,37,238
+Seasonal naive,seasonal_naive,evening_peak,month,12 Dec,1.65298,-1.54681,31,217
+Seasonal naive,seasonal_naive,solar_peak,month,01 Jan,2.10221,0.347139,31,217
+Seasonal naive,seasonal_naive,solar_peak,month,02 Feb,1.67634,-0.210916,28,196
+Seasonal naive,seasonal_naive,solar_peak,month,03 Mar,5.97863,1.91497,31,217
+Seasonal naive,seasonal_naive,solar_peak,month,04 Apr,5.46952,-2.63267,30,210
+Seasonal naive,seasonal_naive,solar_peak,month,05 May,8.374,0.363445,31,217
+Seasonal naive,seasonal_naive,solar_peak,month,06 Jun,4.81127,-0.515524,30,210
+Seasonal naive,seasonal_naive,solar_peak,month,07 Jul,8.84007,1.89589,31,217
+Seasonal naive,seasonal_naive,solar_peak,month,08 Aug,3.29712,-0.598011,31,217
+Seasonal naive,seasonal_naive,solar_peak,month,09 Sep,4.39949,1.64788,30,210
+Seasonal naive,seasonal_naive,solar_peak,month,10 Oct,5.40348,0.801392,31,217
+Seasonal naive,seasonal_naive,solar_peak,month,11 Nov,3.66555,-2.57864,37,238
+Seasonal naive,seasonal_naive,solar_peak,month,12 Dec,2.63548,-2.62515,31,217
+TFT,tft@v1,energy,month,01 Jan,1.54125,1.20885,31,217
+TFT,tft@v1,energy,month,02 Feb,0.914148,-0.551012,28,196
+TFT,tft@v1,energy,month,03 Mar,2.92116,0.36342,31,217
+TFT,tft@v1,energy,month,04 Apr,2.63183,-0.808852,30,210
+TFT,tft@v1,energy,month,05 May,3.56312,0.943837,31,217
+TFT,tft@v1,energy,month,06 Jun,3.10708,-2.64209,30,210
+TFT,tft@v1,energy,month,07 Jul,2.50517,-1.41326,31,217
+TFT,tft@v1,energy,month,08 Aug,1.76827,0.102353,31,217
+TFT,tft@v1,energy,month,09 Sep,1.83878,0.66648,30,210
+TFT,tft@v1,energy,month,10 Oct,2.32095,-0.325876,31,217
+TFT,tft@v1,energy,month,11 Nov,2.91218,-2.30164,37,238
+TFT,tft@v1,energy,month,12 Dec,1.67918,0.257945,31,217
+TFT,tft@v1,evening_peak,month,01 Jan,1.68647,1.17305,31,217
+TFT,tft@v1,evening_peak,month,02 Feb,0.788663,0.119389,28,196
+TFT,tft@v1,evening_peak,month,03 Mar,2.13492,0.346652,31,217
+TFT,tft@v1,evening_peak,month,04 Apr,2.0137,-0.593715,30,210
+TFT,tft@v1,evening_peak,month,05 May,3.51439,1.0092,31,217
+TFT,tft@v1,evening_peak,month,06 Jun,2.15039,-1.35471,30,210
+TFT,tft@v1,evening_peak,month,07 Jul,1.86098,-0.81644,31,217
+TFT,tft@v1,evening_peak,month,08 Aug,1.40216,0.148157,31,217
+TFT,tft@v1,evening_peak,month,09 Sep,1.81117,0.374923,30,210
+TFT,tft@v1,evening_peak,month,10 Oct,2.08911,0.22548,31,217
+TFT,tft@v1,evening_peak,month,11 Nov,2.53606,-1.57204,37,238
+TFT,tft@v1,evening_peak,month,12 Dec,1.37504,-0.664594,31,217
+TFT,tft@v1,solar_peak,month,01 Jan,1.89518,1.52828,31,217
+TFT,tft@v1,solar_peak,month,02 Feb,1.22046,0.229468,28,196
+TFT,tft@v1,solar_peak,month,03 Mar,2.53268,0.933477,31,217
+TFT,tft@v1,solar_peak,month,04 Apr,3.39893,-0.82447,30,210
+TFT,tft@v1,solar_peak,month,05 May,3.98809,1.00206,31,217
+TFT,tft@v1,solar_peak,month,06 Jun,2.82897,-1.85521,30,210
+TFT,tft@v1,solar_peak,month,07 Jul,3.49623,-1.54341,31,217
+TFT,tft@v1,solar_peak,month,08 Aug,2.43461,0.0826133,31,217
+TFT,tft@v1,solar_peak,month,09 Sep,2.52893,0.644187,30,210
+TFT,tft@v1,solar_peak,month,10 Oct,2.70374,-1.31117,31,217
+TFT,tft@v1,solar_peak,month,11 Nov,4.13872,-3.78221,37,238
+TFT,tft@v1,solar_peak,month,12 Dec,2.16748,-0.130053,31,217
+Ensemble (LSTM+LightGBM),ensemble,energy,weekday,1 Mon,1.83005,-0.353869,53,366
+Ensemble (LSTM+LightGBM),ensemble,energy,weekday,2 Tue,1.77399,-0.46166,53,367
+Ensemble (LSTM+LightGBM),ensemble,energy,weekday,3 Wed,1.85328,-0.298721,53,368
+Ensemble (LSTM+LightGBM),ensemble,energy,weekday,4 Thu,1.94288,-0.0818266,53,369
+Ensemble (LSTM+LightGBM),ensemble,energy,weekday,5 Fri,2.34889,-0.266827,53,370
+Ensemble (LSTM+LightGBM),ensemble,energy,weekday,6 Sat,2.20015,-0.323374,53,371
+Ensemble (LSTM+LightGBM),ensemble,energy,weekday,7 Sun,2.05513,0.0908994,54,372
+Ensemble (LSTM+LightGBM),ensemble,evening_peak,weekday,1 Mon,1.66913,-0.423853,53,366
+Ensemble (LSTM+LightGBM),ensemble,evening_peak,weekday,2 Tue,1.69179,-0.328591,53,367
+Ensemble (LSTM+LightGBM),ensemble,evening_peak,weekday,3 Wed,1.7656,-0.148744,53,368
+Ensemble (LSTM+LightGBM),ensemble,evening_peak,weekday,4 Thu,1.72807,0.0237442,53,369
+Ensemble (LSTM+LightGBM),ensemble,evening_peak,weekday,5 Fri,1.85132,-0.049461,53,370
+Ensemble (LSTM+LightGBM),ensemble,evening_peak,weekday,6 Sat,1.63205,-0.103254,53,371
+Ensemble (LSTM+LightGBM),ensemble,evening_peak,weekday,7 Sun,2.19789,0.347526,54,372
+Ensemble (LSTM+LightGBM),ensemble,solar_peak,weekday,1 Mon,2.22437,-0.594313,53,366
+Ensemble (LSTM+LightGBM),ensemble,solar_peak,weekday,2 Tue,1.93064,-0.239983,53,367
+Ensemble (LSTM+LightGBM),ensemble,solar_peak,weekday,3 Wed,2.19419,-0.0918173,53,368
+Ensemble (LSTM+LightGBM),ensemble,solar_peak,weekday,4 Thu,2.50311,0.0113282,53,369
+Ensemble (LSTM+LightGBM),ensemble,solar_peak,weekday,5 Fri,2.9357,-0.257641,53,370
+Ensemble (LSTM+LightGBM),ensemble,solar_peak,weekday,6 Sat,2.58237,-0.24369,53,371
+Ensemble (LSTM+LightGBM),ensemble,solar_peak,weekday,7 Sun,2.41657,0.574512,54,372
+Grid-India,grid_india,energy,weekday,1 Mon,3.10166,0.99711,52,52
+Grid-India,grid_india,energy,weekday,2 Tue,3.22644,1.7441,52,52
+Grid-India,grid_india,energy,weekday,3 Wed,3.29171,1.8026,52,52
+Grid-India,grid_india,energy,weekday,4 Thu,3.70206,2.38889,52,52
+Grid-India,grid_india,energy,weekday,5 Fri,4.50164,2.73776,52,52
+Grid-India,grid_india,energy,weekday,6 Sat,4.51895,2.60585,53,53
+Grid-India,grid_india,energy,weekday,7 Sun,4.71946,3.10392,53,53
+Grid-India,grid_india,evening_peak,weekday,1 Mon,2.64261,1.5478,52,52
+Grid-India,grid_india,evening_peak,weekday,2 Tue,2.62437,1.34491,52,52
+Grid-India,grid_india,evening_peak,weekday,3 Wed,2.39671,1.38134,52,52
+Grid-India,grid_india,evening_peak,weekday,4 Thu,3.14692,2.2165,52,52
+Grid-India,grid_india,evening_peak,weekday,5 Fri,3.5119,2.40852,52,52
+Grid-India,grid_india,evening_peak,weekday,6 Sat,3.33002,1.98771,53,53
+Grid-India,grid_india,evening_peak,weekday,7 Sun,3.86597,2.21868,53,53
+Grid-India,grid_india,solar_peak,weekday,1 Mon,3.65451,0.707426,52,52
+Grid-India,grid_india,solar_peak,weekday,2 Tue,3.73883,0.80204,52,52
+Grid-India,grid_india,solar_peak,weekday,3 Wed,4.20809,0.883953,52,52
+Grid-India,grid_india,solar_peak,weekday,4 Thu,4.73672,1.50784,52,52
+Grid-India,grid_india,solar_peak,weekday,5 Fri,5.75776,1.85564,52,52
+Grid-India,grid_india,solar_peak,weekday,6 Sat,5.45416,1.65744,53,53
+Grid-India,grid_india,solar_peak,weekday,7 Sun,5.51877,2.52339,53,53
+LightGBM,lgbm@compact,energy,weekday,1 Mon,1.89638,-0.422764,53,366
+LightGBM,lgbm@compact,energy,weekday,2 Tue,1.99931,-0.881119,53,367
+LightGBM,lgbm@compact,energy,weekday,3 Wed,2.22389,-0.891672,53,368
+LightGBM,lgbm@compact,energy,weekday,4 Thu,2.28422,-0.704898,53,369
+LightGBM,lgbm@compact,energy,weekday,5 Fri,2.66456,-0.665098,53,370
+LightGBM,lgbm@compact,energy,weekday,6 Sat,2.3881,-0.517394,53,371
+LightGBM,lgbm@compact,energy,weekday,7 Sun,2.34173,-0.0121805,54,372
+LightGBM,lgbm@compact,evening_peak,weekday,1 Mon,1.58923,-0.340592,53,366
+LightGBM,lgbm@compact,evening_peak,weekday,2 Tue,1.64148,-0.589815,53,367
+LightGBM,lgbm@compact,evening_peak,weekday,3 Wed,1.85715,-0.509293,53,368
+LightGBM,lgbm@compact,evening_peak,weekday,4 Thu,1.74515,-0.304301,53,369
+LightGBM,lgbm@compact,evening_peak,weekday,5 Fri,1.92042,-0.258928,53,370
+LightGBM,lgbm@compact,evening_peak,weekday,6 Sat,1.69888,-0.142138,53,371
+LightGBM,lgbm@compact,evening_peak,weekday,7 Sun,2.20054,-0.168943,54,372
+LightGBM,lgbm@compact,solar_peak,weekday,1 Mon,2.55068,-0.579681,53,366
+LightGBM,lgbm@compact,solar_peak,weekday,2 Tue,2.44883,-0.730549,53,367
+LightGBM,lgbm@compact,solar_peak,weekday,3 Wed,2.70307,-0.757083,53,368
+LightGBM,lgbm@compact,solar_peak,weekday,4 Thu,2.81225,-0.727379,53,369
+LightGBM,lgbm@compact,solar_peak,weekday,5 Fri,3.29561,-0.654533,53,370
+LightGBM,lgbm@compact,solar_peak,weekday,6 Sat,2.85022,-0.51095,53,371
+LightGBM,lgbm@compact,solar_peak,weekday,7 Sun,2.81644,0.150302,54,372
+LSTM,lstm_w@compact,energy,weekday,1 Mon,1.91981,-0.271752,53,366
+LSTM,lstm_w@compact,energy,weekday,2 Tue,1.88057,-0.246963,53,367
+LSTM,lstm_w@compact,energy,weekday,3 Wed,1.88731,-0.0709956,53,368
+LSTM,lstm_w@compact,energy,weekday,4 Thu,1.97669,0.166653,53,369
+LSTM,lstm_w@compact,energy,weekday,5 Fri,2.34911,-0.166971,53,370
+LSTM,lstm_w@compact,energy,weekday,6 Sat,2.29197,-0.325174,53,371
+LSTM,lstm_w@compact,energy,weekday,7 Sun,2.09034,0.169147,54,372
+LSTM,lstm_w@compact,evening_peak,weekday,1 Mon,1.94079,-0.487856,53,366
+LSTM,lstm_w@compact,evening_peak,weekday,2 Tue,1.81479,-0.060893,53,367
+LSTM,lstm_w@compact,evening_peak,weekday,3 Wed,1.8186,0.127701,53,368
+LSTM,lstm_w@compact,evening_peak,weekday,4 Thu,1.75322,0.264124,53,369
+LSTM,lstm_w@compact,evening_peak,weekday,5 Fri,1.94446,0.0839723,53,370
+LSTM,lstm_w@compact,evening_peak,weekday,6 Sat,1.71821,-0.191526,53,371
+LSTM,lstm_w@compact,evening_peak,weekday,7 Sun,2.38583,0.537746,54,372
+LSTM,lstm_w@compact,solar_peak,weekday,1 Mon,2.1906,-0.635636,53,366
+LSTM,lstm_w@compact,solar_peak,weekday,2 Tue,1.96063,-0.0503573,53,367
+LSTM,lstm_w@compact,solar_peak,weekday,3 Wed,2.13068,0.10909,53,368
+LSTM,lstm_w@compact,solar_peak,weekday,4 Thu,2.45029,0.259473,53,369
+LSTM,lstm_w@compact,solar_peak,weekday,5 Fri,2.85432,-0.176409,53,370
+LSTM,lstm_w@compact,solar_peak,weekday,6 Sat,2.64185,-0.241493,53,371
+LSTM,lstm_w@compact,solar_peak,weekday,7 Sun,2.50625,0.868155,54,372
+Seasonal naive,seasonal_naive,energy,weekday,1 Mon,3.71881,-0.207216,53,366
+Seasonal naive,seasonal_naive,energy,weekday,2 Tue,3.57725,-0.213653,53,367
+Seasonal naive,seasonal_naive,energy,weekday,3 Wed,3.5004,-0.233343,53,368
+Seasonal naive,seasonal_naive,energy,weekday,4 Thu,3.93419,-0.217885,53,369
+Seasonal naive,seasonal_naive,energy,weekday,5 Fri,4.37279,-0.164173,53,370
+Seasonal naive,seasonal_naive,energy,weekday,6 Sat,4.19651,-0.0853272,53,371
+Seasonal naive,seasonal_naive,energy,weekday,7 Sun,4.23041,0.0608449,54,372
+Seasonal naive,seasonal_naive,evening_peak,weekday,1 Mon,2.94678,-0.142755,53,366
+Seasonal naive,seasonal_naive,evening_peak,weekday,2 Tue,3.17501,-0.147992,53,367
+Seasonal naive,seasonal_naive,evening_peak,weekday,3 Wed,2.93256,-0.142729,53,368
+Seasonal naive,seasonal_naive,evening_peak,weekday,4 Thu,3.14684,-0.17427,53,369
+Seasonal naive,seasonal_naive,evening_peak,weekday,5 Fri,3.20852,-0.142399,53,370
+Seasonal naive,seasonal_naive,evening_peak,weekday,6 Sat,3.26485,-0.0254748,53,371
+Seasonal naive,seasonal_naive,evening_peak,weekday,7 Sun,3.3877,0.157424,54,372
+Seasonal naive,seasonal_naive,solar_peak,weekday,1 Mon,4.57017,-0.247165,53,366
+Seasonal naive,seasonal_naive,solar_peak,weekday,2 Tue,4.21502,-0.237465,53,367
+Seasonal naive,seasonal_naive,solar_peak,weekday,3 Wed,4.36573,-0.279938,53,368
+Seasonal naive,seasonal_naive,solar_peak,weekday,4 Thu,4.89929,-0.227912,53,369
+Seasonal naive,seasonal_naive,solar_peak,weekday,5 Fri,5.47509,-0.181447,53,370
+Seasonal naive,seasonal_naive,solar_peak,weekday,6 Sat,4.94736,-0.153638,53,371
+Seasonal naive,seasonal_naive,solar_peak,weekday,7 Sun,4.67061,-0.0688954,54,372
+TFT,tft@v1,energy,weekday,1 Mon,2.27824,-0.408255,53,366
+TFT,tft@v1,energy,weekday,2 Tue,2.26509,-0.56635,53,367
+TFT,tft@v1,energy,weekday,3 Wed,1.97189,-0.399944,53,368
+TFT,tft@v1,energy,weekday,4 Thu,2.27348,-0.111339,53,369
+TFT,tft@v1,energy,weekday,5 Fri,2.78935,-0.437567,53,370
+TFT,tft@v1,energy,weekday,6 Sat,2.47769,-0.630225,53,371
+TFT,tft@v1,energy,weekday,7 Sun,2.20301,-0.141103,54,372
+TFT,tft@v1,evening_peak,weekday,1 Mon,1.86104,-0.336366,53,366
+TFT,tft@v1,evening_peak,weekday,2 Tue,1.97202,-0.243936,53,367
+TFT,tft@v1,evening_peak,weekday,3 Wed,1.73979,-0.279388,53,368
+TFT,tft@v1,evening_peak,weekday,4 Thu,2.06697,0.00615045,53,369
+TFT,tft@v1,evening_peak,weekday,5 Fri,2.2318,-0.0785138,53,370
+TFT,tft@v1,evening_peak,weekday,6 Sat,1.78434,-0.237278,53,371
+TFT,tft@v1,evening_peak,weekday,7 Sun,2.06737,0.154695,54,372
+TFT,tft@v1,solar_peak,weekday,1 Mon,2.75146,-0.867626,53,366
+TFT,tft@v1,solar_peak,weekday,2 Tue,2.56027,-0.542395,53,367
+TFT,tft@v1,solar_peak,weekday,3 Wed,2.44167,-0.528482,53,368
+TFT,tft@v1,solar_peak,weekday,4 Thu,2.80416,-0.208969,53,369
+TFT,tft@v1,solar_peak,weekday,5 Fri,3.22513,-0.537461,53,370
+TFT,tft@v1,solar_peak,weekday,6 Sat,2.95738,-0.542912,53,371
+TFT,tft@v1,solar_peak,weekday,7 Sun,2.85767,0.0745965,54,372
+Ensemble (LSTM+LightGBM),ensemble,energy,season,monsoon (Jun–Sep),2.19022,-0.951482,122,854
+Ensemble (LSTM+LightGBM),ensemble,energy,season,post-monsoon (Oct–Nov),1.64564,-0.745644,68,455
+Ensemble (LSTM+LightGBM),ensemble,energy,season,pre-monsoon summer (Mar–May),2.65438,0.0567194,92,644
+Ensemble (LSTM+LightGBM),ensemble,energy,season,winter (Dec–Feb),1.33491,0.779927,90,630
+Ensemble (LSTM+LightGBM),ensemble,evening_peak,season,monsoon (Jun–Sep),1.82759,-0.675238,122,854
+Ensemble (LSTM+LightGBM),ensemble,evening_peak,season,post-monsoon (Oct–Nov),1.63334,-0.176179,68,455
+Ensemble (LSTM+LightGBM),ensemble,evening_peak,season,pre-monsoon summer (Mar–May),2.20383,-0.0241999,92,644
+Ensemble (LSTM+LightGBM),ensemble,evening_peak,season,winter (Dec–Feb),1.43505,0.67202,90,630
+Ensemble (LSTM+LightGBM),ensemble,solar_peak,season,monsoon (Jun–Sep),2.55395,-0.873858,122,854
+Ensemble (LSTM+LightGBM),ensemble,solar_peak,season,post-monsoon (Oct–Nov),2.08441,-1.34218,68,455
+Ensemble (LSTM+LightGBM),ensemble,solar_peak,season,pre-monsoon summer (Mar–May),2.99114,0.504563,92,644
+Ensemble (LSTM+LightGBM),ensemble,solar_peak,season,winter (Dec–Feb),1.81148,1.15049,90,630
+Grid-India,grid_india,energy,season,monsoon (Jun–Sep),4.07163,3.61513,115,115
+Grid-India,grid_india,energy,season,post-monsoon (Oct–Nov),4.47891,3.84197,69,69
+Grid-India,grid_india,energy,season,pre-monsoon summer (Mar–May),5.21136,1.50243,92,92
+Grid-India,grid_india,energy,season,winter (Dec–Feb),1.77477,-0.150871,90,90
+Grid-India,grid_india,evening_peak,season,monsoon (Jun–Sep),3.56162,3.43773,115,115
+Grid-India,grid_india,evening_peak,season,post-monsoon (Oct–Nov),2.76381,2.34522,69,69
+Grid-India,grid_india,evening_peak,season,pre-monsoon summer (Mar–May),3.80274,1.08313,92,92
+Grid-India,grid_india,evening_peak,season,winter (Dec–Feb),1.95574,0.320921,90,90
+Grid-India,grid_india,solar_peak,season,monsoon (Jun–Sep),4.67941,3.17505,115,115
+Grid-India,grid_india,solar_peak,season,post-monsoon (Oct–Nov),3.86608,0.12506,69,69
+Grid-India,grid_india,solar_peak,season,pre-monsoon summer (Mar–May),6.75844,2.40907,92,92
+Grid-India,grid_india,solar_peak,season,winter (Dec–Feb),3.3765,-0.827236,90,90
+LightGBM,lgbm@compact,energy,season,monsoon (Jun–Sep),2.49597,-1.2512,122,854
+LightGBM,lgbm@compact,energy,season,post-monsoon (Oct–Nov),2.15456,-1.43684,68,455
+LightGBM,lgbm@compact,energy,season,pre-monsoon summer (Mar–May),2.97604,-0.15012,92,644
+LightGBM,lgbm@compact,energy,season,winter (Dec–Feb),1.27561,0.492143,90,630
+LightGBM,lgbm@compact,evening_peak,season,monsoon (Jun–Sep),1.88359,-0.78529,122,854
+LightGBM,lgbm@compact,evening_peak,season,post-monsoon (Oct–Nov),1.70093,-0.610663,68,455
+LightGBM,lgbm@compact,evening_peak,season,pre-monsoon summer (Mar–May),2.30588,-0.134997,92,644
+LightGBM,lgbm@compact,evening_peak,season,winter (Dec–Feb),1.27526,0.290822,90,630
+LightGBM,lgbm@compact,solar_peak,season,monsoon (Jun–Sep),3.17968,-1.30914,122,854
+LightGBM,lgbm@compact,solar_peak,season,post-monsoon (Oct–Nov),2.83073,-2.02832,68,455
+LightGBM,lgbm@compact,solar_peak,season,pre-monsoon summer (Mar–May),3.27636,0.333215,92,644
+LightGBM,lgbm@compact,solar_peak,season,winter (Dec–Feb),1.70769,0.671724,90,630
+LSTM,lstm_w@compact,energy,season,monsoon (Jun–Sep),2.14899,-0.889011,122,854
+LSTM,lstm_w@compact,energy,season,post-monsoon (Oct–Nov),1.78672,-0.471146,68,455
+LSTM,lstm_w@compact,energy,season,pre-monsoon summer (Mar–May),2.72094,0.24002,92,644
+LSTM,lstm_w@compact,energy,season,winter (Dec–Feb),1.44978,0.864746,90,630
+LSTM,lstm_w@compact,evening_peak,season,monsoon (Jun–Sep),1.85876,-0.604741,122,854
+LSTM,lstm_w@compact,evening_peak,season,post-monsoon (Oct–Nov),1.78381,0.0717188,68,455
+LSTM,lstm_w@compact,evening_peak,season,pre-monsoon summer (Mar–May),2.37292,0.108226,92,644
+LSTM,lstm_w@compact,evening_peak,season,winter (Dec–Feb),1.60285,0.821789,90,630
+LSTM,lstm_w@compact,solar_peak,season,monsoon (Jun–Sep),2.45754,-0.721288,122,854
+LSTM,lstm_w@compact,solar_peak,season,post-monsoon (Oct–Nov),2.00173,-1.11567,68,455
+LSTM,lstm_w@compact,solar_peak,season,pre-monsoon summer (Mar–May),3.06579,0.60453,92,644
+LSTM,lstm_w@compact,solar_peak,season,winter (Dec–Feb),1.89558,1.24944,90,630
+Seasonal naive,seasonal_naive,energy,season,monsoon (Jun–Sep),4.1094,0.461847,122,854
+Seasonal naive,seasonal_naive,energy,season,post-monsoon (Oct–Nov),3.44927,0.389535,68,455
+Seasonal naive,seasonal_naive,energy,season,pre-monsoon summer (Mar–May),6.1861,-0.59514,92,644
+Seasonal naive,seasonal_naive,energy,season,winter (Dec–Feb),1.74549,-0.918528,90,630
+Seasonal naive,seasonal_naive,evening_peak,season,monsoon (Jun–Sep),3.05404,0.279165,122,854
+Seasonal naive,seasonal_naive,evening_peak,season,post-monsoon (Oct–Nov),2.6075,0.618631,68,455
+Seasonal naive,seasonal_naive,evening_peak,season,pre-monsoon summer (Mar–May),5.0788,-0.707804,92,644
+Seasonal naive,seasonal_naive,evening_peak,season,winter (Dec–Feb),1.71022,-0.461946,90,630
+Seasonal naive,seasonal_naive,solar_peak,season,monsoon (Jun–Sep),5.34898,0.608236,122,854
+Seasonal naive,seasonal_naive,solar_peak,season,post-monsoon (Oct–Nov),4.49441,-0.966623,68,455
+Seasonal naive,seasonal_naive,solar_peak,season,pre-monsoon summer (Mar–May),6.61975,-0.0907514,92,644
+Seasonal naive,seasonal_naive,solar_peak,season,winter (Dec–Feb),2.1534,-0.850268,90,630
+TFT,tft@v1,energy,season,monsoon (Jun–Sep),2.30207,-0.818905,122,854
+TFT,tft@v1,energy,season,post-monsoon (Oct–Nov),2.63021,-1.35935,68,455
+TFT,tft@v1,energy,season,pre-monsoon summer (Mar–May),3.04313,0.176733,92,644
+TFT,tft@v1,energy,season,winter (Dec–Feb),1.39366,0.333804,90,630
+TFT,tft@v1,evening_peak,season,monsoon (Jun–Sep),1.80331,-0.41074,122,854
+TFT,tft@v1,evening_peak,season,post-monsoon (Oct–Nov),2.3229,-0.714762,68,455
+TFT,tft@v1,evening_peak,season,pre-monsoon summer (Mar–May),2.56021,0.263261,92,644
+TFT,tft@v1,evening_peak,season,winter (Dec–Feb),1.29988,0.212279,90,630
+TFT,tft@v1,solar_peak,season,monsoon (Jun–Sep),2.82453,-0.668979,122,854
+TFT,tft@v1,solar_peak,season,post-monsoon (Oct–Nov),3.45434,-2.60371,68,455
+TFT,tft@v1,solar_peak,season,pre-monsoon summer (Mar–May),3.30556,0.383344,92,644
+TFT,tft@v1,solar_peak,season,winter (Dec–Feb),1.77906,0.553003,90,630
+Ensemble (LSTM+LightGBM),ensemble,energy,holiday_festival_flag,festival,2.85711,-1.09317,5,35
+Ensemble (LSTM+LightGBM),ensemble,energy,holiday_festival_flag,national holiday,3.28075,1.21365,18,123
+Ensemble (LSTM+LightGBM),ensemble,energy,holiday_festival_flag,regular day,1.92417,-0.303081,349,2425
+Ensemble (LSTM+LightGBM),ensemble,evening_peak,holiday_festival_flag,festival,3.27849,-1.63971,5,35
+Ensemble (LSTM+LightGBM),ensemble,evening_peak,holiday_festival_flag,national holiday,3.66813,1.80554,18,123
+Ensemble (LSTM+LightGBM),ensemble,evening_peak,holiday_festival_flag,regular day,1.67478,-0.170606,349,2425
+Ensemble (LSTM+LightGBM),ensemble,solar_peak,holiday_festival_flag,festival,2.14018,-0.505686,5,35
+Ensemble (LSTM+LightGBM),ensemble,solar_peak,holiday_festival_flag,national holiday,3.93138,1.56538,18,123
+Ensemble (LSTM+LightGBM),ensemble,solar_peak,holiday_festival_flag,regular day,2.32517,-0.198788,349,2425
+Grid-India,grid_india,energy,holiday_festival_flag,festival,5.18237,5.18237,5,5
+Grid-India,grid_india,energy,holiday_festival_flag,national holiday,4.97595,4.16031,18,18
+Grid-India,grid_india,energy,holiday_festival_flag,regular day,3.79294,2.05447,343,343
+Grid-India,grid_india,evening_peak,holiday_festival_flag,festival,5.39192,5.39192,5,5
+Grid-India,grid_india,evening_peak,holiday_festival_flag,national holiday,4.03054,3.07607,18,18
+Grid-India,grid_india,evening_peak,holiday_festival_flag,regular day,2.99315,1.75907,343,343
+Grid-India,grid_india,solar_peak,holiday_festival_flag,festival,4.14809,3.69747,5,5
+Grid-India,grid_india,solar_peak,holiday_festival_flag,national holiday,5.62615,3.33453,18,18
+Grid-India,grid_india,solar_peak,holiday_festival_flag,regular day,4.68963,1.2899,343,343
+LightGBM,lgbm@compact,energy,holiday_festival_flag,festival,1.82943,-0.484801,5,35
+LightGBM,lgbm@compact,energy,holiday_festival_flag,national holiday,4.01476,1.40364,18,123
+LightGBM,lgbm@compact,energy,holiday_festival_flag,regular day,2.17494,-0.686431,349,2425
+LightGBM,lgbm@compact,evening_peak,holiday_festival_flag,festival,2.4539,-1.53596,5,35
+LightGBM,lgbm@compact,evening_peak,holiday_festival_flag,national holiday,3.71441,1.56927,18,123
+LightGBM,lgbm@compact,evening_peak,holiday_festival_flag,regular day,1.70233,-0.408854,349,2425
+LightGBM,lgbm@compact,solar_peak,holiday_festival_flag,festival,1.75497,0.496123,5,35
+LightGBM,lgbm@compact,solar_peak,holiday_festival_flag,national holiday,4.8995,1.92081,18,123
+LightGBM,lgbm@compact,solar_peak,holiday_festival_flag,regular day,2.6908,-0.68319,349,2425
+LSTM,lstm_w@compact,energy,holiday_festival_flag,festival,3.23999,-1.16982,5,35
+LSTM,lstm_w@compact,energy,holiday_festival_flag,national holiday,3.08784,1.16796,18,123
+LSTM,lstm_w@compact,energy,holiday_festival_flag,regular day,1.98789,-0.155439,349,2425
+LSTM,lstm_w@compact,evening_peak,holiday_festival_flag,festival,3.70088,-1.74389,5,35
+LSTM,lstm_w@compact,evening_peak,holiday_festival_flag,national holiday,3.62137,2.01575,18,123
+LSTM,lstm_w@compact,evening_peak,holiday_festival_flag,regular day,1.79877,-0.0343478,349,2425
+LSTM,lstm_w@compact,solar_peak,holiday_festival_flag,festival,2.39379,-0.639357,5,35
+LSTM,lstm_w@compact,solar_peak,holiday_festival_flag,national holiday,3.71559,1.42306,18,123
+LSTM,lstm_w@compact,solar_peak,holiday_festival_flag,regular day,2.32466,-0.0411561,349,2425
+Seasonal naive,seasonal_naive,energy,holiday_festival_flag,festival,4.11184,4.11184,5,35
+Seasonal naive,seasonal_naive,energy,holiday_festival_flag,national holiday,6.2046,3.15183,18,123
+Seasonal naive,seasonal_naive,energy,holiday_festival_flag,regular day,3.81661,-0.380155,349,2425
+Seasonal naive,seasonal_naive,evening_peak,holiday_festival_flag,festival,3.48931,3.48931,5,35
+Seasonal naive,seasonal_naive,evening_peak,holiday_festival_flag,national holiday,6.52683,3.34068,18,123
+Seasonal naive,seasonal_naive,evening_peak,holiday_festival_flag,regular day,2.97642,-0.313401,349,2425
+Seasonal naive,seasonal_naive,solar_peak,holiday_festival_flag,festival,4.54004,4.54004,5,35
+Seasonal naive,seasonal_naive,solar_peak,holiday_festival_flag,national holiday,6.90686,3.30958,18,123
+Seasonal naive,seasonal_naive,solar_peak,holiday_festival_flag,regular day,4.62858,-0.445555,349,2425
+TFT,tft@v1,energy,holiday_festival_flag,festival,1.59246,0.0423394,5,35
+TFT,tft@v1,energy,holiday_festival_flag,national holiday,3.82004,0.817438,18,123
+TFT,tft@v1,energy,holiday_festival_flag,regular day,2.25769,-0.451862,349,2425
+TFT,tft@v1,evening_peak,holiday_festival_flag,festival,2.22872,-1.36122,5,35
+TFT,tft@v1,evening_peak,holiday_festival_flag,national holiday,3.88753,1.24418,18,123
+TFT,tft@v1,evening_peak,holiday_festival_flag,regular day,1.85917,-0.197157,349,2425
+TFT,tft@v1,solar_peak,holiday_festival_flag,festival,1.97423,1.09863,5,35
+TFT,tft@v1,solar_peak,holiday_festival_flag,national holiday,4.23173,0.602627,18,123
+TFT,tft@v1,solar_peak,holiday_festival_flag,regular day,2.73974,-0.525075,349,2425
+Ensemble (LSTM+LightGBM),ensemble,energy,weather_condition,cloudy,2.08278,-1.65533,7,49
+Ensemble (LSTM+LightGBM),ensemble,energy,weather_condition,cold/fog,1.60215,1.27694,40,280
+Ensemble (LSTM+LightGBM),ensemble,energy,weather_condition,heavy rain/storm,2.12098,0.206349,32,224
+Ensemble (LSTM+LightGBM),ensemble,energy,weather_condition,hot,2.47753,-2.24277,40,280
+Ensemble (LSTM+LightGBM),ensemble,energy,weather_condition,humid,1.84467,-1.74189,2,14
+Ensemble (LSTM+LightGBM),ensemble,energy,weather_condition,normal,1.79769,-0.0539064,156,1071
+Ensemble (LSTM+LightGBM),ensemble,energy,weather_condition,rainy,2.25417,-0.355654,95,665
+Ensemble (LSTM+LightGBM),ensemble,evening_peak,weather_condition,cloudy,2.01679,-1.95421,7,49
+Ensemble (LSTM+LightGBM),ensemble,evening_peak,weather_condition,cold/fog,1.66136,1.12333,40,280
+Ensemble (LSTM+LightGBM),ensemble,evening_peak,weather_condition,heavy rain/storm,2.0903,0.336515,32,224
+Ensemble (LSTM+LightGBM),ensemble,evening_peak,weather_condition,hot,2.1016,-1.64164,40,280
+Ensemble (LSTM+LightGBM),ensemble,evening_peak,weather_condition,humid,1.6156,-1.49888,2,14
+Ensemble (LSTM+LightGBM),ensemble,evening_peak,weather_condition,normal,1.61953,0.104515,156,1071
+Ensemble (LSTM+LightGBM),ensemble,evening_peak,weather_condition,rainy,1.8789,-0.262366,95,665
+Ensemble (LSTM+LightGBM),ensemble,solar_peak,weather_condition,cloudy,2.58442,-2.21725,7,49
+Ensemble (LSTM+LightGBM),ensemble,solar_peak,weather_condition,cold/fog,1.94432,1.35114,40,280
+Ensemble (LSTM+LightGBM),ensemble,solar_peak,weather_condition,heavy rain/storm,2.67789,0.457538,32,224
+Ensemble (LSTM+LightGBM),ensemble,solar_peak,weather_condition,hot,2.88869,-2.29153,40,280
+Ensemble (LSTM+LightGBM),ensemble,solar_peak,weather_condition,humid,1.74843,-1.58834,2,14
+Ensemble (LSTM+LightGBM),ensemble,solar_peak,weather_condition,normal,2.19426,0.27181,156,1071
+Ensemble (LSTM+LightGBM),ensemble,solar_peak,weather_condition,rainy,2.62068,-0.461092,95,665
+Grid-India,grid_india,energy,weather_condition,cloudy,2.14534,1.76395,6,6
+Grid-India,grid_india,energy,weather_condition,cold/fog,1.78027,0.0720392,40,40
+Grid-India,grid_india,energy,weather_condition,heavy rain/storm,5.37733,4.08394,32,32
+Grid-India,grid_india,energy,weather_condition,hot,3.76366,-1.967,40,40
+Grid-India,grid_india,energy,weather_condition,humid,3.20408,3.16086,2,2
+Grid-India,grid_india,energy,weather_condition,normal,3.94111,2.44057,156,156
+Grid-India,grid_india,energy,weather_condition,rainy,4.31703,3.92177,90,90
+Grid-India,grid_india,evening_peak,weather_condition,cloudy,1.06182,0.370528,6,6
+Grid-India,grid_india,evening_peak,weather_condition,cold/fog,1.762,0.338494,40,40
+Grid-India,grid_india,evening_peak,weather_condition,heavy rain/storm,4.79819,4.1195,32,32
+Grid-India,grid_india,evening_peak,weather_condition,hot,2.46609,-0.743661,40,40
+Grid-India,grid_india,evening_peak,weather_condition,humid,4.05893,4.05893,2,2
+Grid-India,grid_india,evening_peak,weather_condition,normal,2.88473,1.45954,156,156
+Grid-India,grid_india,evening_peak,weather_condition,rainy,3.7665,3.68938,90,90
+Grid-India,grid_india,solar_peak,weather_condition,cloudy,3.96772,2.49109,6,6
+Grid-India,grid_india,solar_peak,weather_condition,cold/fog,3.70057,-1.49585,40,40
+Grid-India,grid_india,solar_peak,weather_condition,heavy rain/storm,6.92399,4.74585,32,32
+Grid-India,grid_india,solar_peak,weather_condition,hot,5.2542,-2.97752,40,40
+Grid-India,grid_india,solar_peak,weather_condition,humid,3.2464,-0.624745,2,2
+Grid-India,grid_india,solar_peak,weather_condition,normal,4.536,1.8343,156,156
+Grid-India,grid_india,solar_peak,weather_condition,rainy,4.58755,2.75737,90,90
+LightGBM,lgbm@compact,energy,weather_condition,cloudy,2.51147,-2.22679,7,49
+LightGBM,lgbm@compact,energy,weather_condition,cold/fog,1.48337,0.985297,40,280
+LightGBM,lgbm@compact,energy,weather_condition,heavy rain/storm,2.23946,0.366124,32,224
+LightGBM,lgbm@compact,energy,weather_condition,hot,2.99144,-2.6834,40,280
+LightGBM,lgbm@compact,energy,weather_condition,humid,1.57599,-1.56896,2,14
+LightGBM,lgbm@compact,energy,weather_condition,normal,2.10574,-0.361149,156,1071
+LightGBM,lgbm@compact,energy,weather_condition,rainy,2.52199,-0.898632,95,665
+LightGBM,lgbm@compact,evening_peak,weather_condition,cloudy,2.16868,-2.11206,7,49
+LightGBM,lgbm@compact,evening_peak,weather_condition,cold/fog,1.41535,0.485605,40,280
+LightGBM,lgbm@compact,evening_peak,weather_condition,heavy rain/storm,2.09241,0.418214,32,224
+LightGBM,lgbm@compact,evening_peak,weather_condition,hot,2.22624,-1.76903,40,280
+LightGBM,lgbm@compact,evening_peak,weather_condition,humid,1.70659,-1.70659,2,14
+LightGBM,lgbm@compact,evening_peak,weather_condition,normal,1.63934,-0.118225,156,1071
+LightGBM,lgbm@compact,evening_peak,weather_condition,rainy,1.94989,-0.500042,95,665
+LightGBM,lgbm@compact,solar_peak,weather_condition,cloudy,3.36081,-2.89356,7,49
+LightGBM,lgbm@compact,solar_peak,weather_condition,cold/fog,1.77666,0.812258,40,280
+LightGBM,lgbm@compact,solar_peak,weather_condition,heavy rain/storm,2.89214,0.583072,32,224
+LightGBM,lgbm@compact,solar_peak,weather_condition,hot,3.23683,-2.68399,40,280
+LightGBM,lgbm@compact,solar_peak,weather_condition,humid,2.6502,-1.89351,2,14
+LightGBM,lgbm@compact,solar_peak,weather_condition,normal,2.55748,-0.0420542,156,1071
+LightGBM,lgbm@compact,solar_peak,weather_condition,rainy,3.30344,-1.19744,95,665
+LSTM,lstm_w@compact,energy,weather_condition,cloudy,2.02968,-1.47433,7,49
+LSTM,lstm_w@compact,energy,weather_condition,cold/fog,1.74836,1.36829,40,280
+LSTM,lstm_w@compact,energy,weather_condition,heavy rain/storm,2.20502,0.184245,32,224
+LSTM,lstm_w@compact,energy,weather_condition,hot,2.41637,-2.00882,40,280
+LSTM,lstm_w@compact,energy,weather_condition,humid,1.76697,-1.6433,2,14
+LSTM,lstm_w@compact,energy,weather_condition,normal,1.90016,0.0876361,156,1071
+LSTM,lstm_w@compact,energy,weather_condition,rainy,2.24741,-0.202642,95,665
+LSTM,lstm_w@compact,evening_peak,weather_condition,cloudy,1.87249,-1.69192,7,49
+LSTM,lstm_w@compact,evening_peak,weather_condition,cold/fog,1.92249,1.37566,40,280
+LSTM,lstm_w@compact,evening_peak,weather_condition,heavy rain/storm,2.31839,0.10312,32,224
+LSTM,lstm_w@compact,evening_peak,weather_condition,hot,2.18408,-1.63055,40,280
+LSTM,lstm_w@compact,evening_peak,weather_condition,humid,1.51126,-1.30449,2,14
+LSTM,lstm_w@compact,evening_peak,weather_condition,normal,1.76155,0.237953,156,1071
+LSTM,lstm_w@compact,evening_peak,weather_condition,rainy,1.90719,-0.00270799,95,665
+LSTM,lstm_w@compact,solar_peak,weather_condition,cloudy,2.38793,-1.80433,7,49
+LSTM,lstm_w@compact,solar_peak,weather_condition,cold/fog,2.06941,1.46385,40,280
+LSTM,lstm_w@compact,solar_peak,weather_condition,heavy rain/storm,2.64445,0.409934,32,224
+LSTM,lstm_w@compact,solar_peak,weather_condition,hot,3.00723,-2.10341,40,280
+LSTM,lstm_w@compact,solar_peak,weather_condition,humid,1.61909,-1.42594,2,14
+LSTM,lstm_w@compact,solar_peak,weather_condition,normal,2.20487,0.355462,156,1071
+LSTM,lstm_w@compact,solar_peak,weather_condition,rainy,2.50106,-0.198827,95,665
+Seasonal naive,seasonal_naive,energy,weather_condition,cloudy,3.39304,-2.15554,7,49
+Seasonal naive,seasonal_naive,energy,weather_condition,cold/fog,2.0324,-0.637568,40,280
+Seasonal naive,seasonal_naive,energy,weather_condition,heavy rain/storm,6.13364,3.26585,32,224
+Seasonal naive,seasonal_naive,energy,weather_condition,hot,5.28348,-4.40784,40,280
+Seasonal naive,seasonal_naive,energy,weather_condition,humid,2.87547,1.39534,2,14
+Seasonal naive,seasonal_naive,energy,weather_condition,normal,3.7065,-0.0809414,156,1071
+Seasonal naive,seasonal_naive,energy,weather_condition,rainy,3.85532,0.69722,95,665
+Seasonal naive,seasonal_naive,evening_peak,weather_condition,cloudy,2.83265,-2.54429,7,49
+Seasonal naive,seasonal_naive,evening_peak,weather_condition,cold/fog,1.99689,-0.116419,40,280
+Seasonal naive,seasonal_naive,evening_peak,weather_condition,heavy rain/storm,4.69454,2.59974,32,224
+Seasonal naive,seasonal_naive,evening_peak,weather_condition,hot,4.45611,-3.5928,40,280
+Seasonal naive,seasonal_naive,evening_peak,weather_condition,humid,2.65533,-0.490378,2,14
+Seasonal naive,seasonal_naive,evening_peak,weather_condition,normal,3.05344,0.00828583,156,1071
+Seasonal naive,seasonal_naive,evening_peak,weather_condition,rainy,2.7641,0.529225,95,665
+Seasonal naive,seasonal_naive,solar_peak,weather_condition,cloudy,4.18746,-2.022,7,49
+Seasonal naive,seasonal_naive,solar_peak,weather_condition,cold/fog,2.35469,-0.892591,40,280
+Seasonal naive,seasonal_naive,solar_peak,weather_condition,heavy rain/storm,7.48236,3.86204,32,224
+Seasonal naive,seasonal_naive,solar_peak,weather_condition,hot,6.07853,-4.77831,40,280
+Seasonal naive,seasonal_naive,solar_peak,weather_condition,humid,4.10451,1.97668,2,14
+Seasonal naive,seasonal_naive,solar_peak,weather_condition,normal,4.31044,-0.0743212,156,1071
+Seasonal naive,seasonal_naive,solar_peak,weather_condition,rainy,4.98687,0.540247,95,665
+TFT,tft@v1,energy,weather_condition,cloudy,2.81281,-1.75488,7,49
+TFT,tft@v1,energy,weather_condition,cold/fog,1.45352,0.68335,40,280
+TFT,tft@v1,energy,weather_condition,heavy rain/storm,2.40157,0.264795,32,224
+TFT,tft@v1,energy,weather_condition,hot,2.80636,-2.63542,40,280
+TFT,tft@v1,energy,weather_condition,humid,1.56037,-0.125871,2,14
+TFT,tft@v1,energy,weather_condition,normal,2.31854,-0.331019,156,1071
+TFT,tft@v1,energy,weather_condition,rainy,2.44653,-0.0965438,95,665
+TFT,tft@v1,evening_peak,weather_condition,cloudy,1.99538,-1.70801,7,49
+TFT,tft@v1,evening_peak,weather_condition,cold/fog,1.4967,0.594113,40,280
+TFT,tft@v1,evening_peak,weather_condition,heavy rain/storm,2.21711,0.543906,32,224
+TFT,tft@v1,evening_peak,weather_condition,hot,2.30013,-1.80357,40,280
+TFT,tft@v1,evening_peak,weather_condition,humid,0.858695,-0.604271,2,14
+TFT,tft@v1,evening_peak,weather_condition,normal,1.94437,-0.104065,156,1071
+TFT,tft@v1,evening_peak,weather_condition,rainy,1.97396,0.0717394,95,665
+TFT,tft@v1,solar_peak,weather_condition,cloudy,3.17682,-1.95734,7,49
+TFT,tft@v1,solar_peak,weather_condition,cold/fog,1.95153,0.631736,40,280
+TFT,tft@v1,solar_peak,weather_condition,heavy rain/storm,3.12367,0.677656,32,224
+TFT,tft@v1,solar_peak,weather_condition,hot,3.27294,-2.7843,40,280
+TFT,tft@v1,solar_peak,weather_condition,humid,1.51867,0.111452,2,14
+TFT,tft@v1,solar_peak,weather_condition,normal,2.77789,-0.46917,156,1071
+TFT,tft@v1,solar_peak,weather_condition,rainy,2.8855,-0.169894,95,665
+Ensemble (LSTM+LightGBM),ensemble,energy,tmax_ai_quartile,Q1 (23.5-28.9 C),1.62587,0.480545,94,656
+Ensemble (LSTM+LightGBM),ensemble,energy,tmax_ai_quartile,Q2 (28.9-31.7 C),1.70989,0.406791,92,625
+Ensemble (LSTM+LightGBM),ensemble,energy,tmax_ai_quartile,Q3 (31.7-34.3 C),2.00638,-0.570751,93,651
+Ensemble (LSTM+LightGBM),ensemble,energy,tmax_ai_quartile,Q4 (34.3-39.8 C),2.65473,-1.26248,93,651
+Ensemble (LSTM+LightGBM),ensemble,evening_peak,tmax_ai_quartile,Q1 (23.5-28.9 C),1.51868,0.439639,94,656
+Ensemble (LSTM+LightGBM),ensemble,evening_peak,tmax_ai_quartile,Q2 (28.9-31.7 C),1.49385,0.397539,92,625
+Ensemble (LSTM+LightGBM),ensemble,evening_peak,tmax_ai_quartile,Q3 (31.7-34.3 C),1.92427,-0.283291,93,651
+Ensemble (LSTM+LightGBM),ensemble,evening_peak,tmax_ai_quartile,Q4 (34.3-39.8 C),2.21916,-0.923916,93,651
+Ensemble (LSTM+LightGBM),ensemble,solar_peak,tmax_ai_quartile,Q1 (23.5-28.9 C),2.07231,0.348275,94,656
+Ensemble (LSTM+LightGBM),ensemble,solar_peak,tmax_ai_quartile,Q2 (28.9-31.7 C),2.17383,0.422213,92,625
+Ensemble (LSTM+LightGBM),ensemble,solar_peak,tmax_ai_quartile,Q3 (31.7-34.3 C),2.57627,-0.391047,93,651
+Ensemble (LSTM+LightGBM),ensemble,solar_peak,tmax_ai_quartile,Q4 (34.3-39.8 C),2.76771,-0.83717,93,651
+Grid-India,grid_india,energy,tmax_ai_quartile,Q1 (23.5-28.9 C),2.34323,0.392795,94,94
+Grid-India,grid_india,energy,tmax_ai_quartile,Q2 (28.9-31.7 C),4.65516,4.41163,93,93
+Grid-India,grid_india,energy,tmax_ai_quartile,Q3 (31.7-34.3 C),4.2601,3.64934,87,87
+Grid-India,grid_india,energy,tmax_ai_quartile,Q4 (34.3-39.8 C),4.26777,0.443314,92,92
+Grid-India,grid_india,evening_peak,tmax_ai_quartile,Q1 (23.5-28.9 C),2.08405,0.442889,94,94
+Grid-India,grid_india,evening_peak,tmax_ai_quartile,Q2 (28.9-31.7 C),3.56375,3.42338,93,93
+Grid-India,grid_india,evening_peak,tmax_ai_quartile,Q3 (31.7-34.3 C),3.49688,2.98446,87,87
+Grid-India,grid_india,evening_peak,tmax_ai_quartile,Q4 (34.3-39.8 C),3.20217,0.71779,92,92
+Grid-India,grid_india,solar_peak,tmax_ai_quartile,Q1 (23.5-28.9 C),3.86476,-1.91488,94,94
+Grid-India,grid_india,solar_peak,tmax_ai_quartile,Q2 (28.9-31.7 C),4.45298,3.58381,93,93
+Grid-India,grid_india,solar_peak,tmax_ai_quartile,Q3 (31.7-34.3 C),5.40372,3.70346,87,87
+Grid-India,grid_india,solar_peak,tmax_ai_quartile,Q4 (34.3-39.8 C),5.25016,0.493984,92,92
+LightGBM,lgbm@compact,energy,tmax_ai_quartile,Q1 (23.5-28.9 C),1.55885,0.0564039,94,656
+LightGBM,lgbm@compact,energy,tmax_ai_quartile,Q2 (28.9-31.7 C),2.03106,0.0410774,92,625
+LightGBM,lgbm@compact,energy,tmax_ai_quartile,Q3 (31.7-34.3 C),2.5615,-0.971071,93,651
+LightGBM,lgbm@compact,energy,tmax_ai_quartile,Q4 (34.3-39.8 C),2.8764,-1.44305,93,651
+LightGBM,lgbm@compact,evening_peak,tmax_ai_quartile,Q1 (23.5-28.9 C),1.37256,-0.0263452,94,656
+LightGBM,lgbm@compact,evening_peak,tmax_ai_quartile,Q2 (28.9-31.7 C),1.61344,0.243995,92,625
+LightGBM,lgbm@compact,evening_peak,tmax_ai_quartile,Q3 (31.7-34.3 C),1.93747,-0.582243,93,651
+LightGBM,lgbm@compact,evening_peak,tmax_ai_quartile,Q4 (34.3-39.8 C),2.3054,-0.934537,93,651
+LightGBM,lgbm@compact,solar_peak,tmax_ai_quartile,Q1 (23.5-28.9 C),2.07038,-0.261628,94,656
+LightGBM,lgbm@compact,solar_peak,tmax_ai_quartile,Q2 (28.9-31.7 C),2.7932,-0.0848175,92,625
+LightGBM,lgbm@compact,solar_peak,tmax_ai_quartile,Q3 (31.7-34.3 C),3.32262,-0.823401,93,651
+LightGBM,lgbm@compact,solar_peak,tmax_ai_quartile,Q4 (34.3-39.8 C),2.95284,-0.98685,93,651
+LSTM,lstm_w@compact,energy,tmax_ai_quartile,Q1 (23.5-28.9 C),1.81104,0.627436,94,656
+LSTM,lstm_w@compact,energy,tmax_ai_quartile,Q2 (28.9-31.7 C),1.76425,0.448535,92,625
+LSTM,lstm_w@compact,energy,tmax_ai_quartile,Q3 (31.7-34.3 C),1.89304,-0.394008,93,651
+LSTM,lstm_w@compact,energy,tmax_ai_quartile,Q4 (34.3-39.8 C),2.75081,-1.0901,93,651
+LSTM,lstm_w@compact,evening_peak,tmax_ai_quartile,Q1 (23.5-28.9 C),1.71484,0.638936,94,656
+LSTM,lstm_w@compact,evening_peak,tmax_ai_quartile,Q2 (28.9-31.7 C),1.5914,0.500878,92,625
+LSTM,lstm_w@compact,evening_peak,tmax_ai_quartile,Q3 (31.7-34.3 C),1.98499,-0.00132888,93,651
+LSTM,lstm_w@compact,evening_peak,tmax_ai_quartile,Q4 (34.3-39.8 C),2.34283,-0.964237,93,651
+LSTM,lstm_w@compact,solar_peak,tmax_ai_quartile,Q1 (23.5-28.9 C),2.12806,0.502205,94,656
+LSTM,lstm_w@compact,solar_peak,tmax_ai_quartile,Q2 (28.9-31.7 C),2.06597,0.516961,92,625
+LSTM,lstm_w@compact,solar_peak,tmax_ai_quartile,Q3 (31.7-34.3 C),2.37865,-0.224834,93,651
+LSTM,lstm_w@compact,solar_peak,tmax_ai_quartile,Q4 (34.3-39.8 C),2.98368,-0.696351,93,651
+Seasonal naive,seasonal_naive,energy,tmax_ai_quartile,Q1 (23.5-28.9 C),1.99382,-1.08164,94,656
+Seasonal naive,seasonal_naive,energy,tmax_ai_quartile,Q2 (28.9-31.7 C),3.43271,1.66346,92,625
+Seasonal naive,seasonal_naive,energy,tmax_ai_quartile,Q3 (31.7-34.3 C),4.43466,1.19497,93,651
+Seasonal naive,seasonal_naive,energy,tmax_ai_quartile,Q4 (34.3-39.8 C),5.87096,-2.30157,93,651
+Seasonal naive,seasonal_naive,evening_peak,tmax_ai_quartile,Q1 (23.5-28.9 C),1.75656,-0.613456,94,656
+Seasonal naive,seasonal_naive,evening_peak,tmax_ai_quartile,Q2 (28.9-31.7 C),2.76284,1.47639,92,625
+Seasonal naive,seasonal_naive,evening_peak,tmax_ai_quartile,Q3 (31.7-34.3 C),3.31247,0.800013,93,651
+Seasonal naive,seasonal_naive,evening_peak,tmax_ai_quartile,Q4 (34.3-39.8 C),4.77304,-1.94792,93,651
+Seasonal naive,seasonal_naive,solar_peak,tmax_ai_quartile,Q1 (23.5-28.9 C),2.70887,-1.77835,94,656
+Seasonal naive,seasonal_naive,solar_peak,tmax_ai_quartile,Q2 (28.9-31.7 C),4.13073,1.76099,92,625
+Seasonal naive,seasonal_naive,solar_peak,tmax_ai_quartile,Q3 (31.7-34.3 C),5.75103,1.35309,93,651
+Seasonal naive,seasonal_naive,solar_peak,tmax_ai_quartile,Q4 (34.3-39.8 C),6.34424,-2.04206,93,651
+TFT,tft@v1,energy,tmax_ai_quartile,Q1 (23.5-28.9 C),1.80051,-0.0769948,94,656
+TFT,tft@v1,energy,tmax_ai_quartile,Q2 (28.9-31.7 C),2.08809,0.218437,92,625
+TFT,tft@v1,energy,tmax_ai_quartile,Q3 (31.7-34.3 C),2.33441,-0.422528,93,651
+TFT,tft@v1,energy,tmax_ai_quartile,Q4 (34.3-39.8 C),3.0639,-1.23608,93,651
+TFT,tft@v1,evening_peak,tmax_ai_quartile,Q1 (23.5-28.9 C),1.56304,-0.0941147,94,656
+TFT,tft@v1,evening_peak,tmax_ai_quartile,Q2 (28.9-31.7 C),1.70283,0.207644,92,625
+TFT,tft@v1,evening_peak,tmax_ai_quartile,Q3 (31.7-34.3 C),2.02971,-0.0517153,93,651
+TFT,tft@v1,evening_peak,tmax_ai_quartile,Q4 (34.3-39.8 C),2.54022,-0.625322,93,651
+TFT,tft@v1,solar_peak,tmax_ai_quartile,Q1 (23.5-28.9 C),2.47274,-0.445384,94,656
+TFT,tft@v1,solar_peak,tmax_ai_quartile,Q2 (28.9-31.7 C),2.4818,0.121389,92,625
+TFT,tft@v1,solar_peak,tmax_ai_quartile,Q3 (31.7-34.3 C),2.96843,-0.538825,93,651
+TFT,tft@v1,solar_peak,tmax_ai_quartile,Q4 (34.3-39.8 C),3.26847,-0.911911,93,651
